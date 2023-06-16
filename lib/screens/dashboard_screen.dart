@@ -34,7 +34,6 @@ class DashboardScreen extends StatelessWidget {
                    icon: const Icon(Icons.search, color: Color(0xFF663274)),
         onPressed: () {
           // Handle search icon tap
-          // Open search bar or perform search functionality
         },
                 ),
                 IconButton(
@@ -44,7 +43,7 @@ class DashboardScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              NotificationPage()), // Navigate to the notification page
+                              const NotificationPage()),
                     );
                   },
                 ),
@@ -120,12 +119,12 @@ class DashboardScreen extends StatelessWidget {
               children: [
                 Container(
                   height: 40,
-                  width: 150, // Adjust the width as needed
+                  width: 150, 
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(
-                        8), // Adjust the border radius as needed
+                        8), 
                     border: Border.all(color: Colors.grey, width: 2),
                   ),
                   child: DropdownButtonFormField<String>(
@@ -361,7 +360,7 @@ class DashboardScreen extends StatelessWidget {
           // Rest of the code...
         ],
       ),
-      drawer: CustomDrawer(), // Add this line to show the custom drawer
+      drawer: CustomDrawer(), 
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
         onTap: (index) {

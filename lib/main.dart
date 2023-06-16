@@ -22,10 +22,10 @@ class AccountsntaxApp extends StatelessWidget {
       initialRoute: splashRoute,
       debugShowCheckedModeBanner: false,
       routes: {
-        splashRoute: (context) => SplashScreen(),
+        splashRoute: (context) => const SplashScreen(),
         introRoute: (context) => const IntroScreen(),
         loginRoute: (context) => const LoginScreen(),
-        signupRoute: (context) => SignupScreen(),
+        signupRoute: (context) => const SignupScreen(),
         dashboardRoute: (context) => DashboardScreen(),
       },
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 ThemeData buildThemeData() {
   return ThemeData(
-    primarySwatch: MaterialColor(
+    primarySwatch: const MaterialColor(
       0xFF663274,
       <int, Color>{
         50: Color(0xFF663274),
@@ -19,8 +19,8 @@ ThemeData buildThemeData() {
     ),
     primaryColor: const Color.fromARGB(255, 215, 147, 154),
     hintColor: Colors.black,
-    scaffoldBackgroundColor:Color(0xFFF9E8E3),
-    appBarTheme: AppBarTheme(
+    scaffoldBackgroundColor:const Color(0xFFF9E8E3),
+    appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFF663274),
     ),
   );

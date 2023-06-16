@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:accountsntax/utils/routes.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  SplashScreenState createState() => SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
@@ -14,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigateToIntroScreen() {
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushNamed(context, introRoute);
     });
   }
@@ -31,8 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
               width: 150,
               height: 150,
             ),
-            SizedBox(height: 20),
-            CircularProgressIndicator(),
+            const SizedBox(height: 20),
+            const CircularProgressIndicator(),
           ],
         ),
       ),

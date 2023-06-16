@@ -8,24 +8,24 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Color(0xFFF9E8E3),
+      backgroundColor: const Color(0xFFF9E8E3),
       child: ListView(
         children: [
           DrawerHeader(
-            decoration:  BoxDecoration(
+            decoration:  const BoxDecoration(
              color: Color(0xFF663274),
              ),
                 padding: EdgeInsets.zero,
                 child: UserAccountsDrawerHeader(
                     margin: EdgeInsets.zero,
-                    decoration: BoxDecoration(color: Color(0xFF663274)),
-                    accountName: Text(
+                    decoration: const BoxDecoration(color: Color(0xFF663274)),
+                    accountName: const Text(
                       "Aditya",
                       style: TextStyle(fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                     ),
-                    accountEmail: Text(
+                    accountEmail: const Text(
                       "aditya@GMAIL.COM",
                       style: TextStyle(fontSize: 15,
                       color: Colors.white),
@@ -35,29 +35,29 @@ class CustomDrawer extends StatelessWidget {
                       maxRadius: 10,
                     ))),
           ListTile(
-            leading: Icon(Icons.dashboard),
-            title: Text('Dashboard'),
+            leading: const Icon(Icons.dashboard),
+            title: const Text('Dashboard'),
             onTap: () {
               // Handle drawer item tap
             },
           ),
           ListTile(
-            leading: Icon(Icons.account_balance_wallet),
-            title: Text('Wallet'),
+            leading: const Icon(Icons.account_balance_wallet),
+            title: const Text('Wallet'),
             onTap: () {
               // Handle drawer item tap
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
+            leading: const Icon(Icons.settings),
+            title: const Text('Settings'),
             onTap: () {
               // Handle drawer item tap
             },
           ),
           ListTile(
-            leading: Icon(Icons.logout),
-            title: Text('Logout'),
+            leading: const Icon(Icons.logout),
+            title: const Text('Logout'),
             onTap: () {
               // Handle drawer item tap
             },

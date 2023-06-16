@@ -30,14 +30,15 @@ class LoginScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              child: const Text('Log In'),
               onPressed: () {
                 // login authentication
                 Navigator.pushReplacementNamed(context, dashboardRoute);
               },
               style: ElevatedButton.styleFrom(
+                // ignore: deprecated_member_use
                 primary: const Color(0xFFEA7A40), // Set the button color to orange
               ),
+              child: const Text('Log In'),
             ),
             const SizedBox(height: 20),
             TextButton(
