@@ -29,21 +29,23 @@ class DashboardScreen extends StatelessWidget {
                     _scaffoldKey.currentState?.openDrawer();
                   },
                 ),
-                const SizedBox(width: 200,),
-                IconButton(
-                   icon: const Icon(Icons.search, color: Color(0xFF663274)),
-        onPressed: () {
-          // Handle search icon tap
-        },
+                const SizedBox(
+                  width: 200,
                 ),
                 IconButton(
-                  icon: const Icon(Icons.notifications, color: Color(0xFF663274)),
+                  icon: const Icon(Icons.search, color: Color(0xFF663274)),
+                  onPressed: () {
+                    // Handle search icon tap
+                  },
+                ),
+                IconButton(
+                  icon:
+                      const Icon(Icons.notifications, color: Color(0xFF663274)),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) =>
-                              const NotificationPage()),
+                          builder: (context) => const NotificationPage()),
                     );
                   },
                 ),
@@ -79,7 +81,7 @@ class DashboardScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.orange, width: 2),
+              border: Border.all(color: const Color(0xFFEA7A40), width: 2),
             ),
             child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,7 +98,7 @@ class DashboardScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: Colors.orange,
+                        color:  Color(0xFFEA7A40),
                       ),
                     ),
                   ],
@@ -119,12 +121,11 @@ class DashboardScreen extends StatelessWidget {
               children: [
                 Container(
                   height: 40,
-                  width: 150, 
+                  width: 150,
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(
-                        8), 
+                    borderRadius: BorderRadius.circular(8),
                     border: Border.all(color: Colors.grey, width: 2),
                   ),
                   child: DropdownButtonFormField<String>(
@@ -317,7 +318,8 @@ class DashboardScreen extends StatelessWidget {
                       child: Icon(Icons.date_range, color: Colors.white),
                     ),
                   ),
-                  const Text('Due Date', style: TextStyle(color: Color(0xFF663274))),
+                  const Text('Due Date',
+                      style: TextStyle(color: Color(0xFF663274))),
                 ],
               ),
               Column(
@@ -360,7 +362,7 @@ class DashboardScreen extends StatelessWidget {
           // Rest of the code...
         ],
       ),
-      drawer: CustomDrawer(), 
+      drawer: CustomDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
         onTap: (index) {

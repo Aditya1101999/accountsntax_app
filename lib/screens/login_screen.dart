@@ -1,9 +1,54 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:accountsntax/utils/routes.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  bool _isPasswordVisible = false;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  String _emailError = '';
+  String _passwordError = '';
+
+  bool _validateFields() {
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
+    bool isValid = true;
+    if (email.isEmpty) {
+      setState(() {
+        _emailError = 'Please enter your email.';
+      });
+      isValid = false;
+    } else {
+      setState(() {
+        _emailError = '';
+      });
+    }
+
+    if (password.isEmpty) {
+      setState(() {
+        _passwordError = 'Please enter your password.';
+      });
+      isValid = false;
+    } else if (password.length < 8) {
+      setState(() {
+        _passwordError = 'Password should be at least 8 characters long.';
+      });
+      isValid = false;
+    } else {
+      setState(() {
+        _passwordError = '';
+      });
+    }
+
+    return isValid;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,46 +62,86 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextFormField(
-              decoration: const InputDecoration(
+              controller: _emailController,
+              decoration: InputDecoration(
                 labelText: 'Email',
+                hintText: 'Enter your email',
+                errorText: _emailError.isNotEmpty ? _emailError : null,
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             TextFormField(
-              decoration: const InputDecoration(
+              controller: _passwordController,
+              decoration: InputDecoration(
                 labelText: 'Password',
+                hintText: 'Enter your password',
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    _isPasswordVisible
+                        ? Icons.visibility_off
+                        : Icons.visibility,
+                    color: Colors.grey,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isPasswordVisible = !_isPasswordVisible;
+                    });
+                  },
+                ),
+                errorText: _passwordError.isNotEmpty ? _passwordError : null,
               ),
-              obscureText: true,
+              obscureText: !_isPasswordVisible,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                  onPressed: () {
+// Implement forgot password logic here
+                  },
+                  child: const Text(
+                    'Forgot Password ?',
+                    style: TextStyle(
+                      color:  Color(0xFFEA7A40),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // login authentication
-                Navigator.pushReplacementNamed(context, dashboardRoute);
+                if (_validateFields()) {
+// Perform login authentication
+                  Navigator.pushReplacementNamed(context, dashboardRoute);
+                }
               },
               style: ElevatedButton.styleFrom(
-                // ignore: deprecated_member_use
-                primary: const Color(0xFFEA7A40), // Set the button color to orange
+                backgroundColor:
+                    const Color(0xFFEA7A40), // Set the button color to orange
               ),
               child: const Text('Log In'),
             ),
-            const SizedBox(height: 20),
-            TextButton(
-              child: const Text(
-                "Don't have an account? Sign up",
-                style: TextStyle(color: Color(0xFFEA7A40)),
-              ),
-              onPressed: () {
-                Navigator.pushNamed(context, signupRoute);
-              },
-            ),
-            const SizedBox(height: 20),
-            OutlinedButton.icon(
-              icon: const Icon(CupertinoIcons.square_arrow_right), // Use the square_arrow_right icon from cupertino_icons
-              label: const Text("Sign up with Google"),
-              onPressed: () {
-                // sign up with Google authentication
-              },
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("Don't have an account? "),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, signupRoute);
+                  },
+                  child: const Text(
+                    "Sign Up",
+                    style: TextStyle(
+                      color: Color(0xFFEA7A40),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
