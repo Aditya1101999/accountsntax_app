@@ -84,9 +84,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(
                       'Email',
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF663274)
-                      ),
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF663274)),
                     ),
                   ),
                   const SizedBox(height: 5),
@@ -162,7 +161,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
                   SizedBox(
                     width: 150,
                     height: 48,
@@ -170,7 +168,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {
                         if (_validateFields()) {
                           // Perform sign up logic
-                          Navigator.pushReplacementNamed(context, dashboardRoute);
+                          Navigator.pushReplacementNamed(
+                              context, dashboardRoute);
                         }
                       },
                       style: ElevatedButton.styleFrom(
