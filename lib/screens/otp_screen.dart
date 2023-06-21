@@ -47,7 +47,7 @@ class _OTPScreenState extends State<OTPScreen> {
                   height: 200,
                 ),
                 const Text(
-                  'Forgot Password',
+                  'Verify Mobile',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
