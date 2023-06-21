@@ -1,6 +1,6 @@
+import 'package:accountsntax/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:accountsntax/screens/login_screen.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
@@ -85,11 +85,9 @@ class _IntroScreenState extends State<IntroScreen> {
             bottom: 20,
             child: FloatingActionButton(
               child: const Icon(Icons.arrow_forward),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const LoginScreen()),
-                );
+                onPressed: () {
+                        Navigator.pushReplacementNamed(context, loginRoute);
+                      
               },
             ),
           ),

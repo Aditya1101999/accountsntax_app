@@ -1,4 +1,7 @@
+import 'package:accountsntax/screens/otp_screen.dart';
+import 'package:accountsntax/screens/otp_verification_screen.dart';
 import 'package:accountsntax/screens/splash_screen.dart';
+import 'package:accountsntax/widgets/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:accountsntax/utils/routes.dart';
 import 'package:accountsntax/utils/theme.dart';
@@ -27,6 +30,9 @@ class AccountsntaxApp extends StatelessWidget {
         loginRoute: (context) => const LoginScreen(),
         signupRoute: (context) => const SignUpScreen(),
         dashboardRoute: (context) => DashboardScreen(),
+        otpRoute:(context)=>const OTPScreen(),
+        otpVerificationRoute:(context) => const OTPVerificationScreen(),
+        notificationRoute:(context) => const NotificationPage(),
       },
     );
   }

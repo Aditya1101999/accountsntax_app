@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../utils/routes.dart';
 import '../widgets/drawer_page.dart';
-import '../widgets/notification_page.dart';
 
 class DashboardScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -42,11 +42,8 @@ class DashboardScreen extends StatelessWidget {
                   icon:
                       const Icon(Icons.notifications, color: Color(0xFF663274)),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const NotificationPage()),
-                    );
+                    Navigator.pushNamed(context, notificationRoute);
+
                   },
                 ),
               ],
@@ -132,6 +129,9 @@ class DashboardScreen extends StatelessWidget {
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Select Bank',
+                      hintStyle: TextStyle(
+      color: Colors.grey, 
+    ),
                     ),
                     items: const [
                       DropdownMenuItem<String>(
@@ -358,8 +358,6 @@ class DashboardScreen extends StatelessWidget {
               ),
             ],
           ),
-
-          // Rest of the code...
         ],
       ),
       drawer: CustomDrawer(),

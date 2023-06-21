@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
     bool isValid = true;
     if (email.isEmpty) {
       setState(() {
-        _emailError = 'Please enter your email.';
+        _emailError = 'Please enter your Number.';
       });
       isValid = false;
     } else {
@@ -62,15 +62,14 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Image.asset(
                   'assets/images/logo2.png',
-                  height: 150,
+                  height: 200,
                 ),
-                const SizedBox(height: 10),
                 const Text(
                   'Login',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 29,
-                    color: Colors.black,
+                    fontSize: 30,
+                    color: Color(0xFF663274),
                   ),
                 ),
               ],
@@ -82,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      'Email',
+                      'Contact No.',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Color(0xFF663274)
@@ -101,7 +100,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       contentPadding: const EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 12.0),
-                      hintText: 'Enter your email',
+                      hintText: 'Enter your Number',
+                      hintStyle: const TextStyle(
+      color: Colors.grey, 
+    ),
                       errorText: _emailError.isNotEmpty ? _emailError : null,
                     ),
                   ),
@@ -129,6 +131,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       contentPadding: const EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 12.0),
                       hintText: 'Enter your password',
+                      hintStyle: const TextStyle(
+      color: Colors.grey, 
+    ),
                       suffixIcon: IconButton(
                         icon: Icon(
                           _isPasswordVisible
@@ -152,7 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {
-                        // Handle forgot password logic
+                        Navigator.pushReplacementNamed(context, otpRoute);
                       },
                       child: const Text(
                         'Forgot Password?',
@@ -183,7 +188,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         'Log In',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                          fontSize: 22,
                         ),
                       ),
                     ),
