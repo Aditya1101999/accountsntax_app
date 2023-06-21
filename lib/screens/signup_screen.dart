@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:accountsntax/utils/routes.dart';
 
+import 'otp_verification_screen.dart';
+
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
@@ -437,11 +439,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         height: 48,
                         child: ElevatedButton(
                           onPressed: () {
-                            if (_validateFields()) {
-                              // Perform sign up logic
-                              Navigator.pushReplacementNamed(context, otpRoute);
-                            }
-                          },
+  if (_validateFields()) {
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(
+      builder: (context) => const OTPVerificationScreen(sourceFlag: 1), // Pass 1 as a flag for sign-up route
+    ),
+  );
+}
+
+},
+
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFFEA7B0C),
                             shape: RoundedRectangleBorder(

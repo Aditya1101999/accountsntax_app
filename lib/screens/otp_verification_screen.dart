@@ -1,19 +1,32 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'package:accountsntax/utils/routes.dart';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:accountsntax/utils/routes.dart';
 
 class OTPVerificationScreen extends StatefulWidget {
-  const OTPVerificationScreen({Key? key}) : super(key: key);
+  final int sourceFlag; // Flag indicating the source route: 1 for sign-up, 2 for OTP screen
+
+  const OTPVerificationScreen({Key? key, required this.sourceFlag}) : super(key: key);
 
   @override
   _OTPVerificationScreenState createState() => _OTPVerificationScreenState();
 }
 
 class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
-  final List<TextEditingController> _otpControllers = List.generate(4, (_) => TextEditingController());
+  final List<TextEditingController> _otpControllers =
+      List.generate(4, (_) => TextEditingController());
   final List<FocusNode> _focusNodes = List.generate(4, (_) => FocusNode());
   String _otpError = '';
+  int _resendTimer = 59;
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _startResendTimer();
+  }
 
   @override
   void dispose() {
@@ -23,7 +36,27 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
     for (var focusNode in _focusNodes) {
       focusNode.dispose();
     }
+    _timer?.cancel();
     super.dispose();
+  }
+
+  void _startResendTimer() {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        if (_resendTimer > 0) {
+          _resendTimer--;
+        } else {
+          _timer?.cancel();
+        }
+      });
+    });
+  }
+
+  void _resetResendTimer() {
+    setState(() {
+      _resendTimer = 59;
+    });
+    _startResendTimer();
   }
 
   bool _validateFields() {
@@ -43,7 +76,15 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
         _otpError = '';
       });
     }
-    return isValid;
+    return isValid; // Return the actual validation result
+  }
+
+  void _navigateToNextScreen() {
+    if (widget.sourceFlag == 1) {
+      Navigator.pushReplacementNamed(context, loginRoute); // Route to login route if sourceFlag is 1 (sign-up route)
+    } else if (widget.sourceFlag == 2) {
+      Navigator.pushReplacementNamed(context, changePasswordRoute); // Route to change password route if sourceFlag is 2 (OTP screen route)
+    }
   }
 
   @override
@@ -75,7 +116,10 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: List.generate(4, (index) => _buildOTPDigitField(index)),
+                    children: List.generate(
+                      4,
+                      (index) => _buildOTPDigitField(index),
+                    ),
                   ),
                   const SizedBox(height: 20),
                   Text(
@@ -85,51 +129,52 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  SizedBox(
-                    width: 150,
-                    height: 48,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        if (_validateFields()) {
-                          // Dummy condition for OTP verification
-                          if (_otpControllers[0].text == '1' &&
-                              _otpControllers[1].text == '2' &&
-                              _otpControllers[2].text == '3' &&
-                              _otpControllers[3].text == '4') {
-                            // OTP matched
-                            Navigator.pushReplacementNamed(context, dashboardRoute);
-                          } else {
-                            // OTP didn't match
-                            setState(() {
-                              _otpError = 'Invalid OTP. Please try again.';
-                            });
-                          }
+                  ElevatedButton(
+                    onPressed: () {
+                      if (_validateFields()) {
+                        final enteredOTP = _otpControllers.map((controller) => controller.text).join();
+                        const correctOTP = '1234'; // Replace with the correct OTP
+
+                        if (enteredOTP == correctOTP) {
+                          _navigateToNextScreen();
+                        } else {
+                          setState(() {
+                            _otpError = 'Invalid OTP. Please try again.';
+                          });
                         }
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFEA7B0C),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
+                      }
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
                       ),
-                      child: const Text(
-                        'Verify OTP',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 22,
-                        ),
+                      elevation: 2,
+                      minimumSize: const Size(150, 48),
+                    ),
+                    child: const Text(
+                      'Verify OTP',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22,
                       ),
                     ),
                   ),
                   const SizedBox(height: 20),
                   TextButton(
-                    onPressed: () {
-                      // Implement resend OTP logic
-                    },
-                    child: const Text(
-                      'Resend OTP',
+                    onPressed: _resendTimer == 0
+                        ? () {
+                      _resetResendTimer();
+                    }
+                        : null,
+                    child: Text(
+                      _resendTimer == 0
+                          ? 'Resend OTP'
+                          : 'Resend OTP ($_resendTimer s)',
                       style: TextStyle(
-                        color: Color(0xFFEA7A40),
+                        color: _resendTimer == 0
+                            ? const Color(0xFF663274)
+                            : Colors.grey,
                       ),
                     ),
                   ),
@@ -160,6 +205,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
             borderRadius: BorderRadius.circular(8.0),
           ),
           contentPadding: const EdgeInsets.all(16.0),
+          hintStyle: const TextStyle(color: Colors.grey),
         ),
         onChanged: (value) {
           if (value.isNotEmpty && int.tryParse(value) != null && index < 3) {
@@ -173,3 +219,4 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
     );
   }
 }
+

@@ -1,6 +1,8 @@
 import 'package:accountsntax/utils/routes.dart';
 import 'package:flutter/material.dart';
 
+import 'otp_verification_screen.dart';
+
 class OTPScreen extends StatefulWidget {
   const OTPScreen({super.key});
 
@@ -9,6 +11,7 @@ class OTPScreen extends StatefulWidget {
 }
 
 class _OTPScreenState extends State<OTPScreen> {
+  
   final TextEditingController _phoneController = TextEditingController();
   String _phoneError = '';
 
@@ -22,7 +25,7 @@ class _OTPScreenState extends State<OTPScreen> {
       isValid = false;
     } else if (phone.length < 10) {
       setState(() {
-        _phoneError = 'Password should be at least 10 characters long.';
+        _phoneError = 'Number should be at least 10 characters long.';
       });
       isValid = false;
     }else {
@@ -45,9 +48,10 @@ class _OTPScreenState extends State<OTPScreen> {
                 Image.asset(
                   'assets/images/logo2.png',
                   height: 200,
+                  
                 ),
                 const Text(
-                  'Verify Mobile',
+                  'Forget Password ?',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
@@ -95,11 +99,19 @@ class _OTPScreenState extends State<OTPScreen> {
                     height: 48,
                     child: ElevatedButton(
                       onPressed: () {
-                        if (_validateFields()) {
-                          Navigator.pushNamed(context, otpVerificationRoute);
+  if (_validateFields()) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => const OTPVerificationScreen(sourceFlag: 2), 
+    ),
+  );
+  
+}
+  
+  
+},
 
-                        }
-                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFEA7B0C),
                         shape: RoundedRectangleBorder(
