@@ -6,14 +6,14 @@ class ChangePasswordScreen extends StatefulWidget {
 
   @override
   State<ChangePasswordScreen> createState() => _ChangePasswordScreenState();
-}
-
-class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
+}class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
   final TextEditingController _newPasswordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
       TextEditingController();
   bool _isObscureNewPassword = true;
   bool _isObscureConfirmPassword = true;
+  String _newPasswordError = '';
+  String _confirmPasswordError = '';
 
   @override
   Widget build(BuildContext context) {
@@ -47,8 +47,11 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                     'New Password',
                     _isObscureNewPassword,
                     (value) {
-                      // Add any validation or logic for the new password field
+                      setState(() {
+                        _newPasswordError = '';
+                      });
                     },
+                    _newPasswordError,
                   ),
                   const SizedBox(height: 20),
                   _buildPasswordTextField(
@@ -56,8 +59,11 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                     'Confirm New Password',
                     _isObscureConfirmPassword,
                     (value) {
-                      // Add any validation or logic for the confirm password field
+                      setState(() {
+                        _confirmPasswordError = '';
+                      });
                     },
+                    _confirmPasswordError,
                   ),
                   const SizedBox(height: 20),
                   SizedBox(
@@ -65,8 +71,10 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                     height: 50,
                     child: ElevatedButton(
                       onPressed: () {
-                        // Add logic to change the password
-                        Navigator.pushReplacementNamed(context, loginRoute);
+                        if (_validatePasswordFields()) {
+                          // Add logic to change the password
+                          Navigator.pushReplacementNamed(context, loginRoute);
+                        }
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFEA7B0C),
@@ -78,7 +86,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         'Change Password',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          
                           fontSize: 18,
                         ),
                       ),
@@ -94,8 +101,12 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
     );
   }
 
-  Widget _buildPasswordTextField(TextEditingController controller,
-      String hintText, bool isObscure, Function(String) onChanged) {
+  Widget _buildPasswordTextField(
+      TextEditingController controller,
+      String hintText,
+      bool isObscure,
+      Function(String) onChanged,
+      String errorText) {
     return TextFormField(
       controller: controller,
       obscureText: isObscure,
@@ -107,7 +118,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(8.0),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         hintText: hintText,
         hintStyle: const TextStyle(
           color: Colors.grey,
@@ -127,7 +139,41 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
             color: Colors.grey,
           ),
         ),
+        errorText: errorText.isNotEmpty ? errorText : null,
       ),
     );
+  }
+
+  bool _validatePasswordFields() {
+    final newPassword = _newPasswordController.text;
+    final confirmPassword = _confirmPasswordController.text;
+    bool isValid = true;
+
+    if (newPassword.isEmpty) {
+      setState(() {
+        _newPasswordError = 'New password field cannot be empty.';
+      });
+      isValid = false;
+    } else if (newPassword.length < 8) {
+      setState(() {
+        _newPasswordError =
+            'New password should be at least 8 characters long.';
+      });
+      isValid = false;
+    }
+
+    if (confirmPassword.isEmpty) {
+      setState(() {
+        _confirmPasswordError = 'Confirm password field cannot be empty.';
+      });
+      isValid = false;
+    } else if (newPassword != confirmPassword) {
+      setState(() {
+        _confirmPasswordError = 'Passwords do not match.';
+      });
+      isValid = false;
+    }
+
+    return isValid;
   }
 }
