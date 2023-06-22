@@ -1,4 +1,5 @@
 import 'package:accountsntax/screens/change_password.dart';
+import 'package:accountsntax/screens/company_profile_page.dart';
 import 'package:accountsntax/screens/otp_screen.dart';
 import 'package:accountsntax/screens/splash_screen.dart';
 import 'package:accountsntax/widgets/notification_page.dart';
@@ -33,7 +34,9 @@ class AccountsntaxApp extends StatelessWidget {
         otpRoute: (context) => const OTPScreen(),
         notificationRoute: (context) => const NotificationPage(),
       changePasswordRoute: (context) => const ChangePasswordScreen(),
+      companyProfileRoute:(context) => CompanyProfilePage(),
       },
+
     );
   }
 }

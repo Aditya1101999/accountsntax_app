@@ -6,3 +6,4 @@ const String dashboardRoute = '/dashboard';
 const String otpRoute = '/otp';
 const String notificationRoute = '/notification';
 const String changePasswordRoute = '/change_password';
+const String companyProfileRoute = 'company_profile';
