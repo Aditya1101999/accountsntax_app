@@ -175,7 +175,7 @@ class DashboardScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: const Color(0xFF663274),
                     borderRadius: BorderRadius.circular(
-                        8), // Adjust the border radius as needed
+                        8),
                   ),
                   child: const Icon(Icons.download, color: Colors.white),
                 ),

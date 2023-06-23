@@ -76,7 +76,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
         _otpError = '';
       });
     }
-    return isValid; // Return the actual validation result
+    return isValid; 
   }
 
   void _navigateToNextScreen() {
@@ -200,10 +200,10 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
           counterText: '',
           filled: true,
           fillColor: Colors.white,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(8.0),
-          ),
+           enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: const BorderSide(color: Color(0xFF663274)), 
+    ),
           contentPadding: const EdgeInsets.all(16.0),
           hintStyle: const TextStyle(color: Colors.grey),
         ),

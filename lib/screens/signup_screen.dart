@@ -149,16 +149,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                  //         const Text(
-                  //   'Sign Up',
-                  //   style: TextStyle(
-                  //     fontWeight: FontWeight.bold,
-                  //     fontSize: 29,
-                  //     color: Colors.black,
-                  //   ),
-                  //   textAlign: TextAlign.center,
-                  // ),
-                  // const SizedBox(height: 30),
                           const Text(
                             'First Name*',
                             style: TextStyle(
@@ -172,10 +162,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
+                              enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: const BorderSide(color: Color(0xFF663274)), 
+    ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
@@ -208,10 +198,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
+                               enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: const BorderSide(color: Color(0xFF663274)), 
+    ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
@@ -244,10 +234,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
+                               enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: const BorderSide(color: Color(0xFF663274)), 
+    ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
@@ -281,10 +271,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
+                               enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: const BorderSide(color: Color(0xFF663274)), 
+    ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
@@ -316,10 +306,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
+                               enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: const BorderSide(color: Color(0xFF663274)), 
+    ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
@@ -366,10 +356,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
+                               enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: const BorderSide(color: Color(0xFF663274)), 
+    ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
@@ -417,10 +407,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
+                               enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: const BorderSide(color: Color(0xFF663274)), 
+    ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,

@@ -1,3 +1,9 @@
+import 'package:accountsntax/screens/basic_details_operations/add_address_details_screen.dart';
+import 'package:accountsntax/screens/basic_details_operations/add_bank_details_screen.dart';
+import 'package:accountsntax/screens/basic_details_operations/edit_address_details_screen.dart';
+import 'package:accountsntax/screens/basic_details_operations/edit_bank_details_screen.dart';
+import 'package:accountsntax/screens/basic_details_operations/edit_basic_details_screen.dart';
+import 'package:accountsntax/screens/basic_details_operations/edit_business_details_screen.dart';
 import 'package:accountsntax/screens/change_password.dart';
 import 'package:accountsntax/screens/company_profile_page.dart';
 import 'package:accountsntax/screens/otp_screen.dart';
@@ -27,16 +33,21 @@ class AccountsntaxApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         splashRoute: (context) => const SplashScreen(),
-       introRoute: (context) => const IntroScreen(),
+        introRoute: (context) => const IntroScreen(),
         loginRoute: (context) => const LoginScreen(),
         signupRoute: (context) => const SignUpScreen(),
         dashboardRoute: (context) => DashboardScreen(),
         otpRoute: (context) => const OTPScreen(),
         notificationRoute: (context) => const NotificationPage(),
-      changePasswordRoute: (context) => const ChangePasswordScreen(),
-      companyProfileRoute:(context) => CompanyProfilePage(),
+        changePasswordRoute: (context) => const ChangePasswordScreen(),
+        companyProfileRoute: (context) => CompanyProfilePage(),
+        editBasicDetailsRoute: (context) => const EditBasicDetailsScreen(),
+        editAddressDetailsRoute: (context) => const EditAddressDetailsScreen(),
+        editBusinessDetailsRoute: (context) => const EditBusinessDetailsScreen(),
+        addAddressDetailsRoute: (context) => AddAddressDetailsScreen(),
+        addBankDetailsRoute: (context) => AddBankDetailsScreen(),
+        editBankDetailsRoute: (context) => const EditBankDetailsScreen(),
       },
-
     );
   }
 }

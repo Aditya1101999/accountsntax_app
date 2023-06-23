@@ -114,10 +114,10 @@ class ChangePasswordScreen extends StatefulWidget {
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: BorderRadius.circular(8.0),
-        ),
+         enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.0),
+      borderSide: const BorderSide(color: Color(0xFF663274)), 
+    ),
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         hintText: hintText,

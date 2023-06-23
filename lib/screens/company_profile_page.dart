@@ -1,4 +1,5 @@
 // ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api
+import 'package:accountsntax/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class CompanyProfilePage extends StatefulWidget {
@@ -29,7 +30,17 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
-            height: 75,
+            height: 50,
+            width: 50,
+          ),
+          SizedBox(
+            height: 50,
+            child: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
           ),
           const Padding(
             padding: EdgeInsets.all(16.0),
@@ -95,7 +106,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                         ),
                         InkWell(
                           onTap: () {
-                            // Handle container click here
+                            Navigator.pushNamed(context, editBasicDetailsRoute);
                           },
                           child: Stack(
                             children: [
@@ -173,7 +184,8 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                 right: 16,
                                 child: InkWell(
                                   onTap: () {
-                                    // Handle edit icon click here
+                                    Navigator.pushNamed(
+                                        context, editBasicDetailsRoute);
                                   },
                                   child: const Icon(
                                     Icons.edit,
@@ -215,7 +227,8 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                         ),
                         InkWell(
                           onTap: () {
-                            // Handle Business Details container click here
+                            Navigator.pushNamed(
+                                context, editBusinessDetailsRoute);
                           },
                           child: Stack(
                             children: [
@@ -294,7 +307,8 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                 right: 16,
                                 child: InkWell(
                                   onTap: () {
-                                    // Handle edit icon click here
+                                    Navigator.pushNamed(
+                                        context, editBusinessDetailsRoute);
                                   },
                                   child: const Icon(
                                     Icons.edit,
@@ -331,18 +345,25 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                 ],
                               ),
                             ),
-                            const Padding(
-                              padding: EdgeInsets.all(10),
-                              child: Icon(
-                                Icons.add,
-                                color: Color(0xFF663274),
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, addAddressDetailsRoute);
+                                },
+                                child: const Icon(
+                                  Icons.add,
+                                  color: Color(0xFF663274),
+                                ),
                               ),
                             ),
                           ],
                         ),
                         InkWell(
                           onTap: () {
-                            // Handle Address container click here
+                            Navigator.pushNamed(
+                                context, editAddressDetailsRoute);
                           },
                           child: Stack(
                             children: [
@@ -421,7 +442,8 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                 right: 16,
                                 child: InkWell(
                                   onTap: () {
-                                    // Handle edit icon click here
+                                    Navigator.pushNamed(
+                                        context, editAddressDetailsRoute);
                                   },
                                   child: const Icon(
                                     Icons.edit,
@@ -445,9 +467,9 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                               color: const Color(0xFFF9E8E3),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 16, vertical: 8),
-                              child: const Row(
+                              child: Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     'Bank Details',
                                     style: TextStyle(
                                       fontSize: 18,
@@ -455,12 +477,18 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                       color: Color(0xFF663274),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 221,
                                   ),
-                                  Icon(
-                                    Icons.add,
-                                    color: Color(0xFF663274),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, addBankDetailsRoute);
+                                    },
+                                    child: const Icon(
+                                      Icons.add,
+                                      color: Color(0xFF663274),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -469,7 +497,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                         ),
                         InkWell(
                           onTap: () {
-                            // Handle Bank Details container click here
+                            Navigator.pushNamed(context, editBankDetailsRoute);
                           },
                           child: Stack(
                             children: [
@@ -548,7 +576,8 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                 right: 16,
                                 child: InkWell(
                                   onTap: () {
-                                    // Handle edit icon click here
+                                    Navigator.pushNamed(
+                                        context, editBankDetailsRoute);
                                   },
                                   child: const Icon(
                                     Icons.edit,
