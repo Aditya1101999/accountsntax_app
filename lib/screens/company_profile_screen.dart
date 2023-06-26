@@ -667,14 +667,58 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                       ),
                                       const SizedBox(width: 8),
                                       GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            // Remove container 1 from the list
-                                          });
-                                        },
-                                        child: const Icon(Icons.delete,
-                                            color: Color(0xFF663274)),
-                                      ),
+  onTap: () {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: const Color(0xFFF9E8E3),
+          title: const Text(
+            'Do you want to delete this partner?',
+            style: TextStyle(
+              color: Color(0xFF663274),
+            ),
+          ),
+          actions: [
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFEA7B0C),
+              ),
+              onPressed: () {
+                // TODO: Implement logic to delete the partner
+                Navigator.pop(context); 
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Partner Deleted')),
+                );
+              },
+              child: const Text(
+                'YES',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context); 
+              } ,
+              child: const Text(
+                'NO',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  },
+  child: const Icon(
+    Icons.delete,
+    color: Color(0xFF663274),
+  ),
+),
                                     ],
                                   ),
                                 ],
@@ -757,14 +801,58 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                       ),
                                       const SizedBox(width: 8),
                                       GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            // Remove container 2 from the list
-                                          });
-                                        },
-                                        child: const Icon(Icons.delete,
-                                            color: Color(0xFF663274)),
-                                      ),
+  onTap: () {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: const Color(0xFFF9E8E3),
+          title: const Text(
+            'Do you want to delete this partner?',
+            style: TextStyle(
+              color: Color(0xFF663274),
+            ),
+          ),
+          actions: [
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFEA7B0C),
+              ),
+              onPressed: () {
+                // TODO: Implement logic to delete the partner
+                Navigator.pop(context); 
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Partner Deleted')),
+                );
+              },
+              child: const Text(
+                'YES',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context); 
+              } ,
+              child: const Text(
+                'NO',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  },
+  child: const Icon(
+    Icons.delete,
+    color: Color(0xFF663274),
+  ),
+),
                                     ],
                                   ),
                                 ],
@@ -847,14 +935,59 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                       ),
                                       const SizedBox(width: 8),
                                       GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            // Remove container 3 from the list
-                                          });
-                                        },
-                                        child: const Icon(Icons.delete,
-                                            color: Color(0xFF663274)),
-                                      ),
+  onTap: () {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: const Color(0xFFF9E8E3),
+          title: const Text(
+            'Do you want to delete this partner?',
+            style: TextStyle(
+              color: Color(0xFF663274),
+            ),
+          ),
+          actions: [
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFEA7B0C),
+              ),
+              onPressed: () {
+                // TODO: Implement logic to delete the partner
+                Navigator.pop(context); 
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Partner Deleted')),
+                );
+              },
+              child: const Text(
+                'YES',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context); 
+              } ,
+              child: const Text(
+                'NO',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  },
+  child: const Icon(
+    Icons.delete,
+    color: Color(0xFF663274),
+  ),
+),
+
                                     ],
                                   ),
                                 ],
