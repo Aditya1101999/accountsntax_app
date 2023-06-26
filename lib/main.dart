@@ -4,6 +4,10 @@ import 'package:accountsntax/screens/basic_details_operations/edit_address_detai
 import 'package:accountsntax/screens/basic_details_operations/edit_bank_details_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/edit_basic_details_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/edit_business_details_screen.dart';
+import 'package:accountsntax/screens/basic_details_operations/view_address_details_screen.dart';
+import 'package:accountsntax/screens/basic_details_operations/view_bank_details_screen.dart';
+import 'package:accountsntax/screens/basic_details_operations/view_basic_details_screen.dart';
+import 'package:accountsntax/screens/basic_details_operations/view_business_details_screen.dart';
 import 'package:accountsntax/screens/change_password.dart';
 import 'package:accountsntax/screens/company_profile_page.dart';
 import 'package:accountsntax/screens/otp_screen.dart';
@@ -47,6 +51,11 @@ class AccountsntaxApp extends StatelessWidget {
         addAddressDetailsRoute: (context) => AddAddressDetailsScreen(),
         addBankDetailsRoute: (context) => AddBankDetailsScreen(),
         editBankDetailsRoute: (context) => const EditBankDetailsScreen(),
+        viewBasicDetailsRoute:(context) => const ViewBasicDetailsScreen(),
+        viewBusinessDetailsRoute:(context) => const ViewBusinessDetailsScreen(),
+        viewAddressDetailsRoute:(context)=>const ViewAddressDetailsScreen(),
+        viewBankDetailsRoute:(context) => const ViewBankDetailsScreen(),
+
       },
     );
   }

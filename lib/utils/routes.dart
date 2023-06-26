@@ -13,3 +13,7 @@ const String editAddressDetailsRoute = 'edit_address_info';
 const String addAddressDetailsRoute = 'add_address_info';
 const String addBankDetailsRoute = 'add_bank_info';
 const String editBankDetailsRoute = 'edit_bank_info';
+const String viewBasicDetailsRoute = 'view_basic_info';
+const String viewBusinessDetailsRoute = 'view_business_info';
+const String viewAddressDetailsRoute = 'view_address_info';
+const String viewBankDetailsRoute = 'view_bank_info';

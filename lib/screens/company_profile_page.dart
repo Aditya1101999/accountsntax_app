@@ -106,7 +106,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, editBasicDetailsRoute);
+                            Navigator.pushNamed(context, viewBasicDetailsRoute);
                           },
                           child: Stack(
                             children: [
@@ -228,7 +228,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                         InkWell(
                           onTap: () {
                             Navigator.pushNamed(
-                                context, editBusinessDetailsRoute);
+                                context, viewBusinessDetailsRoute);
                           },
                           child: Stack(
                             children: [
@@ -363,7 +363,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                         InkWell(
                           onTap: () {
                             Navigator.pushNamed(
-                                context, editAddressDetailsRoute);
+                                context, viewAddressDetailsRoute);
                           },
                           child: Stack(
                             children: [
@@ -497,7 +497,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, editBankDetailsRoute);
+                            Navigator.pushNamed(context, viewBankDetailsRoute);
                           },
                           child: Stack(
                             children: [
