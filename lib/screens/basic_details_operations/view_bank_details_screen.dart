@@ -61,10 +61,6 @@ class ViewBankDetailsScreen extends StatelessWidget {
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter Bank Name',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
                   ),
                 ),
               ],
@@ -94,10 +90,6 @@ class ViewBankDetailsScreen extends StatelessWidget {
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
-                    ),
-                    hintText: 'Enter Account Number',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
                     ),
                   ),
                 ),
@@ -129,10 +121,6 @@ class ViewBankDetailsScreen extends StatelessWidget {
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter Beneficiary Name',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
                   ),
                 ),
               ],
@@ -162,10 +150,6 @@ class ViewBankDetailsScreen extends StatelessWidget {
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
-                    ),
-                    hintText: 'Enter IFSC Code',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
                     ),
                   ),
                 ),
@@ -197,10 +181,7 @@ class ViewBankDetailsScreen extends StatelessWidget {
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter Type of Account',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
+                    
                   ),
                 ),
               ],

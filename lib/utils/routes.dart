@@ -17,3 +17,6 @@ const String viewBasicDetailsRoute = 'view_basic_info';
 const String viewBusinessDetailsRoute = 'view_business_info';
 const String viewAddressDetailsRoute = 'view_address_info';
 const String viewBankDetailsRoute = 'view_bank_info';
+const String viewPartnerDetailsRoute = 'view_partner_info';
+const String editPartnerDetailsRoute = 'edit_partner_info';
+const String addPartnerDetailsRoute = 'add_partner_info';

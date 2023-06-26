@@ -9,8 +9,11 @@ import 'package:accountsntax/screens/basic_details_operations/view_bank_details_
 import 'package:accountsntax/screens/basic_details_operations/view_basic_details_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/view_business_details_screen.dart';
 import 'package:accountsntax/screens/change_password.dart';
-import 'package:accountsntax/screens/company_profile_page.dart';
+import 'package:accountsntax/screens/company_profile_screen.dart';
 import 'package:accountsntax/screens/otp_screen.dart';
+import 'package:accountsntax/screens/partner_operations/add_partner_screen.dart';
+import 'package:accountsntax/screens/partner_operations/edit_partner_screen.dart';
+import 'package:accountsntax/screens/partner_operations/view_partner_screen.dart';
 import 'package:accountsntax/screens/splash_screen.dart';
 import 'package:accountsntax/widgets/notification_page.dart';
 import 'package:flutter/material.dart';
@@ -55,6 +58,11 @@ class AccountsntaxApp extends StatelessWidget {
         viewBusinessDetailsRoute:(context) => const ViewBusinessDetailsScreen(),
         viewAddressDetailsRoute:(context)=>const ViewAddressDetailsScreen(),
         viewBankDetailsRoute:(context) => const ViewBankDetailsScreen(),
+        viewPartnerDetailsRoute:(context) => const ViewPartnerDetailsScreen(),
+        editPartnerDetailsRoute:(context) => const EditPartnerDetailsScreen(),
+        addPartnerDetailsRoute:(context)=>const AddPartnerDetailsScreen(),
+
+
 
       },
     );

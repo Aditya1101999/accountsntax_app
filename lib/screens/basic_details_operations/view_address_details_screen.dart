@@ -60,10 +60,6 @@ class ViewAddressDetailsScreen extends StatelessWidget {
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter Type',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
                   ),
                 ),
               ],
@@ -93,10 +89,6 @@ class ViewAddressDetailsScreen extends StatelessWidget {
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
-                    ),
-                    hintText: 'Enter Address Line 1',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
                     ),
                   ),
                 ),
@@ -128,10 +120,6 @@ class ViewAddressDetailsScreen extends StatelessWidget {
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter Address Line 2',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
                   ),
                 ),
               ],
@@ -161,10 +149,6 @@ class ViewAddressDetailsScreen extends StatelessWidget {
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
-                    ),
-                    hintText: 'Enter Pincode',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
                     ),
                   ),
                 ),
@@ -196,10 +180,6 @@ class ViewAddressDetailsScreen extends StatelessWidget {
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter City',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
                   ),
                 ),
               ],
@@ -230,10 +210,6 @@ class ViewAddressDetailsScreen extends StatelessWidget {
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter State',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
                   ),
                 ),
               ],
@@ -263,10 +239,6 @@ class ViewAddressDetailsScreen extends StatelessWidget {
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
-                    ),
-                    hintText: 'Enter Country',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
                     ),
                   ),
                 ),
