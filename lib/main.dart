@@ -15,6 +15,9 @@ import 'package:accountsntax/screens/partner_operations/add_partner_screen.dart'
 import 'package:accountsntax/screens/partner_operations/edit_partner_screen.dart';
 import 'package:accountsntax/screens/partner_operations/view_partner_screen.dart';
 import 'package:accountsntax/screens/splash_screen.dart';
+import 'package:accountsntax/screens/vault_operations/add_vault_screen.dart';
+import 'package:accountsntax/screens/vault_operations/edit_vault_screen.dart';
+import 'package:accountsntax/screens/vault_operations/view_vault_screen.dart';
 import 'package:accountsntax/widgets/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:accountsntax/utils/routes.dart';
@@ -61,10 +64,10 @@ class AccountsntaxApp extends StatelessWidget {
         viewPartnerDetailsRoute:(context) => const ViewPartnerDetailsScreen(),
         editPartnerDetailsRoute:(context) => const EditPartnerDetailsScreen(),
         addPartnerDetailsRoute:(context)=>const AddPartnerDetailsScreen(),
-
-
-
-      },
+        viewVaultDetailsRoute:(context) => const ViewVaultDetailsScreen(),
+        addVaultDetailsRoute:(context) => const AddVaultDetailsScreen(),
+        editVaultDetailsRoute:(context)=>const EditVaultDetailsScreen(),
+        },
     );
   }
 }

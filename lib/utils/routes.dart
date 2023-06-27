@@ -20,3 +20,6 @@ const String viewBankDetailsRoute = 'view_bank_info';
 const String viewPartnerDetailsRoute = 'view_partner_info';
 const String editPartnerDetailsRoute = 'edit_partner_info';
 const String addPartnerDetailsRoute = 'add_partner_info';
+const String viewVaultDetailsRoute = 'view_vault_info';
+const String addVaultDetailsRoute = 'add_vault_info';
+const String editVaultDetailsRoute = 'edit_vault_info';

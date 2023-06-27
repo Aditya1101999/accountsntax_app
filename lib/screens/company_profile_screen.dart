@@ -667,58 +667,66 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                       ),
                                       const SizedBox(width: 8),
                                       GestureDetector(
-  onTap: () {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          backgroundColor: const Color(0xFFF9E8E3),
-          title: const Text(
-            'Do you want to delete this partner?',
-            style: TextStyle(
-              color: Color(0xFF663274),
-            ),
-          ),
-          actions: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFEA7B0C),
-              ),
-              onPressed: () {
-                // TODO: Implement logic to delete the partner
-                Navigator.pop(context); 
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Partner Deleted')),
-                );
-              },
-              child: const Text(
-                'YES',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context); 
-              } ,
-              child: const Text(
-                'NO',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ],
-        );
-      },
-    );
-  },
-  child: const Icon(
-    Icons.delete,
-    color: Color(0xFF663274),
-  ),
-),
+                                        onTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                backgroundColor:
+                                                    const Color(0xFFF9E8E3),
+                                                title: const Text(
+                                                  'Do you want to delete this partner?',
+                                                  style: TextStyle(
+                                                    color: Color(0xFF663274),
+                                                  ),
+                                                ),
+                                                actions: [
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          const Color(
+                                                              0xFFEA7B0C),
+                                                    ),
+                                                    onPressed: () {
+                                                      // Implement logic to delete the partner
+                                                      Navigator.pop(context);
+                                                      ScaffoldMessenger.of(
+                                                              context)
+                                                          .showSnackBar(
+                                                        const SnackBar(
+                                                            content: Text(
+                                                                'Partner Deleted')),
+                                                      );
+                                                    },
+                                                    child: const Text(
+                                                      'YES',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: const Text(
+                                                      'NO',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: const Icon(
+                                          Icons.delete,
+                                          color: Color(0xFF663274),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ],
@@ -801,58 +809,66 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                       ),
                                       const SizedBox(width: 8),
                                       GestureDetector(
-  onTap: () {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          backgroundColor: const Color(0xFFF9E8E3),
-          title: const Text(
-            'Do you want to delete this partner?',
-            style: TextStyle(
-              color: Color(0xFF663274),
-            ),
-          ),
-          actions: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFEA7B0C),
-              ),
-              onPressed: () {
-                // TODO: Implement logic to delete the partner
-                Navigator.pop(context); 
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Partner Deleted')),
-                );
-              },
-              child: const Text(
-                'YES',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context); 
-              } ,
-              child: const Text(
-                'NO',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ],
-        );
-      },
-    );
-  },
-  child: const Icon(
-    Icons.delete,
-    color: Color(0xFF663274),
-  ),
-),
+                                        onTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                backgroundColor:
+                                                    const Color(0xFFF9E8E3),
+                                                title: const Text(
+                                                  'Do you want to delete this partner?',
+                                                  style: TextStyle(
+                                                    color: Color(0xFF663274),
+                                                  ),
+                                                ),
+                                                actions: [
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          const Color(
+                                                              0xFFEA7B0C),
+                                                    ),
+                                                    onPressed: () {
+                                                      // mplement logic to delete the partner
+                                                      Navigator.pop(context);
+                                                      ScaffoldMessenger.of(
+                                                              context)
+                                                          .showSnackBar(
+                                                        const SnackBar(
+                                                            content: Text(
+                                                                'Partner Deleted')),
+                                                      );
+                                                    },
+                                                    child: const Text(
+                                                      'YES',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: const Text(
+                                                      'NO',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: const Icon(
+                                          Icons.delete,
+                                          color: Color(0xFF663274),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ],
@@ -935,59 +951,66 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                       ),
                                       const SizedBox(width: 8),
                                       GestureDetector(
-  onTap: () {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          backgroundColor: const Color(0xFFF9E8E3),
-          title: const Text(
-            'Do you want to delete this partner?',
-            style: TextStyle(
-              color: Color(0xFF663274),
-            ),
-          ),
-          actions: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFEA7B0C),
-              ),
-              onPressed: () {
-                // TODO: Implement logic to delete the partner
-                Navigator.pop(context); 
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Partner Deleted')),
-                );
-              },
-              child: const Text(
-                'YES',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context); 
-              } ,
-              child: const Text(
-                'NO',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ],
-        );
-      },
-    );
-  },
-  child: const Icon(
-    Icons.delete,
-    color: Color(0xFF663274),
-  ),
-),
-
+                                        onTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                backgroundColor:
+                                                    const Color(0xFFF9E8E3),
+                                                title: const Text(
+                                                  'Do you want to delete this partner?',
+                                                  style: TextStyle(
+                                                    color: Color(0xFF663274),
+                                                  ),
+                                                ),
+                                                actions: [
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          const Color(
+                                                              0xFFEA7B0C),
+                                                    ),
+                                                    onPressed: () {
+                                                      // Implement logic to delete the partner
+                                                      Navigator.pop(context);
+                                                      ScaffoldMessenger.of(
+                                                              context)
+                                                          .showSnackBar(
+                                                        const SnackBar(
+                                                            content: Text(
+                                                                'Partner Deleted')),
+                                                      );
+                                                    },
+                                                    child: const Text(
+                                                      'YES',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: const Text(
+                                                      'NO',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: const Icon(
+                                          Icons.delete,
+                                          color: Color(0xFF663274),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ],
@@ -1023,7 +1046,499 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                     ),
                   ],
                 ),
-                const Center(child: Text('Vault')),
+                Column(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                         Navigator.pushNamed(context, viewVaultDetailsRoute);
+                      },
+                      child: Container(
+                        height: 125,
+                        width: double.infinity,
+                        margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: const Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          children: [
+                            const SizedBox(width: 32),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const SizedBox(height: 6),
+                                  const Text(
+                                    '     Type of Registration',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xFF663274),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 12),
+                                  const Text(
+                                    '       INCOMETAX',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      const SizedBox(
+                                        width: 30,
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, viewVaultDetailsRoute);
+                                        },
+                                        child: const Icon(Icons.visibility,
+                                            color: Color(0xFF663274)),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, editVaultDetailsRoute);
+                                        },
+                                        child: const Icon(Icons.edit,
+                                            color: Color(0xFF663274)),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      GestureDetector(
+                                        onTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                backgroundColor:
+                                                    const Color(0xFFF9E8E3),
+                                                title: const Text(
+                                                  'Do you want to delete this vault?',
+                                                  style: TextStyle(
+                                                    color: Color(0xFF663274),
+                                                  ),
+                                                ),
+                                                actions: [
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          const Color(
+                                                              0xFFEA7B0C),
+                                                    ),
+                                                    onPressed: () {
+                                                      // Implement logic to delete the vault
+                                                      Navigator.pop(context);
+                                                      ScaffoldMessenger.of(
+                                                              context)
+                                                          .showSnackBar(
+                                                        const SnackBar(
+                                                            content: Text(
+                                                                'Vault Deleted')),
+                                                      );
+                                                    },
+                                                    child: const Text(
+                                                      'YES',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: const Text(
+                                                      'NO',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: const Icon(
+                                          Icons.delete,
+                                          color: Color(0xFF663274),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      GestureDetector(
+                                          onTap: () {
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              const SnackBar(
+                                                  content: Text(
+                                                      'Vault Downloaded Successfully')),
+                                            );
+                                          },
+                                          child: const Padding(
+                                            padding: EdgeInsets.only(top: 5.0),
+                                            child: Icon(Icons.download,
+                                                color: Color(0xFF663274)),
+                                          ))
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                     InkWell(
+                      onTap: () {
+                         Navigator.pushNamed(context, viewVaultDetailsRoute);
+                      },
+                      child: Container(
+                        height: 125,
+                        width: double.infinity,
+                        margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: const Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          children: [
+                            const SizedBox(width: 32),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const SizedBox(height: 6),
+                                  const Text(
+                                    '     Type of Registration',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xFF663274),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 12),
+                                  const Text(
+                                    '       INCOMETAX',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      const SizedBox(
+                                        width: 30,
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, viewVaultDetailsRoute);
+                                        },
+                                        child: const Icon(Icons.visibility,
+                                            color: Color(0xFF663274)),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, editVaultDetailsRoute);
+                                        },
+                                        child: const Icon(Icons.edit,
+                                            color: Color(0xFF663274)),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      GestureDetector(
+                                        onTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                backgroundColor:
+                                                    const Color(0xFFF9E8E3),
+                                                title: const Text(
+                                                  'Do you want to delete this vault?',
+                                                  style: TextStyle(
+                                                    color: Color(0xFF663274),
+                                                  ),
+                                                ),
+                                                actions: [
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          const Color(
+                                                              0xFFEA7B0C),
+                                                    ),
+                                                    onPressed: () {
+                                                      //Implement logic to delete the vault
+                                                      Navigator.pop(context);
+                                                      ScaffoldMessenger.of(
+                                                              context)
+                                                          .showSnackBar(
+                                                        const SnackBar(
+                                                            content: Text(
+                                                                'Vault Deleted')),
+                                                      );
+                                                    },
+                                                    child: const Text(
+                                                      'YES',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: const Text(
+                                                      'NO',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: const Icon(
+                                          Icons.delete,
+                                          color: Color(0xFF663274),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      GestureDetector(
+                                          onTap: () {
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              const SnackBar(
+                                                  content: Text(
+                                                      'Vault Downloaded Successfully')),
+                                            );
+                                          },
+                                          child: const Padding(
+                                            padding: EdgeInsets.only(top: 5.0),
+                                            child: Icon(Icons.download,
+                                                color: Color(0xFF663274)),
+                                          ))
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                     InkWell(
+                      onTap: () {
+                         Navigator.pushNamed(context, viewVaultDetailsRoute);
+                      },
+                      child: Container(
+                        height: 125,
+                        width: double.infinity,
+                        margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: const Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          children: [
+                            const SizedBox(width: 32),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const SizedBox(height: 6),
+                                  const Text(
+                                    '     Type of Registration',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xFF663274),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 12),
+                                  const Text(
+                                    '       INCOMETAX',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      const SizedBox(
+                                        width: 30,
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, viewVaultDetailsRoute);
+                                        },
+                                        child: const Icon(Icons.visibility,
+                                            color: Color(0xFF663274)),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, editVaultDetailsRoute);
+                                        },
+                                        child: const Icon(Icons.edit,
+                                            color: Color(0xFF663274)),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      GestureDetector(
+                                        onTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                backgroundColor:
+                                                    const Color(0xFFF9E8E3),
+                                                title: const Text(
+                                                  'Do you want to delete this vault?',
+                                                  style: TextStyle(
+                                                    color: Color(0xFF663274),
+                                                  ),
+                                                ),
+                                                actions: [
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          const Color(
+                                                              0xFFEA7B0C),
+                                                    ),
+                                                    onPressed: () {
+                                                      //Implement logic to delete the vault
+                                                      Navigator.pop(context);
+                                                      ScaffoldMessenger.of(
+                                                              context)
+                                                          .showSnackBar(
+                                                        const SnackBar(
+                                                            content: Text(
+                                                                'Vault Deleted')),
+                                                      );
+                                                    },
+                                                    child: const Text(
+                                                      'YES',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: const Text(
+                                                      'NO',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: const Icon(
+                                          Icons.delete,
+                                          color: Color(0xFF663274),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      GestureDetector(
+                                          onTap: () {
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              const SnackBar(
+                                                  content: Text(
+                                                      'Vault Downloaded Successfully')),
+                                            );
+                                          },
+                                          child: const Padding(
+                                            padding: EdgeInsets.only(top: 5.0),
+                                            child: Icon(Icons.download,
+                                                color: Color(0xFF663274)),
+                                          ))
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Center(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, addVaultDetailsRoute);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          fixedSize: const Size(170, 60),
+                          backgroundColor: const Color(0xFFEA7B0C),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                        child: const Text(
+                          'Add Vault',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),

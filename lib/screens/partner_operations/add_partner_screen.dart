@@ -319,7 +319,7 @@ class _AddPartnerDetailsScreenState extends State<AddPartnerDetailsScreen> {
               const SizedBox(height: 20),
               const Center(
                 child: Text(
-                  'Edit Partner Details',
+                  'Add a Partner',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
