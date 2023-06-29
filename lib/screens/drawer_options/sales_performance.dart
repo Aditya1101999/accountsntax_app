@@ -118,8 +118,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                         const SizedBox(width: 8.0),
                         Container(
                           width: 160.0,
-                          padding:
-                              const EdgeInsets.symmetric(horizontal: 8.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8.0),
@@ -163,68 +162,119 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                       ],
                     ),
                     Expanded(
-  child: SingleChildScrollView(
-    scrollDirection: Axis.horizontal,
-    child: DataTable(
-      dividerThickness: 1.0,
-      columns: const [
-        DataColumn(label: Text('Month')),
-        DataColumn(label: Text('Total Sales')),
-      ],
-      rows:  [
-        const DataRow(
-          cells: [
-            DataCell(Text('1')),
-            DataCell(Text('1527641.77')),
-          ],
-        ),
-        const DataRow(
-          cells: [
-            DataCell(Text('2')),
-            DataCell(Text('133179.61')),
-          ],
-        ),
-        const DataRow(
-          cells: [
-            DataCell(Text('3')),
-            DataCell(Text('1924268.26')),
-          ],
-        ),
-        const DataRow(
-          cells: [
-            DataCell(Text('4')),
-            DataCell(Text('21500.00')),
-          ],
-        ),
-        const DataRow(
-          cells: [
-            DataCell(Text('5')),
-            DataCell(Text('5450.00')),
-          ],
-        ),
-        DataRow(
-          color: MaterialStateColor.resolveWith(
-              (states) => const Color(0xFFEA7A40)),
-          cells: const [
-            DataCell(
-              Text(
-                'Total',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            DataCell(
-              Text(
-                '3612039.64',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
-  ),
-),
-
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width,
+                          child: SingleChildScrollView(
+                            child: DataTable(
+                              dividerThickness: 1.0,
+                              columns: const [
+                                DataColumn(label: Text('Month')),
+                                DataColumn(label: Text('Total Sales')),
+                                DataColumn(label: Text('No. of Orders')),
+                              ],
+                              rows: [
+                                const DataRow(
+                                  cells: [
+                                    DataCell(Text('1')),
+                                    DataCell(Text('1527641.77')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                const DataRow(
+                                  cells: [
+                                    DataCell(Text('2')),
+                                    DataCell(Text('133179.61')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                const DataRow(
+                                  cells: [
+                                    DataCell(Text('3')),
+                                    DataCell(Text('1924268.26')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                const DataRow(
+                                  cells: [
+                                    DataCell(Text('4')),
+                                    DataCell(Text('21500.00')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                const DataRow(
+                                  cells: [
+                                    DataCell(Text('5')),
+                                    DataCell(Text('5450.00')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                 const DataRow(
+                                  cells: [
+                                    DataCell(Text('6')),
+                                    DataCell(Text('1527641.77')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                const DataRow(
+                                  cells: [
+                                    DataCell(Text('7')),
+                                    DataCell(Text('133179.61')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                const DataRow(
+                                  cells: [
+                                    DataCell(Text('8')),
+                                    DataCell(Text('1924268.26')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                const DataRow(
+                                  cells: [
+                                    DataCell(Text('9')),
+                                    DataCell(Text('21500.00')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                const DataRow(
+                                  cells: [
+                                    DataCell(Text('10')),
+                                    DataCell(Text('5450.00')),
+                                    DataCell(Text("74"))
+                                  ],
+                                ),
+                                DataRow(
+                                  color: MaterialStateColor.resolveWith(
+                                      (states) => const Color(0xFFEA7A40)),
+                                  cells: const [
+                                    DataCell(
+                                      Text(
+                                        'Total',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                    ),
+                                    DataCell(
+                                      Text(
+                                        '3612039.64',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                    ),
+                                    DataCell(
+                                      Text(
+                                        '',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                     const SizedBox(height: 16.0),
                   ],
                 ),
@@ -255,9 +305,8 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                         ),
                         const SizedBox(width: 8.0),
                         Container(
-                          width: 160.0, 
-                          padding:
-                              const EdgeInsets.symmetric(horizontal: 8.0),
+                          width: 160.0,
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8.0),
@@ -330,9 +379,8 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                         ),
                         const SizedBox(width: 8.0),
                         Container(
-                          width: 160.0, 
-                          padding:
-                              const EdgeInsets.symmetric(horizontal: 8.0),
+                          width: 160.0,
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8.0),
@@ -405,9 +453,8 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                         ),
                         const SizedBox(width: 8.0),
                         Container(
-                          width: 160.0, 
-                          padding:
-                              const EdgeInsets.symmetric(horizontal: 8.0),
+                          width: 160.0,
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8.0),
