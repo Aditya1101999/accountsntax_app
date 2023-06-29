@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:accountsntax/utils/routes.dart';
 
 class OTPVerificationScreen extends StatefulWidget {
-  final int sourceFlag; // Flag indicating the source route: 1 for sign-up, 2 for OTP screen
+  final int
+      sourceFlag; // Flag indicating the source route: 1 for sign-up, 2 for OTP screen
 
-  const OTPVerificationScreen({Key? key, required this.sourceFlag}) : super(key: key);
+  const OTPVerificationScreen({Key? key, required this.sourceFlag})
+      : super(key: key);
 
   @override
   _OTPVerificationScreenState createState() => _OTPVerificationScreenState();
@@ -76,14 +78,16 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
         _otpError = '';
       });
     }
-    return isValid; 
+    return isValid;
   }
 
   void _navigateToNextScreen() {
     if (widget.sourceFlag == 1) {
-      Navigator.pushReplacementNamed(context, loginRoute); // Route to login route if sourceFlag is 1 (sign-up route)
+      Navigator.pushReplacementNamed(context,
+          loginRoute); // Route to login route if sourceFlag is 1 (sign-up route)
     } else if (widget.sourceFlag == 2) {
-      Navigator.pushReplacementNamed(context, changePasswordRoute); // Route to change password route if sourceFlag is 2 (OTP screen route)
+      Navigator.pushReplacementNamed(context,
+          changePasswordRoute); // Route to change password route if sourceFlag is 2 (OTP screen route)
     }
   }
 
@@ -132,8 +136,11 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                   ElevatedButton(
                     onPressed: () {
                       if (_validateFields()) {
-                        final enteredOTP = _otpControllers.map((controller) => controller.text).join();
-                        const correctOTP = '1234'; // Replace with the correct OTP
+                        final enteredOTP = _otpControllers
+                            .map((controller) => controller.text)
+                            .join();
+                        const correctOTP =
+                            '1234'; // Replace with the correct OTP
 
                         if (enteredOTP == correctOTP) {
                           _navigateToNextScreen();
@@ -145,7 +152,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                       }
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.orange,
+                      backgroundColor: const Color(0xFFEA7A40),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
@@ -164,8 +171,8 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                   TextButton(
                     onPressed: _resendTimer == 0
                         ? () {
-                      _resetResendTimer();
-                    }
+                            _resetResendTimer();
+                          }
                         : null,
                     child: Text(
                       _resendTimer == 0
@@ -200,10 +207,10 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
           counterText: '',
           filled: true,
           fillColor: Colors.white,
-           enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            borderSide: const BorderSide(color: Color(0xFF663274)),
+          ),
           contentPadding: const EdgeInsets.all(16.0),
           hintStyle: const TextStyle(color: Colors.grey),
         ),
@@ -219,4 +226,3 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
     );
   }
 }
-

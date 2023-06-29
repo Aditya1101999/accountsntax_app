@@ -345,7 +345,7 @@ class DashboardScreen extends StatelessWidget {
                   // Handle create invoice tap
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: const Color(0xFF663274),
+                  primary: const Color(0xFFEA7A40),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
