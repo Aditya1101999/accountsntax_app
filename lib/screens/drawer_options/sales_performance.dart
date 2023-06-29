@@ -161,6 +161,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                         ),
                       ],
                     ),
+                    const SizedBox(height: 16,),
                     Expanded(
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
