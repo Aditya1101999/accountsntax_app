@@ -169,7 +169,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 _selectedSubTileIndex = -1;
                 _showSubTiles = false;
               });
-              //  code here for the 'MIS' tile
+              Navigator.pushNamed(context, misScreenRoute);
             },
           ),
           ListTile(
@@ -276,12 +276,13 @@ class _CustomDrawerState extends State<CustomDrawer> {
           color: _selectedSubTileIndex == index ? Colors.black : null,
         ),
       ),
-      onTap: onTap ?? () {
-              setState(() {
-                _selectedSubTileIndex = index;
-              });
-              // code here for the subtile
-            },
+      onTap: onTap ??
+          () {
+            setState(() {
+              _selectedSubTileIndex = index;
+            });
+            // code here for the subtile
+          },
     );
   }
 }

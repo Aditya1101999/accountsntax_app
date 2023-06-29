@@ -23,3 +23,5 @@ const String addPartnerDetailsRoute = 'add_partner_info';
 const String viewVaultDetailsRoute = 'view_vault_info';
 const String addVaultDetailsRoute = 'add_vault_info';
 const String editVaultDetailsRoute = 'edit_vault_info';
+const String misScreenRoute = 'mis_info';
+const String salesPerformanceRoute = 'sales_info';
