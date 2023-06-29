@@ -18,7 +18,7 @@ ThemeData buildThemeData() {
       },
     ),
     primaryColor: const Color.fromARGB(255, 215, 147, 154),
-    hintColor: Colors.black,
+    hintColor: Colors.grey,
     scaffoldBackgroundColor:const Color(0xFFF9E8E3),
     appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFF663274),

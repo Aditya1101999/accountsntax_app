@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 class SalesPerformanceScreen extends StatefulWidget {
-  const SalesPerformanceScreen({super.key});
+  const SalesPerformanceScreen({Key? key}) : super(key: key);
 
   @override
   _SalesPerformanceScreenState createState() => _SalesPerformanceScreenState();
@@ -89,33 +89,368 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
           Expanded(
             child: TabBarView(
               controller: _tabController,
-              children: const [
+              children: [
                 // First Tab: Sales Monthly
                 Column(
                   children: [
-                    FilterRow(),
-                    SizedBox(height: 16.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Expanded(
+                          child: FractionallySizedBox(
+                            widthFactor: 0.9,
+                            child: Container(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  hintText: 'Search',
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8.0),
+                        Container(
+                          width: 160.0,
+                          padding:
+                              const EdgeInsets.symmetric(horizontal: 8.0),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: DropdownButtonFormField(
+                            decoration: const InputDecoration(
+                              hintText: 'Today',
+                              border: InputBorder.none,
+                            ),
+                            items: const [
+                              DropdownMenuItem(
+                                  value: 'Today', child: Text('Today')),
+                              DropdownMenuItem(
+                                  value: 'Current Month',
+                                  child: Text('Current Month')),
+                              DropdownMenuItem(
+                                  value: 'Current Quarter',
+                                  child: Text('Current Quarter')),
+                              DropdownMenuItem(
+                                  value: 'Current FY',
+                                  child: Text('Current FY')),
+                              DropdownMenuItem(
+                                  value: 'Previous FY',
+                                  child: Text('Previous FY')),
+                              DropdownMenuItem(
+                                  value: 'Custom Range',
+                                  child: Text('Custom Range')),
+                            ],
+                            onChanged: (value) {
+                              // Handle dropdown value change
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 8.0),
+                        IconButton(
+                          icon: const Icon(Icons.calendar_today),
+                          onPressed: () {
+                            // Handle calendar icon tap
+                          },
+                        ),
+                      ],
+                    ),
+                    Expanded(
+  child: SingleChildScrollView(
+    scrollDirection: Axis.horizontal,
+    child: DataTable(
+      dividerThickness: 1.0,
+      columns: const [
+        DataColumn(label: Text('Month')),
+        DataColumn(label: Text('Total Sales')),
+      ],
+      rows:  [
+        const DataRow(
+          cells: [
+            DataCell(Text('1')),
+            DataCell(Text('1527641.77')),
+          ],
+        ),
+        const DataRow(
+          cells: [
+            DataCell(Text('2')),
+            DataCell(Text('133179.61')),
+          ],
+        ),
+        const DataRow(
+          cells: [
+            DataCell(Text('3')),
+            DataCell(Text('1924268.26')),
+          ],
+        ),
+        const DataRow(
+          cells: [
+            DataCell(Text('4')),
+            DataCell(Text('21500.00')),
+          ],
+        ),
+        const DataRow(
+          cells: [
+            DataCell(Text('5')),
+            DataCell(Text('5450.00')),
+          ],
+        ),
+        DataRow(
+          color: MaterialStateColor.resolveWith(
+              (states) => const Color(0xFFEA7A40)),
+          cells: const [
+            DataCell(
+              Text(
+                'Total',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            DataCell(
+              Text(
+                '3612039.64',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  ),
+),
+
+                    const SizedBox(height: 16.0),
                   ],
                 ),
                 // Second Tab: Sales Item-wise
                 Column(
                   children: [
-                    FilterRow(),
-                    SizedBox(height: 16.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Expanded(
+                          child: FractionallySizedBox(
+                            widthFactor: 0.9,
+                            child: Container(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  hintText: 'Search',
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8.0),
+                        Container(
+                          width: 160.0, 
+                          padding:
+                              const EdgeInsets.symmetric(horizontal: 8.0),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: DropdownButtonFormField(
+                            decoration: const InputDecoration(
+                              hintText: 'Today',
+                              border: InputBorder.none,
+                            ),
+                            items: const [
+                              DropdownMenuItem(
+                                  value: 'Today', child: Text('Today')),
+                              DropdownMenuItem(
+                                  value: 'Current Month',
+                                  child: Text('Current Month')),
+                              DropdownMenuItem(
+                                  value: 'Current Quarter',
+                                  child: Text('Current Quarter')),
+                              DropdownMenuItem(
+                                  value: 'Current FY',
+                                  child: Text('Current FY')),
+                              DropdownMenuItem(
+                                  value: 'Previous FY',
+                                  child: Text('Previous FY')),
+                              DropdownMenuItem(
+                                  value: 'Custom Range',
+                                  child: Text('Custom Range')),
+                            ],
+                            onChanged: (value) {
+                              // Handle dropdown value change
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 8.0),
+                        IconButton(
+                          icon: const Icon(Icons.calendar_today),
+                          onPressed: () {
+                            // Handle calendar icon tap
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16.0),
                   ],
                 ),
                 // Third Tab: Sales By Invoice
                 Column(
                   children: [
-                    FilterRow(),
-                    SizedBox(height: 16.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Expanded(
+                          child: FractionallySizedBox(
+                            widthFactor: 0.9,
+                            child: Container(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  hintText: 'Search',
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8.0),
+                        Container(
+                          width: 160.0, 
+                          padding:
+                              const EdgeInsets.symmetric(horizontal: 8.0),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: DropdownButtonFormField(
+                            decoration: const InputDecoration(
+                              hintText: 'Today',
+                              border: InputBorder.none,
+                            ),
+                            items: const [
+                              DropdownMenuItem(
+                                  value: 'Today', child: Text('Today')),
+                              DropdownMenuItem(
+                                  value: 'Current Month',
+                                  child: Text('Current Month')),
+                              DropdownMenuItem(
+                                  value: 'Current Quarter',
+                                  child: Text('Current Quarter')),
+                              DropdownMenuItem(
+                                  value: 'Current FY',
+                                  child: Text('Current FY')),
+                              DropdownMenuItem(
+                                  value: 'Previous FY',
+                                  child: Text('Previous FY')),
+                              DropdownMenuItem(
+                                  value: 'Custom Range',
+                                  child: Text('Custom Range')),
+                            ],
+                            onChanged: (value) {
+                              // Handle dropdown value change
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 8.0),
+                        IconButton(
+                          icon: const Icon(Icons.calendar_today),
+                          onPressed: () {
+                            // Handle calendar icon tap
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16.0),
                   ],
                 ),
                 // Fourth Tab: Sales Customer-wise
                 Column(
                   children: [
-                    FilterRow(),
-                    SizedBox(height: 16.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Expanded(
+                          child: FractionallySizedBox(
+                            widthFactor: 0.9,
+                            child: Container(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  hintText: 'Search',
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8.0),
+                        Container(
+                          width: 160.0, 
+                          padding:
+                              const EdgeInsets.symmetric(horizontal: 8.0),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: DropdownButtonFormField(
+                            decoration: const InputDecoration(
+                              hintText: 'Today',
+                              border: InputBorder.none,
+                            ),
+                            items: const [
+                              DropdownMenuItem(
+                                  value: 'Today', child: Text('Today')),
+                              DropdownMenuItem(
+                                  value: 'Current Month',
+                                  child: Text('Current Month')),
+                              DropdownMenuItem(
+                                  value: 'Current Quarter',
+                                  child: Text('Current Quarter')),
+                              DropdownMenuItem(
+                                  value: 'Current FY',
+                                  child: Text('Current FY')),
+                              DropdownMenuItem(
+                                  value: 'Previous FY',
+                                  child: Text('Previous FY')),
+                              DropdownMenuItem(
+                                  value: 'Custom Range',
+                                  child: Text('Custom Range')),
+                            ],
+                            onChanged: (value) {
+                              // Handle dropdown value change
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 8.0),
+                        IconButton(
+                          icon: const Icon(Icons.calendar_today),
+                          onPressed: () {
+                            // Handle calendar icon tap
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16.0),
                   ],
                 ),
               ],
@@ -123,74 +458,6 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
           ),
         ],
       ),
-    );
-  }
-}
-
-class FilterRow extends StatelessWidget {
-  const FilterRow({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Expanded(
-          child: FractionallySizedBox(
-            widthFactor: 0.9,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-              child: const TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search',
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
-          ),
-        ),
-        const SizedBox(width: 8.0),
-        Container(
-          width: 160.0, // Adjust the width as needed
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(8.0),
-          ),
-          child: DropdownButtonFormField(
-            decoration: const InputDecoration(
-              hintText: 'Today',
-              border: InputBorder.none,
-            ),
-            items: const [
-              DropdownMenuItem(value: 'Today', child: Text('Today')),
-              DropdownMenuItem(
-                  value: 'Current Month', child: Text('Current Month')),
-              DropdownMenuItem(
-                  value: 'Current Quarter', child: Text('Current Quarter')),
-              DropdownMenuItem(value: 'Current FY', child: Text('Current FY')),
-              DropdownMenuItem(
-                  value: 'Previous FY', child: Text('Previous FY')),
-              DropdownMenuItem(
-                  value: 'Custom Range', child: Text('Custom Range')),
-            ],
-            onChanged: (value) {
-              // Handle dropdown value change
-            },
-          ),
-        ),
-        const SizedBox(width: 8.0),
-        IconButton(
-          icon: const Icon(Icons.calendar_today),
-          onPressed: () {
-            // Handle calendar icon tap
-          },
-        ),
-      ],
     );
   }
 }
