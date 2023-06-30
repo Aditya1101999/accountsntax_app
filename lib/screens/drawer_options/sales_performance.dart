@@ -161,116 +161,209 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                         ),
                       ],
                     ),
-                    const SizedBox(height: 16,),
+                    const SizedBox(
+                      height: 16,
+                    ),
                     Expanded(
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: SizedBox(
-                          width: MediaQuery.of(context).size.width,
+                          width: MediaQuery.of(context).size.width * 0.97,
                           child: SingleChildScrollView(
-                            child: DataTable(
-                              dividerThickness: 1.0,
-                              columns: const [
-                                DataColumn(label: Text('Month')),
-                                DataColumn(label: Text('Total Sales')),
-                                DataColumn(label: Text('No. of Orders')),
-                              ],
-                              rows: [
-                                const DataRow(
-                                  cells: [
-                                    DataCell(Text('1')),
-                                    DataCell(Text('1527641.77')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                const DataRow(
-                                  cells: [
-                                    DataCell(Text('2')),
-                                    DataCell(Text('133179.61')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                const DataRow(
-                                  cells: [
-                                    DataCell(Text('3')),
-                                    DataCell(Text('1924268.26')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                const DataRow(
-                                  cells: [
-                                    DataCell(Text('4')),
-                                    DataCell(Text('21500.00')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                const DataRow(
-                                  cells: [
-                                    DataCell(Text('5')),
-                                    DataCell(Text('5450.00')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                 const DataRow(
-                                  cells: [
-                                    DataCell(Text('6')),
-                                    DataCell(Text('1527641.77')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                const DataRow(
-                                  cells: [
-                                    DataCell(Text('7')),
-                                    DataCell(Text('133179.61')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                const DataRow(
-                                  cells: [
-                                    DataCell(Text('8')),
-                                    DataCell(Text('1924268.26')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                const DataRow(
-                                  cells: [
-                                    DataCell(Text('9')),
-                                    DataCell(Text('21500.00')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                const DataRow(
-                                  cells: [
-                                    DataCell(Text('10')),
-                                    DataCell(Text('5450.00')),
-                                    DataCell(Text("74"))
-                                  ],
-                                ),
-                                DataRow(
-                                  color: MaterialStateColor.resolveWith(
-                                      (states) => const Color(0xFFEA7A40)),
-                                  cells: const [
-                                    DataCell(
-                                      Text(
-                                        'Total',
-                                        style: TextStyle(color: Colors.white),
+                            child: Theme(
+                              data: Theme.of(context)
+                                  .copyWith(dividerColor: const Color(0xFFEA7B0C)),
+                              child: DataTable(
+                                dividerThickness: 1.0,
+                                columns: const [
+                                  DataColumn(label: Text('Month')),
+                                  DataColumn(label: Text('Total Sales')),
+                                  DataColumn(label: Text('No. of Orders')),
+                                ],
+                                rows: [
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for jan
+                                        },
+                                        child: const Text('  Jan'),
+                                      )),
+                                      const DataCell(Text('1527641.77')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                          onTap: () {
+                                            //handle click for feb
+                                          },
+                                          child: const Text('  Feb'))),
+                                      const DataCell(Text('133179.61')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for Mar
+                                        },
+                                        child: const Text('  Mar'))),
+                                      const DataCell(Text('1924268.26')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for Apr
+                                        },
+                                        child: const Text('  Apr'))),
+                                      const DataCell(Text('21500.00')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for May
+                                        },
+                                        child: const Text('  May'))),
+                                      const DataCell(Text('5450.00')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for Jun
+                                        },
+                                        child: const Text('  Jun'))),
+                                      const DataCell(Text('1527641.77')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for Jul
+                                        },
+                                        child: const Text('  Jul'))),
+                                      const DataCell(Text('133179.61')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for Aug
+                                        },
+                                        child: const Text('  Aug'))),
+                                      const DataCell(Text('1924268.26')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for Sep
+                                        },
+                                        child: const Text('  Sep'))),
+                                      const DataCell(Text('21500.00')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for Oct
+                                        },
+                                        child: const Text('  Oct'))),
+                                      const DataCell(Text('5450.00')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for Nov
+                                        },
+                                        child: const Text('  Nov'))),
+                                      const DataCell(Text('5450.00')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle click for Dec
+                                        },
+                                        child: const Text('  Dec'))),
+                                      const DataCell(Text('5450.00')),
+                                      const DataCell(Text("        74"))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => const Color(0xFFEA7A40)),
+                                    cells: const [
+                                      DataCell(
+                                        Text(
+                                          'Total',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
                                       ),
-                                    ),
-                                    DataCell(
-                                      Text(
-                                        '3612039.64',
-                                        style: TextStyle(color: Colors.white),
+                                      DataCell(
+                                        Text(
+                                          '3612039.64',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
                                       ),
-                                    ),
-                                    DataCell(
-                                      Text(
-                                        '',
-                                        style: TextStyle(color: Colors.white),
+                                      DataCell(
+                                        Text(
+                                          '',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
