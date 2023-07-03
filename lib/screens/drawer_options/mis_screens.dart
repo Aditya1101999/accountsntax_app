@@ -245,8 +245,9 @@ class MISScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.all(16.0),
+      floatingActionButton: 
+      Padding(
+        padding: const EdgeInsets.all(1.0),
         child: FloatingActionButton.extended(
           onPressed: () {
             // Handle create entry button tap

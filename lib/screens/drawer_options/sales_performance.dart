@@ -171,8 +171,8 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                           width: MediaQuery.of(context).size.width * 0.97,
                           child: SingleChildScrollView(
                             child: Theme(
-                              data: Theme.of(context)
-                                  .copyWith(dividerColor: const Color(0xFFEA7B0C)),
+                              data: Theme.of(context).copyWith(
+                                  dividerColor: const Color(0xFFEA7B0C)),
                               child: DataTable(
                                 dividerThickness: 1.0,
                                 columns: const [
@@ -185,157 +185,232 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
+                                      DataCell(
+                                        const Text('  Jan'),
+                                      ),
+                                      const DataCell(Text(' 1527641.77')),
                                       DataCell(GestureDetector(
                                         onTap: () {
-                                          //handle tap for jan
+                                          //handle tap for jan orders
                                         },
-                                        child: const Text('  Jan'),
-                                      )),
-                                      const DataCell(Text('1527641.77')),
-                                      const DataCell(Text("        74"))
+                                        child: Text(
+                                          "        74",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
                                     ],
                                   ),
                                   DataRow(
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
+                                      DataCell(const Text('  Feb')),
+                                      const DataCell(Text('   133179.61')),
                                       DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for feb orders
+                                        },
+                                        child: Text(
+                                          "        64",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('  Mar')),
+                                      const DataCell(Text('1924268.26')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for mar orders
+                                        },
+                                        child: Text(
+                                          "        67",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('  Apr')),
+                                      const DataCell(Text('    21500.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for apr orders
+                                        },
+                                        child: Text(
+                                          "        16",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('  May')),
+                                      const DataCell(Text(' 423550.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for may orders
+                                        },
+                                        child: Text(
+                                          "        83",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('  Jun')),
+                                      const DataCell(Text('1527641.77')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for jun orders
+                                        },
+                                        child: Text(
+                                          "        104",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('  Jul')),
+                                      const DataCell(Text('  133179.61')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for jul orders
+                                        },
+                                        child: Text(
+                                          "        31",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('  Aug')),
+                                      const DataCell(Text(' 122468.26')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for aug orders
+                                        },
+                                        child: Text(
+                                          "        69",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('  Sep')),
+                                      const DataCell(Text('   21500.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for sep orders
+                                        },
+                                        child: Text(
+                                          "        51",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('  Oct')),
+                                      const DataCell(Text('   15450.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for oct orders
+                                        },
+                                        child: Text(
+                                          "        43",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('  Nov')),
+                                      const DataCell(Text('    5450.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for nov orders
+                                        },
+                                        child: Text(
+                                          "         4",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('  Dec')),
+                                      const DataCell(Text('    5450.00')),
+                                      DataCell(
+                                        GestureDetector(
                                           onTap: () {
-                                            //handle click for feb
+                                            //handle tap for dec orders
                                           },
-                                          child: const Text('  Feb'))),
-                                      const DataCell(Text('133179.61')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for Mar
-                                        },
-                                        child: const Text('  Mar'))),
-                                      const DataCell(Text('1924268.26')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for Apr
-                                        },
-                                        child: const Text('  Apr'))),
-                                      const DataCell(Text('21500.00')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for May
-                                        },
-                                        child: const Text('  May'))),
-                                      const DataCell(Text('5450.00')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for Jun
-                                        },
-                                        child: const Text('  Jun'))),
-                                      const DataCell(Text('1527641.77')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for Jul
-                                        },
-                                        child: const Text('  Jul'))),
-                                      const DataCell(Text('133179.61')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for Aug
-                                        },
-                                        child: const Text('  Aug'))),
-                                      const DataCell(Text('1924268.26')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for Sep
-                                        },
-                                        child: const Text('  Sep'))),
-                                      const DataCell(Text('21500.00')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for Oct
-                                        },
-                                        child: const Text('  Oct'))),
-                                      const DataCell(Text('5450.00')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for Nov
-                                        },
-                                        child: const Text('  Nov'))),
-                                      const DataCell(Text('5450.00')),
-                                      const DataCell(Text("        74"))
-                                    ],
-                                  ),
-                                  DataRow(
-                                    color: MaterialStateColor.resolveWith(
-                                        (states) => Colors.white),
-                                    cells: [
-                                      DataCell(GestureDetector(
-                                        onTap: () {
-                                          //handle click for Dec
-                                        },
-                                        child: const Text('  Dec'))),
-                                      const DataCell(Text('5450.00')),
-                                      const DataCell(Text("        74"))
+                                          child: Text(
+                                            "         4",
+                                            style: TextStyle(
+                                              color: Color(0xFFEA7A40),
+                                            ),
+                                          ),
+                                        ),
+                                      )
                                     ],
                                   ),
                                   DataRow(
@@ -443,6 +518,282 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                         ),
                       ],
                     ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.97,
+                          child: SingleChildScrollView(
+                            child: Theme(
+                              data: Theme.of(context).copyWith(
+                                  dividerColor: const Color(0xFFEA7B0C)),
+                              child: DataTable(
+                                dividerThickness: 1.0,
+                                columns: const [
+                                  DataColumn(label: Text('Item')),
+                                  DataColumn(label: Text('Total Sales')),
+                                  DataColumn(label: Text('Quantity')),
+                                ],
+                                rows: [
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(
+                                        GestureDetector(
+                                          onTap: () {
+                                            //handle item tap
+                                          },
+                                          child: const Text('Item 1',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),
+                                            ),),
+                                        ),
+                                      ),
+                                      const DataCell(Text('1527641.77')),
+                                      DataCell(Text(
+                                          "  -400",
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(GestureDetector(
+                                        onTap: ()
+                                        {
+                                          //handle item tap
+                                        },
+                                        child: const Text('Item 2'
+                                        ,
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),)),
+                                      )),
+                                      const DataCell(Text('  133179.61')),
+                                      DataCell( Text(
+                                          "      0",
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('Item 3',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text('192428.26')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for mar orders
+                                        },
+                                        child: Text(
+                                          " -1200"
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('Item 4',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text('   21500.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for apr orders
+                                        },
+                                        child: Text(
+                                          "  -800",
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('Item 5',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text('423550.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for may orders
+                                        },
+                                        child: Text(
+                                          "  -200",
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('Item 6',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text('152741.77')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for jan orders
+                                        },
+                                        child: Text(
+                                          "  -300"
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('Item 7',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text(' 133179.61')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for jul orders
+                                        },
+                                        child: Text(
+                                          " -1200"
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('Item 8',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text('122468.26')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for aug orders
+                                        },
+                                        child: Text(
+                                          " -1300"
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('Item 9',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text('  21500.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for sep orders
+                                        },
+                                        child: Text(
+                                          " -1600"
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('Item 10',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text('  15450.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for oct orders
+                                        },
+                                        child: Text(
+                                          "     0",
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('Item 11',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text('    5450.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for nov orders
+                                        },
+                                        child: Text(
+                                          "  -500",
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('Item 12',
+                                          style: TextStyle(
+                                              color: Color(0xFFEA7A40),))),
+                                      const DataCell(Text('    5450.00')),
+                                      DataCell(
+                                        GestureDetector(
+                                          onTap: () {
+                                            //handle tap for dec orders
+                                          },
+                                          child: Text(
+                                            "-2400"
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => const Color(0xFFEA7A40)),
+                                    cells: const [
+                                      DataCell(
+                                        Text(
+                                          'Total',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                      DataCell(
+                                        Text(
+                                          '3612039.64',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                      DataCell(
+                                        Text(
+                                          '',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                     const SizedBox(height: 16.0),
                   ],
                 ),
@@ -517,6 +868,283 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                         ),
                       ],
                     ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.97,
+                          child: SingleChildScrollView(
+                            child: Theme(
+                              data: Theme.of(context).copyWith(
+                                  dividerColor: const Color(0xFFEA7B0C)),
+                              child: DataTable(
+                                dividerThickness: 1.0,
+                                columns: const [
+                                  DataColumn(label: Text('Invoice No.')),
+                                  DataColumn(label: Text('Party Name')),
+                                  DataColumn(label: Text('  Sales')),
+                                ],
+                                rows: [
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(
+                                        const Text('    58'),
+                                      ),
+                                      const DataCell(Text('   Style Co.')),
+                                      DataCell(
+                                        Text(
+                                          "15271.77",
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('     1')),
+                                      const DataCell(Text('   Filigree')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for feb orders
+                                        },
+                                        child: Text(
+                                          "13319.61",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('    45')),
+                                      const DataCell(Text('Khushal JW')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for mar orders
+                                        },
+                                        child: Text(
+                                          "11928.26",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('   145')),
+                                      const DataCell(Text('Gupta Store')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for apr orders
+                                        },
+                                        child: Text(
+                                          " 9500.00",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('    23')),
+                                      const DataCell(Text('Go Fashion')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for may orders
+                                        },
+                                        child: Text(
+                                          "13551.00",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('    76')),
+                                      const DataCell(Text('Shri Ganesh')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for jan orders
+                                        },
+                                        child: Text(
+                                          "15241.77",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('   104')),
+                                      const DataCell(Text('La Modish')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for jul orders
+                                        },
+                                        child: Text(
+                                          "13379.61",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('    33')),
+                                      const DataCell(Text('Riddhi JW')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for aug orders
+                                        },
+                                        child: Text(
+                                          "12148.26",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('    21')),
+                                      const DataCell(Text('Basant JW')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for sep orders
+                                        },
+                                        child: Text(
+                                          "21501.00",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('   156')),
+                                      const DataCell(Text('Radhika JW')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for oct orders
+                                        },
+                                        child: Text(
+                                          "15150.00",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text('    19')),
+                                      const DataCell(Text('La Modish')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for nov orders
+                                        },
+                                        child: Text(
+                                          " 5450.00",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text('     3')),
+                                      const DataCell(Text('Go Gloriya')),
+                                      DataCell(
+                                        GestureDetector(
+                                          onTap: () {
+                                            //handle tap for dec orders
+                                          },
+                                          child: Text(
+                                            " 5450.00",
+                                            style: TextStyle(
+                                              color: Color(0xFFEA7A40),
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => const Color(0xFFEA7A40)),
+                                    cells: const [
+                                      DataCell(
+                                        Text(
+                                          'Total',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                      DataCell(
+                                        Text(
+                                          '',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                      DataCell(
+                                        Text(
+                                          '98111.64',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                     const SizedBox(height: 16.0),
                   ],
                 ),
@@ -590,6 +1218,289 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                           },
                         ),
                       ],
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.97,
+                          child: SingleChildScrollView(
+                            child: Theme(
+                              data: Theme.of(context).copyWith(
+                                  dividerColor: const Color(0xFFEA7B0C)),
+                              child: DataTable(
+                                dividerThickness: 1.0,
+                                columns: const [
+                                  DataColumn(label: Text('Party Name')),
+                                  DataColumn(label: Text('   Amount')),
+                                  DataColumn(label: Text('Orders')),
+                                ],
+                                rows: [
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(
+                                        const Text(' Filigree JW'),
+                                      ),
+                                      const DataCell(Text(' 1527641.77')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "    74",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text(' Kushal JW')),
+                                      const DataCell(Text('   133179.61')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "    64",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text(' La Modish')),
+                                      const DataCell(Text('1924268.26')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "    67",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text(' Gupta Store')),
+                                      const DataCell(Text('    21500.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "    16",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text(' Go Fashion')),
+                                      const DataCell(Text(' 423550.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "    83",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text(' Shagun JW')),
+                                      const DataCell(Text('1527641.77')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "   104",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text(' Radhika JW')),
+                                      const DataCell(Text('  133179.61')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "    31",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text(' Basant JW')),
+                                      const DataCell(Text(' 122468.26')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "    69",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text(' Mani JW')),
+                                      const DataCell(Text('   21500.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "    51",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text(' Radhe JW')),
+                                      const DataCell(Text('   15450.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "    43",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(Text(' Goyal Stores')),
+                                      const DataCell(Text('    5450.00')),
+                                      DataCell(GestureDetector(
+                                        onTap: () {
+                                          //handle tap for orders
+                                        },
+                                        child: Text(
+                                          "     4",
+                                          style: TextStyle(
+                                            color: Color(0xFFEA7A40),
+                                          ),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => Colors.white),
+                                    cells: [
+                                      DataCell(const Text(' Gun Fashion')),
+                                      const DataCell(Text('    5450.00')),
+                                      DataCell(
+                                        GestureDetector(
+                                          onTap: () {
+                                            //handle tap for orders
+                                          },
+                                          child: Text(
+                                            "    34",
+                                            style: TextStyle(
+                                              color: Color(0xFFEA7A40),
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  DataRow(
+                                    color: MaterialStateColor.resolveWith(
+                                        (states) => const Color(0xFFEA7A40)),
+                                    cells: const [
+                                      DataCell(
+                                        Text(
+                                          'Total',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                      DataCell(
+                                        Text(
+                                          '3612039.64',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                      DataCell(
+                                        Text(
+                                          '',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                     const SizedBox(height: 16.0),
                   ],

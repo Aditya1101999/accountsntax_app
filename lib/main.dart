@@ -11,7 +11,7 @@ import 'package:accountsntax/screens/basic_details_operations/view_business_deta
 import 'package:accountsntax/screens/change_password.dart';
 import 'package:accountsntax/screens/company_profile_screen.dart';
 import 'package:accountsntax/screens/drawer_options/mis_screens.dart';
-import 'package:accountsntax/screens/drawer_options/sales_performance.dart';
+import 'package:accountsntax/screens/drawer_options/sales_demo.dart';
 import 'package:accountsntax/screens/otp_screen.dart';
 import 'package:accountsntax/screens/partner_operations/add_partner_screen.dart';
 import 'package:accountsntax/screens/partner_operations/edit_partner_screen.dart';
@@ -70,7 +70,7 @@ class AccountsntaxApp extends StatelessWidget {
         addVaultDetailsRoute:(context) => const AddVaultDetailsScreen(),
         editVaultDetailsRoute:(context)=>const EditVaultDetailsScreen(),
         misScreenRoute:(context) => const MISScreen(),
-        salesPerformanceRoute:(context) => const SalesPerformanceScreen(),
+        salesPerformanceRoute:(context) => const SalesDemo(),
         },
     );
   }
