@@ -185,15 +185,15 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(
-                                        const Text('  Jan'),
+                                      const DataCell(
+                                        Text('  Jan'),
                                       ),
                                       const DataCell(Text(' 1527641.77')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for jan orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        74",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -206,13 +206,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('  Feb')),
+                                      const DataCell(Text('  Feb')),
                                       const DataCell(Text('   133179.61')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for feb orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        64",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -225,13 +225,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('  Mar')),
+                                      const DataCell(Text('  Mar')),
                                       const DataCell(Text('1924268.26')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for mar orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        67",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -244,13 +244,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('  Apr')),
+                                      const DataCell(Text('  Apr')),
                                       const DataCell(Text('    21500.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for apr orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        16",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -263,13 +263,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('  May')),
+                                      const DataCell(Text('  May')),
                                       const DataCell(Text(' 423550.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for may orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        83",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -282,13 +282,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('  Jun')),
+                                      const DataCell(Text('  Jun')),
                                       const DataCell(Text('1527641.77')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for jun orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        104",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -301,13 +301,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('  Jul')),
+                                      const DataCell(Text('  Jul')),
                                       const DataCell(Text('  133179.61')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for jul orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        31",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -320,13 +320,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('  Aug')),
+                                      const DataCell(Text('  Aug')),
                                       const DataCell(Text(' 122468.26')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for aug orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        69",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -339,13 +339,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('  Sep')),
+                                      const DataCell(Text('  Sep')),
                                       const DataCell(Text('   21500.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for sep orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        51",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -358,13 +358,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('  Oct')),
+                                      const DataCell(Text('  Oct')),
                                       const DataCell(Text('   15450.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for oct orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "        43",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -377,13 +377,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('  Nov')),
+                                      const DataCell(Text('  Nov')),
                                       const DataCell(Text('    5450.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for nov orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "         4",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -396,14 +396,14 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('  Dec')),
+                                      const DataCell(Text('  Dec')),
                                       const DataCell(Text('    5450.00')),
                                       DataCell(
                                         GestureDetector(
                                           onTap: () {
                                             //handle tap for dec orders
                                           },
-                                          child: Text(
+                                          child: const Text(
                                             "         4",
                                             style: TextStyle(
                                               color: Color(0xFFEA7A40),
@@ -554,7 +554,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         ),
                                       ),
                                       const DataCell(Text('1527641.77')),
-                                      DataCell(Text(
+                                      const DataCell(Text(
                                           "  -400",
                                         ),
                                       )
@@ -575,7 +575,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                               color: Color(0xFFEA7A40),)),
                                       )),
                                       const DataCell(Text('  133179.61')),
-                                      DataCell( Text(
+                                      const DataCell( Text(
                                           "      0",
                                         ),
                                       )
@@ -585,7 +585,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('Item 3',
+                                      const DataCell(Text('Item 3',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text('192428.26')),
@@ -593,7 +593,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         onTap: () {
                                           //handle tap for mar orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           " -1200"
                                         ),
                                       ))
@@ -603,7 +603,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('Item 4',
+                                      const DataCell(Text('Item 4',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text('   21500.00')),
@@ -611,7 +611,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         onTap: () {
                                           //handle tap for apr orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "  -800",
                                         ),
                                       ))
@@ -621,7 +621,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('Item 5',
+                                      const DataCell(Text('Item 5',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text('423550.00')),
@@ -629,7 +629,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         onTap: () {
                                           //handle tap for may orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "  -200",
                                         ),
                                       ))
@@ -639,7 +639,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('Item 6',
+                                      const DataCell(Text('Item 6',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text('152741.77')),
@@ -647,7 +647,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         onTap: () {
                                           //handle tap for jan orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "  -300"
                                         ),
                                       ))
@@ -657,7 +657,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('Item 7',
+                                      const DataCell(Text('Item 7',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text(' 133179.61')),
@@ -665,7 +665,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         onTap: () {
                                           //handle tap for jul orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           " -1200"
                                         ),
                                       ))
@@ -675,7 +675,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('Item 8',
+                                      const DataCell(Text('Item 8',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text('122468.26')),
@@ -683,7 +683,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         onTap: () {
                                           //handle tap for aug orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           " -1300"
                                         ),
                                       ))
@@ -693,7 +693,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('Item 9',
+                                      const DataCell(Text('Item 9',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text('  21500.00')),
@@ -701,7 +701,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         onTap: () {
                                           //handle tap for sep orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           " -1600"
                                         ),
                                       ))
@@ -711,7 +711,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('Item 10',
+                                      const DataCell(Text('Item 10',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text('  15450.00')),
@@ -719,7 +719,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         onTap: () {
                                           //handle tap for oct orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "     0",
                                         ),
                                       ))
@@ -729,7 +729,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('Item 11',
+                                      const DataCell(Text('Item 11',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text('    5450.00')),
@@ -737,7 +737,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                         onTap: () {
                                           //handle tap for nov orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "  -500",
                                         ),
                                       ))
@@ -747,7 +747,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('Item 12',
+                                      const DataCell(Text('Item 12',
                                           style: TextStyle(
                                               color: Color(0xFFEA7A40),))),
                                       const DataCell(Text('    5450.00')),
@@ -756,7 +756,7 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                           onTap: () {
                                             //handle tap for dec orders
                                           },
-                                          child: Text(
+                                          child: const Text(
                                             "-2400"
                                           ),
                                         ),
@@ -891,11 +891,11 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                   DataRow(
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
-                                    cells: [
+                                    cells: const [
                                       DataCell(
-                                        const Text('    58'),
+                                        Text('    58'),
                                       ),
-                                      const DataCell(Text('   Style Co.')),
+                                      DataCell(Text('   Style Co.')),
                                       DataCell(
                                         Text(
                                           "15271.77",
@@ -907,13 +907,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('     1')),
+                                      const DataCell(Text('     1')),
                                       const DataCell(Text('   Filigree')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for feb orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "13319.61",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -926,13 +926,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('    45')),
+                                      const DataCell(Text('    45')),
                                       const DataCell(Text('Khushal JW')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for mar orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "11928.26",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -945,13 +945,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('   145')),
+                                      const DataCell(Text('   145')),
                                       const DataCell(Text('Gupta Store')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for apr orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           " 9500.00",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -964,13 +964,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('    23')),
+                                      const DataCell(Text('    23')),
                                       const DataCell(Text('Go Fashion')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for may orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "13551.00",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -983,13 +983,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('    76')),
+                                      const DataCell(Text('    76')),
                                       const DataCell(Text('Shri Ganesh')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for jan orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "15241.77",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1002,13 +1002,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('   104')),
+                                      const DataCell(Text('   104')),
                                       const DataCell(Text('La Modish')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for jul orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "13379.61",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1021,13 +1021,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('    33')),
+                                      const DataCell(Text('    33')),
                                       const DataCell(Text('Riddhi JW')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for aug orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "12148.26",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1040,13 +1040,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('    21')),
+                                      const DataCell(Text('    21')),
                                       const DataCell(Text('Basant JW')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for sep orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "21501.00",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1059,13 +1059,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('   156')),
+                                      const DataCell(Text('   156')),
                                       const DataCell(Text('Radhika JW')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for oct orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "15150.00",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1078,13 +1078,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text('    19')),
+                                      const DataCell(Text('    19')),
                                       const DataCell(Text('La Modish')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for nov orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           " 5450.00",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1097,14 +1097,14 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text('     3')),
+                                      const DataCell(Text('     3')),
                                       const DataCell(Text('Go Gloriya')),
                                       DataCell(
                                         GestureDetector(
                                           onTap: () {
                                             //handle tap for dec orders
                                           },
-                                          child: Text(
+                                          child: const Text(
                                             " 5450.00",
                                             style: TextStyle(
                                               color: Color(0xFFEA7A40),
@@ -1243,15 +1243,15 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(
-                                        const Text(' Filigree JW'),
+                                      const DataCell(
+                                        Text(' Filigree JW'),
                                       ),
                                       const DataCell(Text(' 1527641.77')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "    74",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1264,13 +1264,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text(' Kushal JW')),
+                                      const DataCell(Text(' Kushal JW')),
                                       const DataCell(Text('   133179.61')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "    64",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1283,13 +1283,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text(' La Modish')),
+                                      const DataCell(Text(' La Modish')),
                                       const DataCell(Text('1924268.26')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "    67",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1302,13 +1302,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text(' Gupta Store')),
+                                      const DataCell(Text(' Gupta Store')),
                                       const DataCell(Text('    21500.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "    16",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1321,13 +1321,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text(' Go Fashion')),
+                                      const DataCell(Text(' Go Fashion')),
                                       const DataCell(Text(' 423550.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "    83",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1340,13 +1340,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text(' Shagun JW')),
+                                      const DataCell(Text(' Shagun JW')),
                                       const DataCell(Text('1527641.77')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "   104",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1359,13 +1359,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text(' Radhika JW')),
+                                      const DataCell(Text(' Radhika JW')),
                                       const DataCell(Text('  133179.61')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "    31",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1378,13 +1378,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text(' Basant JW')),
+                                      const DataCell(Text(' Basant JW')),
                                       const DataCell(Text(' 122468.26')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "    69",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1397,13 +1397,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text(' Mani JW')),
+                                      const DataCell(Text(' Mani JW')),
                                       const DataCell(Text('   21500.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "    51",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1416,13 +1416,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text(' Radhe JW')),
+                                      const DataCell(Text(' Radhe JW')),
                                       const DataCell(Text('   15450.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "    43",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1435,13 +1435,13 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(Text(' Goyal Stores')),
+                                      const DataCell(Text(' Goyal Stores')),
                                       const DataCell(Text('    5450.00')),
                                       DataCell(GestureDetector(
                                         onTap: () {
                                           //handle tap for orders
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "     4",
                                           style: TextStyle(
                                             color: Color(0xFFEA7A40),
@@ -1454,14 +1454,14 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
                                     color: MaterialStateColor.resolveWith(
                                         (states) => Colors.white),
                                     cells: [
-                                      DataCell(const Text(' Gun Fashion')),
+                                      const DataCell(Text(' Gun Fashion')),
                                       const DataCell(Text('    5450.00')),
                                       DataCell(
                                         GestureDetector(
                                           onTap: () {
                                             //handle tap for orders
                                           },
-                                          child: Text(
+                                          child: const Text(
                                             "    34",
                                             style: TextStyle(
                                               color: Color(0xFFEA7A40),
