@@ -1,5 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:accountsntax/screens/drawer_options/sales_operations/invoice_screen.dart';
 import 'package:flutter/material.dart';
 
 class SalesDescription extends StatefulWidget {
@@ -737,7 +738,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           DataCell(
                             GestureDetector(
                               onTap: () {
-                                //handle invoice tap
+                                Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '58'),
+        ),
+      );
                               },
                               child: const Text('    58',
                                   style: TextStyle(color: Color(0xFFEA7A40))),
@@ -757,7 +763,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                              Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '1'),
+        ),
+      );
                             },
                             child: const Text('     1',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -776,7 +787,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                             Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '45'),
+        ),
+      );
                             },
                             child: const Text('    45',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -793,7 +809,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                              Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '145'),
+        ),
+      );
                             },
                             child: const Text('   145',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -810,7 +831,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                             Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '23'),
+        ),
+      );
                             },
                             child: const Text('    23',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -827,7 +853,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                             Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '76'),
+        ),
+      );
                             },
                             child: const Text('    76',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -844,7 +875,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                              Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '104'),
+        ),
+      );
                             },
                             child: const Text('   104',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -861,7 +897,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                              Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '33'),
+        ),
+      );
                             },
                             child: const Text('    33',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -878,7 +919,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                              Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '21'),
+        ),
+      );
                             },
                             child: const Text('    21',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -895,7 +941,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                              Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '156'),
+        ),
+      );
                             },
                             child: const Text('   156',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -912,7 +963,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                             Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '19'),
+        ),
+      );
                             },
                             child: const Text('    19',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -929,7 +985,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle invoice tap
+                              Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const InvoiceScreen(textValue: '3'),
+        ),
+      );
                             },
                             child: const Text('     3',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
