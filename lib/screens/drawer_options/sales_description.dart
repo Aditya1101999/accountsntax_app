@@ -42,7 +42,8 @@ class _SalesDescriptionState extends State<SalesDescription> {
                 ),
                 const Spacer(),
                 IconButton(
-                  icon: const Icon(Icons.calendar_today, color: Color(0xFF663274)),
+                  icon: const Icon(Icons.calendar_today,
+                      color: Color(0xFF663274)),
                   onPressed: () {
                     // Handle calendar icon tap
                   },
@@ -66,21 +67,21 @@ class _SalesDescriptionState extends State<SalesDescription> {
                 items: const [
                   DropdownMenuItem(
                     value: 'Option 1',
-                    child: Text('                               Monthly',
+                    child: Text('                               Month Wise',
                         style: TextStyle(
                           color: Color(0xFFEA7A40),
                         )),
                   ),
                   DropdownMenuItem(
                     value: 'Option 2',
-                    child: Text('                               Item-Wise',
+                    child: Text('                               Item Wise',
                         style: TextStyle(
                           color: Color(0xFFEA7A40),
                         )),
                   ),
                   DropdownMenuItem(
                     value: 'Option 3',
-                    child: Text('                               By Invoice',
+                    child: Text('                                Invoice Wise',
                         style: TextStyle(
                           color: Color(0xFFEA7A40),
                         )),
@@ -106,7 +107,13 @@ class _SalesDescriptionState extends State<SalesDescription> {
               color: Colors.white,
               child: const Row(
                 children: [
-                  Icon(Icons.search),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.search,
+                    color: Color(0xFF663274),
+                  ),
                   SizedBox(width: 8.0),
                   Expanded(
                     child: TextField(
@@ -151,18 +158,21 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         color: MaterialStateColor.resolveWith(
                             (states) => Colors.white),
                         cells: [
-                          DataCell( GestureDetector(
+                          DataCell(GestureDetector(
                             onTap: () {
                               //handle month tap
                             },
-                            child: const Text('  Jan',
-                            style: TextStyle(color: Color(0xFFEA7A40)),),
+                            child: const Text(
+                              '  Jan',
+                              style: TextStyle(color: Color(0xFFEA7A40)),
+                            ),
                           )),
                           const DataCell(Text(' 1527641.77')),
-                          const DataCell( Text(
-                                "        74",
-                              ),
+                          const DataCell(
+                            Text(
+                              "        74",
                             ),
+                          ),
                         ],
                       ),
                       DataRow(
@@ -174,13 +184,13 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Feb',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
-                          )
-                          ),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
+                          )),
                           const DataCell(Text('   133179.61')),
-                          const DataCell( Text(
-                                "        64",
-                              ),
+                          const DataCell(
+                            Text(
+                              "        64",
+                            ),
                           ),
                         ],
                       ),
@@ -193,10 +203,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Mar',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('1924268.26')),
-                          const DataCell(Text(
+                          const DataCell(
+                            Text(
                               "        67",
                             ),
                           )
@@ -211,10 +222,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Apr',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('    21500.00')),
-                          const DataCell(Text(
+                          const DataCell(
+                            Text(
                               "        16",
                             ),
                           )
@@ -229,10 +241,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  May',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text(' 423550.00')),
-                          const DataCell(Text(
+                          const DataCell(
+                            Text(
                               "        83",
                             ),
                           )
@@ -247,7 +260,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Jun',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('1527641.77')),
                           const DataCell(
@@ -266,11 +279,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Jul',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('  133179.61')),
                           const DataCell(
-                             Text(
+                            Text(
                               "        31",
                             ),
                           )
@@ -285,10 +298,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Aug',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text(' 122468.26')),
-                          const DataCell( Text(
+                          const DataCell(
+                            Text(
                               "        69",
                             ),
                           )
@@ -303,7 +317,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Sep',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   21500.00')),
                           DataCell(GestureDetector(
@@ -325,11 +339,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Oct',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   15450.00')),
                           const DataCell(Text(
-                              "        43",
+                            "        43",
                           ))
                         ],
                       ),
@@ -342,11 +356,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Nov',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('    5450.00')),
                           const DataCell(Text(
-                              "         4",
+                            "         4",
                           ))
                         ],
                       ),
@@ -359,12 +373,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Dec',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('    5450.00')),
                           const DataCell(
-                             Text(
-                                "         4",
+                            Text(
+                              "         4",
                             ),
                           )
                         ],
@@ -475,15 +489,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 3',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text('192428.26')),
-                          const DataCell( Text(" -1200"),
+                          const DataCell(
+                            Text(" -1200"),
                           )
                         ],
                       ),
@@ -493,15 +508,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 4',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text('   21500.00')),
-                          const DataCell( Text(
+                          const DataCell(
+                            Text(
                               "  -800",
                             ),
                           )
@@ -513,15 +529,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 5',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text('423550.00')),
-                          const DataCell( Text(
+                          const DataCell(
+                            Text(
                               "  -200",
                             ),
                           )
@@ -533,15 +550,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 6',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text('152741.77')),
-                          const DataCell(Text("  -300"),
+                          const DataCell(
+                            Text("  -300"),
                           )
                         ],
                       ),
@@ -551,15 +569,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 7',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text(' 133179.61')),
-                          const DataCell( Text(" -1200"),
+                          const DataCell(
+                            Text(" -1200"),
                           )
                         ],
                       ),
@@ -569,15 +588,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 8',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text('122468.26')),
-                          const DataCell( Text(" -1300"),
+                          const DataCell(
+                            Text(" -1300"),
                           )
                         ],
                       ),
@@ -587,15 +607,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 9',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text('  21500.00')),
-                          const DataCell(Text(" -1600"),
+                          const DataCell(
+                            Text(" -1600"),
                           )
                         ],
                       ),
@@ -605,15 +626,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 10',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text('  15450.00')),
-                          const DataCell(Text(
+                          const DataCell(
+                            Text(
                               "     0",
                             ),
                           )
@@ -625,15 +647,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 11',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text('    5450.00')),
-                          const DataCell(Text(
+                          const DataCell(
+                            Text(
                               "  -500",
                             ),
                           )
@@ -645,16 +668,17 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle item tap
-                              },
+                              //handle item tap
+                            },
                             child: const Text('Item 12',
                                 style: TextStyle(
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
                           const DataCell(Text('    5450.00')),
-                          const DataCell( Text("-2400"),
-                            ),
+                          const DataCell(
+                            Text("-2400"),
+                          ),
                         ],
                       ),
                       DataRow(
@@ -693,7 +717,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: SizedBox(
-              width: MediaQuery.of(context).size.width *0.97,
+              width: MediaQuery.of(context).size.width * 0.97,
               child: SingleChildScrollView(
                 child: Theme(
                   data: Theme.of(context)
@@ -716,7 +740,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
                                 //handle invoice tap
                               },
                               child: const Text('    58',
-                              style: TextStyle(color: Color(0xFFEA7A40))),
+                                  style: TextStyle(color: Color(0xFFEA7A40))),
                             ),
                           ),
                           const DataCell(Text('   Style Co.')),
@@ -733,13 +757,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('     1',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   Filigree')),
-                          const DataCell(Text(
+                          const DataCell(
+                            Text(
                               "13319.61",
                             ),
                           )
@@ -751,14 +776,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('    45',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('Khushal JW')),
-                          const DataCell( Text(
-                              "11928.26",
+                          const DataCell(Text(
+                            "11928.26",
                           ))
                         ],
                       ),
@@ -768,14 +793,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('   145',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('Gupta Store')),
                           const DataCell(Text(
-                              " 9500.00",
+                            " 9500.00",
                           ))
                         ],
                       ),
@@ -785,14 +810,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('    23',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('Go Fashion')),
                           const DataCell(Text(
-                              "13551.00",
+                            "13551.00",
                           ))
                         ],
                       ),
@@ -802,14 +827,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('    76',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('Shri Ganesh')),
-                          const DataCell( Text(
-                              "15241.77",
+                          const DataCell(Text(
+                            "15241.77",
                           ))
                         ],
                       ),
@@ -819,14 +844,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('   104',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('La Modish')),
                           const DataCell(Text(
-                              "13379.61",
+                            "13379.61",
                           ))
                         ],
                       ),
@@ -836,14 +861,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('    33',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('Riddhi JW')),
-                          const DataCell( Text(
-                              "12148.26",
+                          const DataCell(Text(
+                            "12148.26",
                           ))
                         ],
                       ),
@@ -853,14 +878,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('    21',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('Basant JW')),
-                          const DataCell( Text(
-                              "21501.00",
+                          const DataCell(Text(
+                            "21501.00",
                           ))
                         ],
                       ),
@@ -870,14 +895,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('   156',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('Radhika JW')),
                           const DataCell(Text(
-                              "15150.00",
+                            "15150.00",
                           ))
                         ],
                       ),
@@ -887,14 +912,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('    19',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('La Modish')),
-                          const DataCell( Text(
-                              " 5450.00",
+                          const DataCell(Text(
+                            " 5450.00",
                           ))
                         ],
                       ),
@@ -904,15 +929,15 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle invoice tap
-                              },
+                              //handle invoice tap
+                            },
                             child: const Text('     3',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('Go Glory')),
                           const DataCell(
                             Text(
-                                " 5450.00",
+                              " 5450.00",
                             ),
                           )
                         ],
@@ -976,12 +1001,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                                 //handle party tap
                               },
                               child: const Text(' Filigree JW',
-                                                      style: TextStyle(color: Color(0xFFEA7A40))),
+                                  style: TextStyle(color: Color(0xFFEA7A40))),
                             ),
                           ),
                           const DataCell(Text(' 1527641.77')),
                           const DataCell(Text(
-                              "    74",
+                            "    74",
                           ))
                         ],
                       ),
@@ -991,14 +1016,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle party tap
-                              },
+                              //handle party tap
+                            },
                             child: const Text(' Kushal JW',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   133179.61')),
                           const DataCell(Text(
-                              "    64",
+                            "    64",
                           ))
                         ],
                       ),
@@ -1008,14 +1033,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle party tap
-                              },
+                              //handle party tap
+                            },
                             child: const Text(' La Modish',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('1924268.26')),
                           const DataCell(Text(
-                              "    67",
+                            "    67",
                           ))
                         ],
                       ),
@@ -1025,14 +1050,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle party tap
-                              },
+                              //handle party tap
+                            },
                             child: const Text(' Gupta Store',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('    21500.00')),
-                          const DataCell( Text(
-                              "    16",
+                          const DataCell(Text(
+                            "    16",
                           ))
                         ],
                       ),
@@ -1042,14 +1067,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle party tap
-                              },
+                              //handle party tap
+                            },
                             child: const Text(' Go Fashion',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text(' 423550.00')),
-                          const DataCell( Text(
-                              "    83",
+                          const DataCell(Text(
+                            "    83",
                           ))
                         ],
                       ),
@@ -1059,14 +1084,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle party tap
-                              },
+                              //handle party tap
+                            },
                             child: const Text(' Shagun JW',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('1527641.77')),
-                          const DataCell( Text(
-                              "   104",
+                          const DataCell(Text(
+                            "   104",
                           ))
                         ],
                       ),
@@ -1074,17 +1099,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         color: MaterialStateColor.resolveWith(
                             (states) => Colors.white),
                         cells: [
-                          DataCell(
-                            GestureDetector(
-                              onTap: () {
-                                //handle party tap
-                              },
+                          DataCell(GestureDetector(
+                            onTap: () {
+                              //handle party tap
+                            },
                             child: const Text(' Radhika JW',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('  133179.61')),
                           const DataCell(Text(
-                              "    31",
+                            "    31",
                           ))
                         ],
                       ),
@@ -1092,17 +1116,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         color: MaterialStateColor.resolveWith(
                             (states) => Colors.white),
                         cells: [
-                          DataCell(
-                            GestureDetector(
+                          DataCell(GestureDetector(
                             onTap: () {
-                                //handle party tap
-                              },
+                              //handle party tap
+                            },
                             child: const Text(' Basant JW',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text(' 122468.26')),
                           const DataCell(Text(
-                              "    69",
+                            "    69",
                           ))
                         ],
                       ),
@@ -1110,17 +1133,16 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         color: MaterialStateColor.resolveWith(
                             (states) => Colors.white),
                         cells: [
-                          DataCell(
-                            GestureDetector(
-                              onTap: () {
-                                //handle party tap
-                              },
+                          DataCell(GestureDetector(
+                            onTap: () {
+                              //handle party tap
+                            },
                             child: const Text(' Mani JW',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   21500.00')),
-                          const DataCell( Text(
-                              "    51",
+                          const DataCell(Text(
+                            "    51",
                           ))
                         ],
                       ),
@@ -1130,14 +1152,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle party tap
-                              },
+                              //handle party tap
+                            },
                             child: const Text(' Radhe JW',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   15450.00')),
-                          const DataCell( Text(
-                              "    43",
+                          const DataCell(Text(
+                            "    43",
                           ))
                         ],
                       ),
@@ -1147,14 +1169,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle party tap
-                              },
+                              //handle party tap
+                            },
                             child: const Text(' Goyal Stores',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('    5450.00')),
                           const DataCell(Text(
-                              "     4",
+                            "     4",
                           ))
                         ],
                       ),
@@ -1164,15 +1186,15 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                                //handle party tap
-                              },
+                              //handle party tap
+                            },
                             child: const Text(' Gun Fashion',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('    5450.00')),
                           const DataCell(
                             Text(
-                                "    34",
+                              "    34",
                             ),
                           )
                         ],
@@ -1230,18 +1252,21 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         color: MaterialStateColor.resolveWith(
                             (states) => Colors.white),
                         cells: [
-                          DataCell( GestureDetector(
+                          DataCell(GestureDetector(
                             onTap: () {
                               //handle month tap
                             },
-                            child: const Text('  Jan',
-                            style: TextStyle(color: Color(0xFFEA7A40)),),
+                            child: const Text(
+                              '  Jan',
+                              style: TextStyle(color: Color(0xFFEA7A40)),
+                            ),
                           )),
                           const DataCell(Text(' 1527641.77')),
-                          const DataCell( Text(
-                                "        74",
-                              ),
+                          const DataCell(
+                            Text(
+                              "        74",
                             ),
+                          ),
                         ],
                       ),
                       DataRow(
@@ -1253,13 +1278,13 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Feb',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
-                          )
-                          ),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
+                          )),
                           const DataCell(Text('   133179.61')),
-                          const DataCell( Text(
-                                "        64",
-                              ),
+                          const DataCell(
+                            Text(
+                              "        64",
+                            ),
                           ),
                         ],
                       ),
@@ -1272,10 +1297,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Mar',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('1924268.26')),
-                          const DataCell(Text(
+                          const DataCell(
+                            Text(
                               "        67",
                             ),
                           )
@@ -1290,10 +1316,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Apr',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('    21500.00')),
-                          const DataCell(Text(
+                          const DataCell(
+                            Text(
                               "        16",
                             ),
                           )
@@ -1308,10 +1335,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  May',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text(' 423550.00')),
-                          const DataCell(Text(
+                          const DataCell(
+                            Text(
                               "        83",
                             ),
                           )
@@ -1326,7 +1354,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Jun',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('1527641.77')),
                           const DataCell(
@@ -1345,11 +1373,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Jul',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('  133179.61')),
                           const DataCell(
-                             Text(
+                            Text(
                               "        31",
                             ),
                           )
@@ -1364,10 +1392,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Aug',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text(' 122468.26')),
-                          const DataCell( Text(
+                          const DataCell(
+                            Text(
                               "        69",
                             ),
                           )
@@ -1382,7 +1411,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Sep',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   21500.00')),
                           DataCell(GestureDetector(
@@ -1404,11 +1433,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Oct',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   15450.00')),
                           const DataCell(Text(
-                              "        43",
+                            "        43",
                           ))
                         ],
                       ),
@@ -1421,11 +1450,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Nov',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('    5450.00')),
                           const DataCell(Text(
-                              "         4",
+                            "         4",
                           ))
                         ],
                       ),
@@ -1438,12 +1467,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                               //handle month tap
                             },
                             child: const Text('  Dec',
-                            style: TextStyle(color: Color(0xFFEA7A40))),
+                                style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('    5450.00')),
                           const DataCell(
-                             Text(
-                                "         4",
+                            Text(
+                              "         4",
                             ),
                           )
                         ],

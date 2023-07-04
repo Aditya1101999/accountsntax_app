@@ -72,9 +72,9 @@ class _SalesPerformanceScreenState extends State<SalesPerformanceScreen>
               labelColor: const Color(0xFF663274),
               unselectedLabelColor: Colors.black,
               tabs: const [
-                Tab(text: 'Monthly'),
+                Tab(text: 'Month Wise'),
                 Tab(text: 'Item-wise'),
-                Tab(text: 'By Invoice'),
+                Tab(text: 'Invoice Wise'),
                 Tab(text: 'Customer-wise'),
               ],
             ),
