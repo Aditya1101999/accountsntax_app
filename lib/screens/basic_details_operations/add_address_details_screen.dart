@@ -148,10 +148,10 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -182,10 +182,10 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -216,10 +216,10 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -250,10 +250,10 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -284,10 +284,10 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -319,9 +319,9 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                     filled: true,
                     fillColor: Colors.white,
                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -352,10 +352,10 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -375,6 +375,7 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                 onPressed: () {
                   if (_validateFields()) {
                     // Perform the save operation
+                    Navigator.pop(context);
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text('Address Details Added Successfully'),
@@ -383,7 +384,7 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(170, 60), 
+                  fixedSize: const Size(170, 60),
                   backgroundColor: const Color(0xFFEA7B0C),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),

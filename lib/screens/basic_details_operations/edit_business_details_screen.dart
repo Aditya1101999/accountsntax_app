@@ -1,6 +1,4 @@
 // ignore_for_file: library_private_types_in_public_api
-
-import 'package:accountsntax/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class EditBusinessDetailsScreen extends StatefulWidget {
@@ -350,7 +348,7 @@ class _EditBusinessDetailsScreenState extends State<EditBusinessDetailsScreen> {
               child: ElevatedButton(
                 onPressed: () {
                   if (_validateFields()) {
-                    Navigator.pushNamed(context, companyProfileRoute);
+                    Navigator.pop(context);
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text('Updated Successfully'),

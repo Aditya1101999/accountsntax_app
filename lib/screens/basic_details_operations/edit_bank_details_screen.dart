@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-import '../../utils/routes.dart';
-
 class EditBankDetailsScreen extends StatefulWidget {
   const EditBankDetailsScreen({super.key});
 
@@ -289,7 +287,7 @@ class _EditBankDetailsScreenState extends State<EditBankDetailsScreen> {
               child: ElevatedButton(
                 onPressed: () {
                   if (_validateFields()) {
-                    Navigator.pushNamed(context, companyProfileRoute);
+                    Navigator.pop(context);
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text('Updated Successfully'),

@@ -26,3 +26,4 @@ const String editVaultDetailsRoute = 'edit_vault_info';
 const String misScreenRoute = 'mis_info';
 const String salesPerformanceRoute = 'sales_info';
 const String createInvoiceRoute = 'create_invoice';
+const String editCustomerRoute = 'edit_customer';

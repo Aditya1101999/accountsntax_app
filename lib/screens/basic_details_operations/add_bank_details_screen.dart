@@ -284,6 +284,7 @@ class _AddBankDetailsScreenState extends State<AddBankDetailsScreen> {
                 onPressed: () {
                   if (_validateFields()) {
                     // Perform the save operation
+                    Navigator.pop(context);
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text('Bank Details Added Successfully'),

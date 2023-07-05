@@ -11,6 +11,7 @@ import 'package:accountsntax/screens/basic_details_operations/view_business_deta
 import 'package:accountsntax/screens/change_password.dart';
 import 'package:accountsntax/screens/company_profile_screen.dart';
 import 'package:accountsntax/screens/create_invoice_screen.dart';
+import 'package:accountsntax/screens/customer_details_screen.dart';
 import 'package:accountsntax/screens/drawer_options/mis_screen.dart';
 import 'package:accountsntax/screens/drawer_options/sales_description.dart';
 import 'package:accountsntax/screens/otp_screen.dart';
@@ -73,6 +74,7 @@ class AccountsntaxApp extends StatelessWidget {
         misScreenRoute:(context) => const MISScreen(),
         salesPerformanceRoute:(context) => const SalesDescription(),
         createInvoiceRoute:(context) => const CreateInvoiceScreen(),
+        editCustomerRoute:(context) => const CustomerDetailsScreen(),
         },
     );
   }

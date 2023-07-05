@@ -2,22 +2,20 @@
 
 import 'package:flutter/material.dart';
 
-class EditAddressDetailsScreen extends StatefulWidget {
-  const EditAddressDetailsScreen({super.key});
+class CustomerDetailsScreen extends StatefulWidget {
+  const CustomerDetailsScreen({super.key});
 
   @override
-  _EditAddressDetailsScreenState createState() =>
-      _EditAddressDetailsScreenState();
+  _CustomerDetailsScreenState createState() => _CustomerDetailsScreenState();
 }
 
-class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
+class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
   late TextEditingController _typeController;
   late TextEditingController _addressLine1Controller;
   late TextEditingController _addressLine2Controller;
   late TextEditingController _pincodeController;
   late TextEditingController _cityController;
   late TextEditingController _stateController;
-  late TextEditingController _countryController;
 
   String? _typeError;
   String? _addressLine1Error;
@@ -25,18 +23,16 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
   String? _pincodeError;
   String? _cityError;
   String? _stateError;
-  String? _countryError;
 
   @override
   void initState() {
     super.initState();
-    _typeController = TextEditingController(text: 'registered');
-    _addressLine1Controller = TextEditingController(text: 'H.NO.1');
-    _addressLine2Controller = TextEditingController(text: 'H.NO.1');
-    _pincodeController = TextEditingController(text: '302001');
-    _cityController = TextEditingController(text: 'Ahiri');
-    _stateController = TextEditingController(text: 'Maharashtra');
-    _countryController = TextEditingController(text: 'IN');
+    _typeController = TextEditingController(text: 'Khatu Shyam Traders');
+    _addressLine1Controller = TextEditingController(text: '20/ 2 Telephone...');
+    _addressLine2Controller = TextEditingController(text: 'xyz.google.com');
+    _pincodeController = TextEditingController(text: '08CVYPG6177K1ZL');
+    _cityController = TextEditingController(text: '08CVYPG6177K1ZL');
+    _stateController = TextEditingController(text: '+91-9876543210');
   }
 
   @override
@@ -47,7 +43,6 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
     _pincodeController.dispose();
     _cityController.dispose();
     _stateController.dispose();
-    _countryController.dispose();
     super.dispose();
   }
 
@@ -56,49 +51,42 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
 
     if (_typeController.text.isEmpty) {
       setState(() {
-        _typeError = 'Please enter the type';
+        _typeError = 'Please enter name';
       });
       isValid = false;
     }
 
     if (_addressLine1Controller.text.isEmpty) {
       setState(() {
-        _addressLine1Error = 'Please enter Address Line 1';
+        _addressLine1Error = 'Please enter Address ';
       });
       isValid = false;
     }
 
     if (_addressLine2Controller.text.isEmpty) {
       setState(() {
-        _addressLine2Error = 'Please enter Address Line 2';
+        _addressLine2Error = 'Please enter e-mail';
       });
       isValid = false;
     }
 
     if (_pincodeController.text.isEmpty) {
       setState(() {
-        _pincodeError = 'Please enter the pincode';
+        _pincodeError = 'Please enter PAN No.';
       });
       isValid = false;
     }
 
     if (_cityController.text.isEmpty) {
       setState(() {
-        _cityError = 'Please enter the city';
+        _cityError = 'Please enter GST No.';
       });
       isValid = false;
     }
 
     if (_stateController.text.isEmpty) {
       setState(() {
-        _stateError = 'Please enter the state';
-      });
-      isValid = false;
-    }
-
-    if (_countryController.text.isEmpty) {
-      setState(() {
-        _countryError = 'Please enter the country';
+        _stateError = 'Please enter Mobile No.';
       });
       isValid = false;
     }
@@ -126,7 +114,7 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
             const SizedBox(height: 20),
             Container(
               child: const Text(
-                'Edit Address Details',
+                'Customer/Consignee Details',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
@@ -140,7 +128,7 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const Text(
-                  'Type',
+                  'Name',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF663274),
@@ -153,14 +141,14 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
                     filled: true,
                     fillColor: Colors.white,
                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter Type',
+                    hintText: 'Enter Name',
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
@@ -174,7 +162,7 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const Text(
-                  'Address Line 1',
+                  'Address',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF663274),
@@ -186,15 +174,15 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter Address Line 1',
+                    hintText: 'Enter Address',
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
@@ -208,7 +196,7 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const Text(
-                  'Address Line 2',
+                  'Email',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF663274),
@@ -220,15 +208,15 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter Address Line 2',
+                    hintText: 'Enter email',
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
@@ -242,7 +230,7 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const Text(
-                  'Pincode',
+                  'GST No.',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF663274),
@@ -254,15 +242,15 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter Pincode',
+                    hintText: 'Enter GST No.',
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
@@ -276,7 +264,7 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const Text(
-                  'City',
+                  'Pan No.',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF663274),
@@ -288,15 +276,15 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter City',
+                    hintText: 'Enter PAN No.',
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
@@ -310,7 +298,7 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const Text(
-                  'State',
+                  'Mobile No.',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF663274),
@@ -323,14 +311,14 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
                     filled: true,
                     fillColor: Colors.white,
                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Enter State',
+                    hintText: 'Enter Mobile No.',
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
@@ -339,42 +327,8 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 12),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const Text(
-                  'Country',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF663274),
-                  ),
-                ),
-                const SizedBox(height: 5),
-                TextFormField(
-                  controller: _countryController,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16.0,
-                      vertical: 12.0,
-                    ),
-                    hintText: 'Enter Country',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
-                    errorText: _countryError,
-                  ),
-                ),
-              ],
-            ),
             const SizedBox(height: 20),
-             Center(
+            Center(
               child: ElevatedButton(
                 onPressed: () {
                   if (_validateFields()) {
@@ -387,7 +341,7 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(170, 60), 
+                  fixedSize: const Size(170, 60),
                   backgroundColor: const Color(0xFFEA7B0C),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),

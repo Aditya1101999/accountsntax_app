@@ -59,7 +59,7 @@ class _CreateInvoiceScreenState extends State<CreateInvoiceScreen> {
           children: [
             const Center(
               child: Text(
-                'Create Invoice',
+                'Create Entry',
                 style: TextStyle(
                   color: Color(0xFF663274),
                   fontSize: 30,
