@@ -22,7 +22,6 @@ class ViewVaultDetailsScreen extends StatelessWidget {
                 alignment: Alignment.centerLeft,
               ),
             ),
-            const SizedBox(height: 20),
             Container(
               child: const Text(
                 'Vault Details',

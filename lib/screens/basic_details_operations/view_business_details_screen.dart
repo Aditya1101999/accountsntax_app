@@ -25,7 +25,6 @@ class ViewBusinessDetailsScreen extends StatelessWidget {
                 },
               ),
             ),
-            const SizedBox(height: 20),
             const Center(
               child: Text(
                 'Business Details',

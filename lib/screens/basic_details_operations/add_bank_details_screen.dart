@@ -98,7 +98,6 @@ class _AddBankDetailsScreenState extends State<AddBankDetailsScreen> {
                 alignment: Alignment.centerLeft,
               ),
             ),
-            const SizedBox(height: 20),
             const Text(
               'Add Bank Details',
               style: TextStyle(

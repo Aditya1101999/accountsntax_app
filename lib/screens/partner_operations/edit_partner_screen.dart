@@ -297,7 +297,6 @@ class _EditPartnerDetailsScreenState extends State<EditPartnerDetailsScreen> {
                   },
                 ),
               ),
-              const SizedBox(height: 20),
               const Center(
                 child: Text(
                   'Edit Partner Details',

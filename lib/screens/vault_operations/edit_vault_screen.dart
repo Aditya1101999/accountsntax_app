@@ -128,7 +128,6 @@ bool _validateFields() {
                   },
                 ),
               ),
-              const SizedBox(height: 20),
               const Center(
                 child: Text(
                   'Edit Vault',

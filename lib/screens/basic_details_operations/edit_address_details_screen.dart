@@ -123,7 +123,6 @@ class _EditAddressDetailsScreenState extends State<EditAddressDetailsScreen> {
                 alignment: Alignment.centerLeft,
               ),
             ),
-            const SizedBox(height: 20),
             Container(
               child: const Text(
                 'Edit Address Details',

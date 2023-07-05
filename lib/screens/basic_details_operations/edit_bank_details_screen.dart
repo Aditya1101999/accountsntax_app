@@ -100,7 +100,6 @@ class _EditBankDetailsScreenState extends State<EditBankDetailsScreen> {
                 alignment: Alignment.centerLeft,
               ),
             ),
-            const SizedBox(height: 20),
             Container(
               child: const Text(
                 'Edit Bank Details',

@@ -316,7 +316,6 @@ class _AddPartnerDetailsScreenState extends State<AddPartnerDetailsScreen> {
                   },
                 ),
               ),
-              const SizedBox(height: 20),
               const Center(
                 child: Text(
                   'Add a Partner',

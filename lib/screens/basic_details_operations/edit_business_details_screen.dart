@@ -128,7 +128,6 @@ class _EditBusinessDetailsScreenState extends State<EditBusinessDetailsScreen> {
                 },
               ),
             ),
-            const SizedBox(height: 20),
             const Center(
               child: Text(
                 'Edit Business Details',

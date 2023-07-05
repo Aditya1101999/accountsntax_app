@@ -26,7 +26,6 @@ class ViewBasicDetailsScreen extends StatelessWidget {
                 },
               ),
             ),
-            const SizedBox(height: 20),
             const Center(
               child: Text(
                 'Basic Details',

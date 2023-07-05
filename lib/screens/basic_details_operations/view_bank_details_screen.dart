@@ -23,7 +23,6 @@ class ViewBankDetailsScreen extends StatelessWidget {
                 alignment: Alignment.centerLeft,
               ),
             ),
-            const SizedBox(height: 20),
             Container(
               child: const Text(
                 'Bank Details',

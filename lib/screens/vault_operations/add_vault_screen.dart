@@ -138,7 +138,6 @@ class _AddVaultDetailsScreenState extends State<AddVaultDetailsScreen> {
                   },
                 ),
               ),
-              const SizedBox(height: 20),
               const Center(
                 child: Text(
                   'Add Vault',

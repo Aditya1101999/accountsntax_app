@@ -130,7 +130,6 @@ class _EditBasicDetailsScreenState extends State<EditBasicDetailsScreen> {
                 },
               ),
             ),
-            const SizedBox(height: 20),
             const Center(
               child: Text(
                 'Edit Basic Details',

@@ -121,7 +121,6 @@ class _AddAddressDetailsScreenState extends State<AddAddressDetailsScreen> {
                 alignment: Alignment.centerLeft,
               ),
             ),
-            const SizedBox(height: 20),
             const Text(
               'Add Address Details',
               style: TextStyle(
