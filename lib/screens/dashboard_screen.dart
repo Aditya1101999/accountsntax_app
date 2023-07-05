@@ -43,7 +43,6 @@ class DashboardScreen extends StatelessWidget {
                       const Icon(Icons.notifications, color: Color(0xFF663274)),
                   onPressed: () {
                     Navigator.pushNamed(context, notificationRoute);
-
                   },
                 ),
               ],
@@ -95,7 +94,7 @@ class DashboardScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color:  Color(0xFFEA7A40),
+                        color: Color(0xFFEA7A40),
                       ),
                     ),
                   ],
@@ -110,7 +109,6 @@ class DashboardScreen extends StatelessWidget {
               ],
             ),
           ),
-
           const SizedBox(height: 14),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -130,8 +128,8 @@ class DashboardScreen extends StatelessWidget {
                       border: InputBorder.none,
                       hintText: 'Select Bank',
                       hintStyle: TextStyle(
-      color: Colors.grey, 
-    ),
+                        color: Colors.grey,
+                      ),
                     ),
                     items: const [
                       DropdownMenuItem<String>(
@@ -174,8 +172,7 @@ class DashboardScreen extends StatelessWidget {
                   height: 40,
                   decoration: BoxDecoration(
                     color: const Color(0xFF663274),
-                    borderRadius: BorderRadius.circular(
-                        8),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Icon(Icons.download, color: Colors.white),
                 ),
@@ -201,7 +198,6 @@ class DashboardScreen extends StatelessWidget {
               Column(
                 children: [
                   CircleAvatar(
-                    
                     backgroundColor: Color(0xFFF9E8E3),
                     child: Icon(Icons.shopping_cart, color: Color(0xFFEA7B0C)),
                   ),
@@ -217,12 +213,11 @@ class DashboardScreen extends StatelessWidget {
                   Text('Sales', style: TextStyle(color: Color(0xFF663274))),
                 ],
               ),
-              
               Column(
                 children: [
                   CircleAvatar(
-                  backgroundColor: Color(0xFFF9E8E3),
-                    child: Icon(Icons.money, color:  Color(0xFFEA7B0C)),
+                    backgroundColor: Color(0xFFF9E8E3),
+                    child: Icon(Icons.money, color: Color(0xFFEA7B0C)),
                   ),
                   Text('Expense', style: TextStyle(color: Color(0xFF663274))),
                 ],
@@ -230,8 +225,8 @@ class DashboardScreen extends StatelessWidget {
               Column(
                 children: [
                   CircleAvatar(
-                   backgroundColor: Color(0xFFF9E8E3),
-                    child: Icon(Icons.apps, color:Color(0xFFEA7B0C)),
+                    backgroundColor: Color(0xFFF9E8E3),
+                    child: Icon(Icons.apps, color: Color(0xFFEA7B0C)),
                   ),
                   Text('Others', style: TextStyle(color: Color(0xFF663274))),
                 ],
@@ -256,10 +251,9 @@ class DashboardScreen extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  
                   CircleAvatar(
                     backgroundColor: Color(0xFFF9E8E3),
-                    child: Icon(Icons.business, color:Color(0xFFEA7A40)),
+                    child: Icon(Icons.business, color: Color(0xFFEA7A40)),
                   ),
                   Text('Business', style: TextStyle(color: Color(0xFF663274))),
                 ],
@@ -277,8 +271,8 @@ class DashboardScreen extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     backgroundColor: Color(0xFFF9E8E3),
-                    child:
-                        Icon(Icons.account_balance_wallet, color: Color(0xFFEA7B0C)),
+                    child: Icon(Icons.account_balance_wallet,
+                        color: Color(0xFFEA7B0C)),
                   ),
                   Text('Finance', style: TextStyle(color: Color(0xFF663274))),
                 ],
@@ -286,7 +280,7 @@ class DashboardScreen extends StatelessWidget {
               Column(
                 children: [
                   CircleAvatar(
-                    backgroundColor:Color(0xFFF9E8E3),
+                    backgroundColor: Color(0xFFF9E8E3),
                     child: Icon(Icons.receipt, color: Color(0xFFEA7B0C)),
                   ),
                   Text('Returns', style: TextStyle(color: Color(0xFF663274))),
@@ -332,7 +326,7 @@ class DashboardScreen extends StatelessWidget {
                       // Handle work status tap
                     },
                     child: const CircleAvatar(
-                     backgroundColor: Color(0xFFF9E8E3),
+                      backgroundColor: Color(0xFFF9E8E3),
                       child: Icon(Icons.work, color: Color(0xFFEA7B0C)),
                     ),
                   ),
@@ -342,7 +336,7 @@ class DashboardScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Handle create invoice tap
+                  Navigator.pushNamed(context, createInvoiceRoute);
                 },
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFFEA7A40),
@@ -363,9 +357,7 @@ class DashboardScreen extends StatelessWidget {
           ),
         ],
       ),
-
-
-      drawer:CustomDrawer(),
+      drawer: CustomDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
         onTap: (index) {

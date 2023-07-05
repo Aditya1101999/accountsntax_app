@@ -254,7 +254,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 _selectedSubTileIndex = -1;
                 _showSubTiles = false;
               });
-              //  code here for the 'Logout' tile
+              //log out
+              Navigator.pushNamed(context, loginRoute);
             },
           ),
         ],

@@ -245,12 +245,11 @@ class MISScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: 
-      Padding(
+      floatingActionButton: Padding(
         padding: const EdgeInsets.all(1.0),
         child: FloatingActionButton.extended(
           onPressed: () {
-            // Handle create entry button tap
+            Navigator.pushNamed(context, createInvoiceRoute);
           },
           backgroundColor: const Color(0xFFEA7A40),
           icon: const Icon(Icons.add),
