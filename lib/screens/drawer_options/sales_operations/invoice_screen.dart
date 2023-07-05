@@ -39,7 +39,7 @@ class _InvoiceScreenState extends State<InvoiceScreen>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButton(
-                icon: const Icon(Icons.arrow_back),
+                icon: const Icon(Icons.arrow_back,color:Color(0xFF663274)),
                 onPressed: () {
                   Navigator.pop(context);
                 },

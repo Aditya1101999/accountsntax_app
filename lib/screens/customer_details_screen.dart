@@ -102,19 +102,18 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
         child: ListView(
           children: [
             SizedBox(
-              height: 50,
+              height: 40,
               child: IconButton(
-                icon: const Icon(Icons.arrow_back),
+                icon: const Icon(Icons.arrow_back,color: Color(0xFF663274),),
                 onPressed: () {
                   Navigator.pop(context);
                 },
                 alignment: Alignment.centerLeft,
               ),
             ),
-            const SizedBox(height: 20),
             Container(
               child: const Text(
-                'Customer/Consignee Details',
+                'Customer Details',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,

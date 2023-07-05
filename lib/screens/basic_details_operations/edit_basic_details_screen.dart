@@ -123,7 +123,7 @@ class _EditBasicDetailsScreenState extends State<EditBasicDetailsScreen> {
             SizedBox(
               height: 50,
               child: IconButton(
-                icon: const Icon(Icons.arrow_back),
+                icon: const Icon(Icons.arrow_back,color:Color(0xFF663274)),
                 onPressed: () {
                   Navigator.pop(context);
                   
