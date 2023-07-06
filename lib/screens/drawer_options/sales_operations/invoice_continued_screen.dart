@@ -55,34 +55,52 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
               ),
             ),
             const SizedBox(height: 16),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                OptionalVoucherCheckbox(),
-                Text('  Is it an optional voucher?'),
-              ],
-            ),
+             const Center(
+               child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  OptionalVoucherCheckbox(),
+                  Text('  Is it an optional voucher?'),
+                ],
+                         ),
+             ),
             const SizedBox(height: 16),
-            const Align(
+            Align(
               alignment: Alignment.centerLeft,
-              child: Row(children: [
-                Text(
-                  'Customer Name',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Color(0xFF663274)),
-                ),
-                SizedBox(width: 155),
-                Icon(
-                  Icons.add,
-                  color: Color(0xFFEA7B0C),
-                ),
-                Text(
-                  'Add New',
-                  style: TextStyle(
-                    color: Color(0xFFEA7B0C),
+              child: Row(
+                children: [
+                  const Text(
+                    'Customer Name',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF663274),
+                    ),
                   ),
-                ),
-              ]),
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, addCustomerRoute);
+                      });
+                    },
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.add,
+                          color: Color(0xFFEA7B0C),
+                        ),
+                        Text(
+                          'Add New',
+                          style: TextStyle(
+                            color: Color(0xFFEA7B0C),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 5),
             Row(

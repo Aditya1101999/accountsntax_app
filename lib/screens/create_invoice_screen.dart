@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'invoice_continued_screen.dart';
+import 'drawer_options/sales_operations/invoice_continued_screen.dart';
 
 class CreateInvoiceScreen extends StatefulWidget {
   const CreateInvoiceScreen({super.key});

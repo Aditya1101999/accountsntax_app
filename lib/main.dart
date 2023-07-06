@@ -1,3 +1,4 @@
+import 'package:accountsntax/screens/invoice_operations/add_customer_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_address_details_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_bank_details_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/edit_address_details_screen.dart';
@@ -75,6 +76,7 @@ class AccountsntaxApp extends StatelessWidget {
         salesPerformanceRoute:(context) => const SalesDescription(),
         createInvoiceRoute:(context) => const CreateInvoiceScreen(),
         editCustomerRoute:(context) => const CustomerDetailsScreen(),
+        addCustomerRoute:(context) => const AddCustomerDetailsScreen(),
         },
     );
   }
