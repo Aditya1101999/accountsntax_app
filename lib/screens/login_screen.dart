@@ -26,6 +26,11 @@ class _LoginScreenState extends State<LoginScreen> {
         _emailError = 'Please enter your Number.';
       });
       isValid = false;
+    } else if (email.length != 10) {
+      setState(() {
+        _emailError = 'Please enter Valid Number.';
+      });
+      isValid = false;
     } else {
       setState(() {
         _emailError = '';
@@ -83,9 +88,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(
                       'Contact No.',
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF663274)
-                      ),
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF663274)),
                     ),
                   ),
                   const SizedBox(height: 5),
@@ -94,16 +98,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                       enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                        borderSide: const BorderSide(color: Color(0xFF663274)),
+                      ),
                       contentPadding: const EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 12.0),
                       hintText: 'Enter your Number',
                       hintStyle: const TextStyle(
-      color: Colors.grey, 
-    ),
+                        color: Colors.grey,
+                      ),
                       errorText: _emailError.isNotEmpty ? _emailError : null,
                     ),
                   ),
@@ -124,16 +128,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                       enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                        borderSide: const BorderSide(color: Color(0xFF663274)),
+                      ),
                       contentPadding: const EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 12.0),
                       hintText: 'Enter your password',
                       hintStyle: const TextStyle(
-      color: Colors.grey, 
-    ),
+                        color: Colors.grey,
+                      ),
                       suffixIcon: IconButton(
                         icon: Icon(
                           _isPasswordVisible
@@ -157,7 +161,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {
-                       Navigator.pushReplacementNamed(context, otpRoute);
+                        Navigator.pushReplacementNamed(context, otpRoute);
                       },
                       child: const Text(
                         'Forgot Password?',
@@ -175,7 +179,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {
                         if (_validateFields()) {
                           // Perform sign up logic
-                          Navigator.pushReplacementNamed(context, dashboardRoute);
+                          Navigator.pushReplacementNamed(
+                              context, dashboardRoute);
                         }
                       },
                       style: ElevatedButton.styleFrom(

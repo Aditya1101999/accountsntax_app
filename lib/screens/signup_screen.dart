@@ -67,6 +67,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
         _contactNoError = 'Please enter your contact number.';
       });
       isValid = false;
+    } else if (contactNo.length != 10) {
+      setState(() {
+        _contactNoError = 'Please enter Valid Number.';
+      });
+      isValid = false;
     } else {
       setState(() {
         _contactNoError = '';
@@ -163,17 +168,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               filled: true,
                               fillColor: Colors.white,
                               enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                                borderRadius: BorderRadius.circular(8.0),
+                                borderSide:
+                                    const BorderSide(color: Color(0xFF663274)),
+                              ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
                               ),
                               hintText: 'Enter your first name',
                               hintStyle: const TextStyle(
-      color: Colors.grey, 
-    ),
+                                color: Colors.grey,
+                              ),
                               errorText: _firstNameError.isNotEmpty
                                   ? _firstNameError
                                   : null,
@@ -198,18 +204,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                               enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                                borderSide:
+                                    const BorderSide(color: Color(0xFF663274)),
+                              ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
                               ),
                               hintText: 'Enter your last name',
                               hintStyle: const TextStyle(
-      color: Colors.grey, 
-    ),
+                                color: Colors.grey,
+                              ),
                               errorText: _lastNameError.isNotEmpty
                                   ? _lastNameError
                                   : null,
@@ -234,18 +241,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                               enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                                borderSide:
+                                    const BorderSide(color: Color(0xFF663274)),
+                              ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
                               ),
                               hintText: 'Enter your contact number',
                               hintStyle: const TextStyle(
-      color: Colors.grey, 
-    ),
+                                color: Colors.grey,
+                              ),
                               errorText: _contactNoError.isNotEmpty
                                   ? _contactNoError
                                   : null,
@@ -253,7 +261,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                         ],
                       ),
-                      
                       const SizedBox(height: 12),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -271,18 +278,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                               enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                                borderSide:
+                                    const BorderSide(color: Color(0xFF663274)),
+                              ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
                               ),
                               hintText: 'Enter your email',
                               hintStyle: const TextStyle(
-      color: Colors.grey, 
-    ),
+                                color: Colors.grey,
+                              ),
                               errorText:
                                   _emailError.isNotEmpty ? _emailError : null,
                             ),
@@ -306,18 +314,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                               enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                                borderSide:
+                                    const BorderSide(color: Color(0xFF663274)),
+                              ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
                               ),
                               hintText: 'Enter your password',
                               hintStyle: const TextStyle(
-      color: Colors.grey, 
-    ),
+                                color: Colors.grey,
+                              ),
                               suffixIcon: IconButton(
                                 icon: Icon(
                                   _isPasswordVisible
@@ -356,18 +365,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                               enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                                borderSide:
+                                    const BorderSide(color: Color(0xFF663274)),
+                              ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
                               ),
                               hintText: 'Re-enter your password',
                               hintStyle: const TextStyle(
-      color: Colors.grey, 
-    ),
+                                color: Colors.grey,
+                              ),
                               suffixIcon: IconButton(
                                 icon: Icon(
                                   _isConfirmPasswordVisible
@@ -407,18 +417,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
-                               enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                                borderSide:
+                                    const BorderSide(color: Color(0xFF663274)),
+                              ),
                               contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                                 vertical: 12.0,
                               ),
                               hintText: 'Enter the admin code',
                               hintStyle: const TextStyle(
-      color: Colors.grey, 
-    ),
+                                color: Colors.grey,
+                              ),
                             ),
                           ),
                         ],
@@ -429,17 +440,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         height: 48,
                         child: ElevatedButton(
                           onPressed: () {
-  if (_validateFields()) {
-  Navigator.pushReplacement(
-    context,
-    MaterialPageRoute(
-      builder: (context) => const OTPVerificationScreen(sourceFlag: 1), // Pass 1 as a flag for sign-up route
-    ),
-  );
-}
-
-},
-
+                            if (_validateFields()) {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const OTPVerificationScreen(
+                                      sourceFlag:
+                                          1), // Pass 1 as a flag for sign-up route
+                                ),
+                              );
+                            }
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFFEA7B0C),
                             shape: RoundedRectangleBorder(
