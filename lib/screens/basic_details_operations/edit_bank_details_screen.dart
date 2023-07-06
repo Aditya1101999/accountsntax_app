@@ -65,14 +65,19 @@ class _EditBankDetailsScreenState extends State<EditBankDetailsScreen> {
       });
       isValid = false;
     }
-
+ RegExp pattern = RegExp(r'^\d{2}[A-Za-z0-9]{10}[1-9A-Za-z]$');
     if (_ifscCodeController.text.isEmpty) {
       setState(() {
         _ifscCodeError = 'Please enter the IFSC code';
       });
       isValid = false;
     }
-
+    else if (pattern.hasMatch(_ifscCodeController.text)) {
+      setState(() {
+        _ifscCodeError = 'Please enter valid IFSC code';
+      });
+      isValid = false;
+    }
     if (_accountTypeController.text.isEmpty) {
       setState(() {
         _accountTypeError = 'Please enter the type of account';

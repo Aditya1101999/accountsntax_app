@@ -84,10 +84,16 @@ class _AddCustomerDetailsScreenState extends State<AddCustomerDetailsScreen> {
         _idError = null;
       });
     }
-
+ RegExp pattern = RegExp(r'^\d{2}[A-Za-z0-9]{10}[1-9A-Za-z]$');
     if (_nameController.text.isEmpty) {
       setState(() {
         _nameError = 'GSTIN is required';
+      });
+      isValid = false;
+    }
+    else if (!pattern.hasMatch(_nameController.text)) {
+      setState(() {
+        _nameError = 'Enter Valid GSTIN';
       });
       isValid = false;
     } else {

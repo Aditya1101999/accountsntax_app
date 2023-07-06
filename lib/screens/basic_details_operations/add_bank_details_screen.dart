@@ -63,10 +63,15 @@ class _AddBankDetailsScreenState extends State<AddBankDetailsScreen> {
       });
       isValid = false;
     }
-
+    RegExp pattern = RegExp(r'^\d{2}[A-Za-z0-9]{10}[1-9A-Za-z]$');
     if (_ifscCodeController.text.isEmpty) {
       setState(() {
         _ifscCodeError = 'Please enter the IFSC code';
+      });
+      isValid = false;
+    } else if (!pattern.hasMatch(_ifscCodeController.text)) {
+      setState(() {
+        _ifscCodeError = 'Please enter valid IFSC code';
       });
       isValid = false;
     }
@@ -91,7 +96,10 @@ class _AddBankDetailsScreenState extends State<AddBankDetailsScreen> {
             SizedBox(
               height: 50,
               child: IconButton(
-                icon: const Icon(Icons.arrow_back,color: Color(0xFF663274),),
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: Color(0xFF663274),
+                ),
                 onPressed: () {
                   Navigator.pop(context);
                 },
@@ -124,10 +132,10 @@ class _AddBankDetailsScreenState extends State<AddBankDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -158,10 +166,10 @@ class _AddBankDetailsScreenState extends State<AddBankDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -193,9 +201,9 @@ class _AddBankDetailsScreenState extends State<AddBankDetailsScreen> {
                     filled: true,
                     fillColor: Colors.white,
                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -226,10 +234,10 @@ class _AddBankDetailsScreenState extends State<AddBankDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,
@@ -260,10 +268,10 @@ class _AddBankDetailsScreenState extends State<AddBankDetailsScreen> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
-      borderSide: const BorderSide(color: Color(0xFF663274)), 
-    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 12.0,

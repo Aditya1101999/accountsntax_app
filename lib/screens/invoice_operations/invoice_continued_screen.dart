@@ -410,7 +410,7 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
             Row(children: [
               ElevatedButton(
                 onPressed: () {
-                  // Perform add more logic
+                  Navigator.pushNamed(context, addMoreDetailsRoute);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFEA7B0C),

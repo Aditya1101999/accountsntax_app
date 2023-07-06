@@ -76,10 +76,15 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
       });
       isValid = false;
     }
-
+    RegExp pattern = RegExp(r'^\d{2}[A-Za-z0-9]{10}[1-9A-Za-z]$');
     if (_cityController.text.isEmpty) {
       setState(() {
         _cityError = 'Please enter GST No.';
+      });
+      isValid = false;
+    } else if (!pattern.hasMatch(_cityController.text)) {
+      setState(() {
+        _cityError = 'Please enter Valid GST No.';
       });
       isValid = false;
     }
@@ -104,7 +109,10 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
             SizedBox(
               height: 40,
               child: IconButton(
-                icon: const Icon(Icons.arrow_back,color: Color(0xFF663274),),
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: Color(0xFF663274),
+                ),
                 onPressed: () {
                   Navigator.pop(context);
                 },

@@ -29,3 +29,4 @@ const String createInvoiceRoute = 'create_invoice';
 const String editCustomerRoute = 'edit_customer';
 const String addCustomerRoute = 'add_customer';
 const String addItemRoute = 'add_item';
+const String addMoreDetailsRoute = 'add_details';
