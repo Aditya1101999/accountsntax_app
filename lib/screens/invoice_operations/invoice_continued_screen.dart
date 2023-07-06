@@ -55,16 +55,16 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
               ),
             ),
             const SizedBox(height: 16),
-             const Center(
-               child: Row(
+            const Center(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   OptionalVoucherCheckbox(),
                   Text('  Is it an optional voucher?'),
                 ],
-                         ),
-             ),
+              ),
+            ),
             const SizedBox(height: 16),
             Align(
               alignment: Alignment.centerLeft,
@@ -93,8 +93,8 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                         Text(
                           'Add New',
                           style: TextStyle(
-                            color: Color(0xFFEA7B0C),
-                          ),
+                              color: Color(0xFFEA7B0C),
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -270,10 +270,147 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
               ],
             ),
             const SizedBox(height: 16),
-            Center(
-              child: ElevatedButton(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      color: const Color(0xFFF9E8E3),
+                      child: Row(
+                        children: [
+                          const Text(
+                            'Items',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF663274),
+                            ),
+                          ),
+                          const SizedBox(width: 230),
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                Navigator.pushNamed(context, addItemRoute);
+                              });
+                            },
+                            child: const Row(
+                              children: [
+                                Icon(
+                                  Icons.add,
+                                  color: Color(0xFFEA7B0C),
+                                ),
+                                Text(
+                                  'Add Item',
+                                  style: TextStyle(
+                                      color: Color(0xFFEA7B0C),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                InkWell(
+                  onTap: () {
+                    //handle view item
+                  },
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 125,
+                        width: double.maxFinite,
+                        margin: const EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(33),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: const Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  'Item Name',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color(0xFF663274),
+                                  ),
+                                ),
+                                Spacer(),
+                                Text(
+                                  'Amount',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color(0xFF663274),
+                                  ),
+                                ),
+                                SizedBox(width: 43),
+                              ],
+                            ),
+                            SizedBox(height: 8),
+                            Row(
+                              children: [
+                                Text(
+                                  'Qty 25@125',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.normal,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                Spacer(),
+                                Text(
+                                  '30000',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.normal,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(width: 55),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                        top: 16,
+                        right: 16,
+                        child: InkWell(
+                          onTap: () {
+                            //handle item edit
+                          },
+                          child: const Icon(
+                            Icons.edit,
+                            color: Color(0xFF663274),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 25),
+            Row(children: [
+              ElevatedButton(
                 onPressed: () {
-                  // Perform next logic
+                  // Perform add more logic
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFEA7B0C),
@@ -284,15 +421,62 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                 child: const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'Save',
+                    'Add More',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
                       fontSize: 22,
                     ),
                   ),
                 ),
               ),
-            ),
+              const SizedBox(width: 20),
+              SizedBox(
+                width: 165,
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Perform save logic
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFEA7B0C),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      'Save',
+                      style: TextStyle(
+                        fontSize: 22,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ]),
+            const SizedBox(height: 16),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {
+                  // Perform save logic
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF663274),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    'Submit & Share',
+                    style: TextStyle(
+                      fontSize: 22,
+                    ),
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),

@@ -1,6 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'package:accountsntax/screens/drawer_options/sales_operations/invoice_screen.dart';
+import 'package:accountsntax/screens/invoice_operations/invoice_screen.dart';
 import 'package:flutter/material.dart';
 
 class SalesDescription extends StatefulWidget {

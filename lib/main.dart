@@ -14,7 +14,8 @@ import 'package:accountsntax/screens/company_profile_screen.dart';
 import 'package:accountsntax/screens/create_invoice_screen.dart';
 import 'package:accountsntax/screens/customer_details_screen.dart';
 import 'package:accountsntax/screens/drawer_options/mis_screen.dart';
-import 'package:accountsntax/screens/drawer_options/sales_description.dart';
+import 'package:accountsntax/screens/drawer_options/sales_operations/sales_description.dart';
+import 'package:accountsntax/screens/invoice_operations/add_item_screen.dart';
 import 'package:accountsntax/screens/otp_screen.dart';
 import 'package:accountsntax/screens/partner_operations/add_partner_screen.dart';
 import 'package:accountsntax/screens/partner_operations/edit_partner_screen.dart';
@@ -77,6 +78,7 @@ class AccountsntaxApp extends StatelessWidget {
         createInvoiceRoute:(context) => const CreateInvoiceScreen(),
         editCustomerRoute:(context) => const CustomerDetailsScreen(),
         addCustomerRoute:(context) => const AddCustomerDetailsScreen(),
+        addItemRoute:(context) => const AddItemScreen(),
         },
     );
   }

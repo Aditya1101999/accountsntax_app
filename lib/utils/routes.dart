@@ -28,3 +28,4 @@ const String salesPerformanceRoute = 'sales_info';
 const String createInvoiceRoute = 'create_invoice';
 const String editCustomerRoute = 'edit_customer';
 const String addCustomerRoute = 'add_customer';
+const String addItemRoute = 'add_item';
