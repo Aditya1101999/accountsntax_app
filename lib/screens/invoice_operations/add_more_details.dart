@@ -6,113 +6,153 @@ class AddMoreDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Row(
-            children: [
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text('John Doe'),
-                    SizedBox(width: 8.0),
-                    Icon(Icons.arrow_drop_down),
-                    SizedBox(width: 8.0),
-                  ],
-                ),
-              ),
-            ],
+        body: SingleChildScrollView(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      const SizedBox(
+        height: 50,
+        width: 50,
+      ),
+      SizedBox(
+        height: 50,
+        child: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Color(0xFF663274),
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      const Center(
+        child: Text(
+          'Add Item',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 30,
+            color: Color(0xFF663274),
           ),
         ),
-        body: SingleChildScrollView(
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-              const SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        Container(
-                          width: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.rectangle,
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          padding: const EdgeInsets.all(12.0),
-                          child: IconButton(
-                            icon: const Icon(
-                              Icons.account_box,
-                              color: Color(0xFFEA7A40),
-                            ),
-                            onPressed: () {
-                              // Handle items button tap
-                            },
-                          ),
-                        ),
-                        const SizedBox(height: 8.0),
-                        const Text('Items'),
-                      ],
+      ),
+      const SizedBox(
+        height: 20,
+      ),
+      Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: [
+                Container(
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  padding: const EdgeInsets.all(12.0),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.delivery_dining,
+                      color: Color(0xFFEA7A40),
                     ),
-                    Column(
-                      children: [
-                        Container(
-                          width: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.rectangle,
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          padding: const EdgeInsets.all(12.0),
-                          child: IconButton(
-                            icon: const Icon(
-                              Icons.people,
-                              color: Color(0xFFEA7A40),
-                            ),
-                            onPressed: () {
-                              // Handle party button tap
-                            },
-                          ),
-                        ),
-                        const SizedBox(height: 8.0),
-                        const Text('Party'),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          width: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.rectangle,
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          padding: const EdgeInsets.all(12.0),
-                          child: IconButton(
-                            icon: const Icon(
-                              Icons.money_off_csred_sharp,
-                              color: Color(0xFFEA7A40),
-                            ),
-                            onPressed: () {
-                              // Handle collections button tap
-                            },
-                          ),
-                        ),
-                        const SizedBox(height: 8.0),
-                        const Text('Collections'),
-                      ],
-                    ),
-                  ],
+                    onPressed: () {
+                      // Handle items button tap
+                    },
+                  ),
                 ),
-              ),
-            ])));
+                const SizedBox(height: 8.0),
+                const Text('Dispatch Order Details'),
+              ],
+            ),
+            Column(
+              children: [
+                Container(
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  padding: const EdgeInsets.all(12.0),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.import_export,
+                      color: Color(0xFFEA7A40),
+                    ),
+                    onPressed: () {
+                      // Handle party button tap
+                    },
+                  ),
+                ),
+                const SizedBox(height: 8.0),
+                const Text('Export Details'),
+              ],
+            ),
+          ],
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const SizedBox(),
+            Column(
+              children: [
+                Container(
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  padding: const EdgeInsets.all(12.0),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.receipt,
+                      color: Color(0xFFEA7A40),
+                    ),
+                    onPressed: () {
+                      // Handle collections button tap
+                    },
+                  ),
+                ),
+                const SizedBox(height: 8.0),
+                const Text('E-way Bill Details'),
+              ],
+            ),
+            const SizedBox(),
+            Column(
+              children: [
+                Container(
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  padding: const EdgeInsets.all(12.0),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.document_scanner,
+                      color: Color(0xFFEA7A40),
+                    ),
+                    onPressed: () {
+                      // Handle collections button tap
+                    },
+                  ),
+                ),
+                const SizedBox(height: 8.0),
+                const Text('E-invoice Details'),
+              ],
+            ),
+          ],
+        ),
+        
+      ),
+    ])));
   }
 }

@@ -60,8 +60,11 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  Text('  Is it an optional voucher?',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  SizedBox(width: 10),
                   OptionalVoucherCheckbox(),
-                  Text('  Is it an optional voucher?'),
                 ],
               ),
             ),
@@ -259,7 +262,7 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                   decoration: const BoxDecoration(color: Color(0xFFEA7B0C)),
                   child: InkWell(
                     onTap: () {
-                      // Handle view consignee list logic
+                      Navigator.pushNamed(context, viewInvoiceRoute);
                     },
                     child: const Icon(
                       Icons.visibility,
@@ -406,7 +409,40 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 20),
+            const Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Do you want to generate E-way Bill ?',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  OptionalVoucherCheckbox(),
+                ],
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('Do you want to generate E-Invoice ?',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  OptionalVoucherCheckbox(),
+                ],
+              ),
+            ),
+            const SizedBox(height: 12),
             Row(children: [
               ElevatedButton(
                 onPressed: () {
