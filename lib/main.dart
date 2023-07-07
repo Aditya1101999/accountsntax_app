@@ -11,7 +11,7 @@ import 'package:accountsntax/screens/basic_details_operations/view_basic_details
 import 'package:accountsntax/screens/basic_details_operations/view_business_details_screen.dart';
 import 'package:accountsntax/screens/change_password.dart';
 import 'package:accountsntax/screens/company_profile_screen.dart';
-import 'package:accountsntax/screens/create_invoice_screen.dart';
+import 'package:accountsntax/screens/invoice_operations/create_invoice_screen.dart';
 import 'package:accountsntax/screens/customer_details_screen.dart';
 import 'package:accountsntax/screens/drawer_options/mis_screen.dart';
 import 'package:accountsntax/screens/drawer_options/sales_operations/sales_description.dart';

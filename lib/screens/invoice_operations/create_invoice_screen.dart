@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'invoice_operations/invoice_continued_screen.dart';
+import 'create_invoice_continued_screen.dart';
 
 class CreateInvoiceScreen extends StatefulWidget {
   const CreateInvoiceScreen({super.key});
@@ -170,7 +170,6 @@ class _CreateInvoiceScreenState extends State<CreateInvoiceScreen> {
                 fillColor: Colors.white,
                 contentPadding:
                     const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
-                labelText: 'Party Name',
                 hintText: 'Enter party name',
                 hintStyle: const TextStyle(color: Colors.grey),
               ),
