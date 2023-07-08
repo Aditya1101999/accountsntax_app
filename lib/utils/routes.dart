@@ -32,3 +32,4 @@ const String addItemRoute = 'add_item';
 const String addMoreDetailsRoute = 'add_details';
 const String viewInvoiceRoute = 'view_invoice';
 const String dispatchOrderRoute = 'dispatch_order';
+const String expensesRoute = 'expenses';

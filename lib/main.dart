@@ -1,3 +1,4 @@
+import 'package:accountsntax/screens/drawer_options/accounting/expenses_screen.dart';
 import 'package:accountsntax/screens/invoice_operations/add_customer_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_address_details_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_bank_details_screen.dart';
@@ -83,6 +84,7 @@ class AccountsntaxApp extends StatelessWidget {
         addItemRoute:(context) => const AddItemScreen(),
         addMoreDetailsRoute:(context) => const AddMoreDetailsScreen(),
         viewInvoiceRoute:(context) => const ViewInvoiceScreen(),
+        expensesRoute:(context) => const ExpensesDescription(),
         },
     );
   }

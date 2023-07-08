@@ -419,34 +419,7 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  'Particulars',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF663274),
-                  ),
-                ),
-                const SizedBox(height: 5),
-                TextFormField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                      borderSide: const BorderSide(color: Color(0xFF663274)),
-                    ),
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16.0,
-                      vertical: 12.0,
-                    ),
-                    hintText: 'Tax',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 10),
-                const Text(
-                  'New Invoice Status',
+                  'Select Ledger',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF663274),
@@ -499,6 +472,33 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                   ],
                 ),
                 const SizedBox(height: 10),
+                const Text(
+                  'Rate',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF663274),
+                  ),
+                ),
+                const SizedBox(height: 5),
+                TextFormField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 12.0,
+                    ),
+                    hintText: 'Enter Rate',
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
                 Row(
                   children: [
                     Expanded(
@@ -506,7 +506,7 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Start Date',
+                            'Amount',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0xFF663274),
@@ -591,34 +591,7 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  'Particulars',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF663274),
-                  ),
-                ),
-                const SizedBox(height: 5),
-                TextFormField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                      borderSide: const BorderSide(color: Color(0xFF663274)),
-                    ),
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16.0,
-                      vertical: 12.0,
-                    ),
-                    hintText: 'Charges',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 10),
-                const Text(
-                  'New Invoice Status',
+                  'Select Ledgers',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF663274),
@@ -643,7 +616,7 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                       horizontal: 16.0,
                       vertical: 12.0,
                     ),
-                    hintText: 'Select an option',
+                    hintText: 'Select Ledger',
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
@@ -678,7 +651,7 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Start Date',
+                            'Amount',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0xFF663274),
