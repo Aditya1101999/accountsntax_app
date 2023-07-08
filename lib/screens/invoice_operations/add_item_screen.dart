@@ -226,7 +226,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                   ),
                 ),
               ]),
-            const SizedBox(height: 12),
+            const SizedBox(height: 5),
             const Text(
               'Sales Ledger',
               style: TextStyle(
@@ -291,7 +291,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                   ),
                 ),
               ]),
-            const SizedBox(height: 12),
+            const SizedBox(height: 5),
             const Text(
               'HSN',
               style: TextStyle(
@@ -329,7 +329,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                 errorText: _hsnError,
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 5),
             const Text(
               'Quantity',
               style: TextStyle(
@@ -367,7 +367,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                 errorText: _quantityError,
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 5),
             const Text(
               'Rate',
               style: TextStyle(
@@ -405,7 +405,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                 errorText: _rateError,
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 5),
             const Text(
               'Tax',
               style: TextStyle(
@@ -443,7 +443,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                 errorText: _taxError,
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 5),
             const Text(
               'Discount',
               style: TextStyle(

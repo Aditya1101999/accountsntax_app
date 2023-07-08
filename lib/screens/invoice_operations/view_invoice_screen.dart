@@ -12,23 +12,32 @@ class ViewInvoiceScreen extends StatefulWidget {
 class _ViewInvoiceScreenState extends State<ViewInvoiceScreen> {
   late TextEditingController _frequencyController;
   String? invoiceStatus;
+  String? currency;
   late TextEditingController _startDateController;
   late TextEditingController _endDateController;
   late TextEditingController _dueDateController;
   late TextEditingController _salesOrderNoController;
   late TextEditingController _salesQuotationNoController;
+  late TextEditingController _rateController = TextEditingController();
+  late TextEditingController _conversionCurrencyController =
+      TextEditingController();
+
   bool _showSetRecurrenceFields = false;
+  bool _showCurrencyError = false;
 
   @override
   void initState() {
     super.initState();
     _frequencyController = TextEditingController();
     invoiceStatus = '';
+    currency = '';
     _startDateController = TextEditingController();
     _endDateController = TextEditingController();
     _dueDateController = TextEditingController();
     _salesOrderNoController = TextEditingController(text: '123456');
     _salesQuotationNoController = TextEditingController(text: '7890');
+    _rateController = TextEditingController();
+    _conversionCurrencyController = TextEditingController();
   }
 
   @override
@@ -39,6 +48,8 @@ class _ViewInvoiceScreenState extends State<ViewInvoiceScreen> {
     _dueDateController.dispose();
     _salesOrderNoController.dispose();
     _salesQuotationNoController.dispose();
+    _rateController.dispose();
+    _conversionCurrencyController.dispose();
     super.dispose();
   }
 
@@ -48,7 +59,10 @@ class _ViewInvoiceScreenState extends State<ViewInvoiceScreen> {
     });
   }
 
-  bool _isDateValid(String input) {
+  bool _isDateValid(String? input) {
+    if (input == null || input.isEmpty) {
+      return true;
+    }
     final dateFormat = RegExp(r'^\d{2}-\d{2}-\d{4}$');
     if (!dateFormat.hasMatch(input)) {
       return false;
@@ -67,7 +81,7 @@ class _ViewInvoiceScreenState extends State<ViewInvoiceScreen> {
   }
 
   String? _validateDate(String? input) {
-    if (input != null && input.isNotEmpty && !_isDateValid(input)) {
+    if (input != null && !_isDateValid(input)) {
       return 'Invalid date format (dd-mm-yyyy)';
     }
     return null;
@@ -90,6 +104,9 @@ class _ViewInvoiceScreenState extends State<ViewInvoiceScreen> {
       }
     }
     if (!_isDateValid(_dueDateController.text)) {
+      return false;
+    }
+    if (currency == null || currency!.isEmpty) {
       return false;
     }
     return true;
@@ -281,6 +298,7 @@ class _ViewInvoiceScreenState extends State<ViewInvoiceScreen> {
                           ),
                           const SizedBox(height: 5),
                           TextFormField(
+                            controller: _endDateController,
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
@@ -410,6 +428,141 @@ class _ViewInvoiceScreenState extends State<ViewInvoiceScreen> {
                   ),
                 ),
               ),
+              const SizedBox(height: 10),
+              const Text(
+                'Currency',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF663274),
+                ),
+              ),
+              const SizedBox(height: 5),
+              DropdownButtonFormField<String>(
+                hint: const Text('Select Currency'),
+                onChanged: (value) {
+                  setState(() {
+                    currency = value!;
+                    _showCurrencyError = false;
+                  });
+                },
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                    borderSide: const BorderSide(color: Color(0xFF663274)),
+                  ),
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 16.0,
+                    vertical: 12.0,
+                  ),
+                  hintText: 'Select an option',
+                  hintStyle: const TextStyle(
+                    color: Colors.grey,
+                  ),
+                  errorStyle: const TextStyle(
+                    color: Colors.red,
+                  ),
+                  errorText:
+                      _showCurrencyError ? 'Please select a currency' : null,
+                ),
+                items: const [
+                  DropdownMenuItem<String>(
+                    value: 'INR',
+                    child: Text('INR'),
+                  ),
+                  DropdownMenuItem<String>(
+                    value: 'USD',
+                    child: Text('USD'),
+                  ),
+                  DropdownMenuItem<String>(
+                    value: 'EUR',
+                    child: Text('EUR'),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Rate',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF663274),
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        TextFormField(
+                          controller: _rateController,
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8.0),
+                              borderSide:
+                                  const BorderSide(color: Color(0xFF663274)),
+                            ),
+                            contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 16.0,
+                              vertical: 12.0,
+                            ),
+                            hintText: 'Rate',
+                            hintStyle: const TextStyle(
+                              color: Colors.grey,
+                            ),
+                            errorStyle: const TextStyle(
+                              color: Colors.red,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Conversion Currency',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF663274),
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        TextFormField(
+                          controller: _conversionCurrencyController,
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8.0),
+                              borderSide:
+                                  const BorderSide(color: Color(0xFF663274)),
+                            ),
+                            contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 16.0,
+                              vertical: 12.0,
+                            ),
+                            hintText: 'INR',
+                            hintStyle: const TextStyle(
+                              color: Colors.grey,
+                            ),
+                            errorStyle: const TextStyle(
+                              color: Colors.red,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(height: 30),
               Center(
                 child: ElevatedButton(
@@ -419,6 +572,11 @@ class _ViewInvoiceScreenState extends State<ViewInvoiceScreen> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Invoice Details Saved')),
                       );
+                    } else {
+                      setState(() {
+                        _showCurrencyError =
+                            currency == null || currency!.isEmpty;
+                      });
                     }
                   },
                   style: ElevatedButton.styleFrom(
