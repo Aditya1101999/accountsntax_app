@@ -14,7 +14,22 @@ class InvoiceContinuedScreen extends StatefulWidget {
 
 class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
   String? selectedCustomer;
+  String? invoiceStatus;
   final TextEditingController _invoiceNoController = TextEditingController();
+  bool _showTaxLedgerFields = false;
+  bool _showAdditionalChargesFields = false;
+
+  void _toggleTaxLedgerFields() {
+    setState(() {
+      _showTaxLedgerFields = !_showTaxLedgerFields;
+    });
+  }
+
+  void _toggleAdditionalChargesFields() {
+    setState(() {
+      _showAdditionalChargesFields = !_showAdditionalChargesFields;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +77,8 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text('  Is it an optional voucher?',
-                        style:
-                            TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold)),
                     SizedBox(width: 10),
                     OptionalVoucherCheckbox(),
                   ],
@@ -319,45 +334,405 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                     ],
                   ),
                   ListView(
-  padding: const EdgeInsets.all(8.0),
-  shrinkWrap: true,
-  physics: const NeverScrollableScrollPhysics(),
-  children: [
-    ListTile(
-      onTap: () {
-        // handle item tap
-      },
-      title: const Text(
-        'SNS00042 / 360 - \nBlue & White - White                      25000',
-      ),
-      subtitle: const Text('Qty 25@125'),
-    ),
-    const Divider(color: Color(0xFFEA7A40)),
-    ListTile(
-      onTap: () {
-        // handle item tap
-      },
-      title: const Text(
-        'SNS00042 / 360 - \nBlue & White - White                      25000',
-      ),
-      subtitle: const Text('Qty 25@125'),
-    ),
-    const Divider(color: Color(0xFFEA7A40)),
-    ListTile(
-      onTap: () {
-        // handle item tap
-      },
-      title: const Text(
-        'SNS00042 / 360 - \nBlue & White - White                      25000',
-      ),
-      subtitle: const Text('Qty 25@125'),
-    ),
-  ],
-),
-
-                  
+                    padding: const EdgeInsets.all(8.0),
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    children: [
+                      ListTile(
+                        onTap: () {
+                          // handle item tap
+                        },
+                        title: const Text(
+                          'SNS00042 / 360 - \nBlue & White - White                      25000',
+                        ),
+                        subtitle: const Text('Qty 25@125'),
+                      ),
+                      const Divider(color: Color(0xFFEA7A40)),
+                      ListTile(
+                        onTap: () {
+                          // handle item tap
+                        },
+                        title: const Text(
+                          'SNS00042 / 360 - \nBlue & White - White                      25000',
+                        ),
+                        subtitle: const Text('Qty 25@125'),
+                      ),
+                      const Divider(color: Color(0xFFEA7A40)),
+                      ListTile(
+                        onTap: () {
+                          // handle item tap
+                        },
+                        title: const Text(
+                          'SNS00042 / 360 - \nBlue & White - White                      25000',
+                        ),
+                        subtitle: const Text('Qty 25@125'),
+                      ),
+                    ],
+                  ),
                 ],
               ),
+              Row(children: [
+                TextButton(
+                  onPressed: _toggleTaxLedgerFields,
+                  child: const Text(
+                    'Tax Ledgers',
+                    style: TextStyle(
+                        color: Color(0xFFEA7B0C), fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const SizedBox(width: 100),
+                TextButton(
+                  onPressed: _toggleAdditionalChargesFields,
+                  child: const Text('Additional Charges',
+                      style: TextStyle(
+                          color: Color(0xFFEA7B0C),
+                          fontWeight: FontWeight.bold)),
+                ),
+              ]),
+              if (_showTaxLedgerFields) ...[
+                const SizedBox(height: 20),
+                const Text(
+                  'Type of Charge',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF663274),
+                  ),
+                ),
+                const SizedBox(height: 5),
+                TextFormField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 12.0,
+                    ),
+                    hintText: 'Charge Type',
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'Particulars',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF663274),
+                  ),
+                ),
+                const SizedBox(height: 5),
+                TextFormField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 12.0,
+                    ),
+                    hintText: 'Tax',
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'New Invoice Status',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF663274),
+                  ),
+                ),
+                const SizedBox(height: 5),
+                DropdownButtonFormField<String>(
+                  hint: const Text('Select Ledgers'),
+                  onChanged: (value) {
+                    setState(() {
+                      invoiceStatus = value!;
+                    });
+                  },
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 12.0,
+                    ),
+                    hintText: 'Select an option',
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                    ),
+                    errorStyle: const TextStyle(
+                      color: Colors.red,
+                    ),
+                  ),
+                  items: const [
+                    DropdownMenuItem<String>(
+                      value: 'option1',
+                      child: Text('Option 1'),
+                    ),
+                    DropdownMenuItem<String>(
+                      value: 'option2',
+                      child: Text('Option 2'),
+                    ),
+                    DropdownMenuItem<String>(
+                      value: 'option3',
+                      child: Text('Option 3'),
+                    ),
+                    DropdownMenuItem<String>(
+                      value: 'option4',
+                      child: Text('Option 4'),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Start Date',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF663274),
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          TextFormField(
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Colors.white,
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                                borderSide:
+                                    const BorderSide(color: Color(0xFF663274)),
+                              ),
+                              contentPadding: const EdgeInsets.symmetric(
+                                horizontal: 16.0,
+                                vertical: 12.0,
+                              ),
+                              hintText: 'Enter Amount',
+                              hintStyle: const TextStyle(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 30),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      _toggleTaxLedgerFields();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                            content: Text('Tax Ledger Details Saved')),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFEA7B0C),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 40,
+                        vertical: 12,
+                      ),
+                    ),
+                    child: const Text(
+                      'Save',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                ),
+              ],
+              if (_showAdditionalChargesFields) ...[
+                const SizedBox(height: 20),
+                const Text(
+                  'Type of Charge',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF663274),
+                  ),
+                ),
+                const SizedBox(height: 5),
+                TextFormField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 12.0,
+                    ),
+                    hintText: 'Charge Type',
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'Particulars',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF663274),
+                  ),
+                ),
+                const SizedBox(height: 5),
+                TextFormField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 12.0,
+                    ),
+                    hintText: 'Charges',
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'New Invoice Status',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF663274),
+                  ),
+                ),
+                const SizedBox(height: 5),
+                DropdownButtonFormField<String>(
+                  hint: const Text('Select Ledgers'),
+                  onChanged: (value) {
+                    setState(() {
+                      invoiceStatus = value!;
+                    });
+                  },
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Color(0xFF663274)),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 12.0,
+                    ),
+                    hintText: 'Select an option',
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                    ),
+                    errorStyle: const TextStyle(
+                      color: Colors.red,
+                    ),
+                  ),
+                  items: const [
+                    DropdownMenuItem<String>(
+                      value: 'option1',
+                      child: Text('Option 1'),
+                    ),
+                    DropdownMenuItem<String>(
+                      value: 'option2',
+                      child: Text('Option 2'),
+                    ),
+                    DropdownMenuItem<String>(
+                      value: 'option3',
+                      child: Text('Option 3'),
+                    ),
+                    DropdownMenuItem<String>(
+                      value: 'option4',
+                      child: Text('Option 4'),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Start Date',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF663274),
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          TextFormField(
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Colors.white,
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8.0),
+                                borderSide:
+                                    const BorderSide(color: Color(0xFF663274)),
+                              ),
+                              contentPadding: const EdgeInsets.symmetric(
+                                horizontal: 16.0,
+                                vertical: 12.0,
+                              ),
+                              hintText: 'Enter Amount',
+                              hintStyle: const TextStyle(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 30),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      _toggleAdditionalChargesFields();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                            content: Text('Additonal Charges Saved')),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFEA7B0C),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 40,
+                        vertical: 12,
+                      ),
+                    ),
+                    child: const Text(
+                      'Save',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                ),
+              ],
               const SizedBox(height: 20),
               const Center(
                 child: Row(
@@ -366,7 +741,8 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                   children: [
                     Text(
                       'Do you want to generate E-way Bill ?',
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
                       width: 10,
@@ -382,8 +758,8 @@ class _InvoiceContinuedScreenState extends State<InvoiceContinuedScreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text('Do you want to generate E-Invoice ?',
-                        style:
-                            TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold)),
                     SizedBox(
                       width: 10,
                     ),
