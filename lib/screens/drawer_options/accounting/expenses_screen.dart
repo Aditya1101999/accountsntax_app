@@ -28,7 +28,7 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                   },
                 ),
                 const SizedBox(
-                  width: 60,
+                  width: 50,
                 ),
                 const Text(
                   'Expenses',
