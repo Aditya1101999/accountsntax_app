@@ -158,7 +158,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                         .showSnackBar(
                                                       const SnackBar(
                                                           content: Text(
-                                                              'Entry Deleted')),
+                                                              'Customer Deleted')),
                                                     );
                                                   },
                                                   child: const Text(
@@ -209,7 +209,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                     IconButton(
                                         onPressed: () {
                                           Navigator.pushNamed(
-                                            context, editCustomerRoute);
+                                              context, editCustomerRoute);
                                         },
                                         icon: const Icon(Icons.edit_document),
                                         color: const Color(0xFFEA7A40)),
@@ -243,7 +243,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                           .showSnackBar(
                                                         const SnackBar(
                                                             content: Text(
-                                                                'Entry Deleted')),
+                                                                'Customer Deleted')),
                                                       );
                                                     },
                                                     child: const Text(
@@ -333,7 +333,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                         .showSnackBar(
                                                       const SnackBar(
                                                           content: Text(
-                                                              'Entry Deleted')),
+                                                              'Customer Deleted')),
                                                     );
                                                   },
                                                   child: const Text(
@@ -384,7 +384,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                     IconButton(
                                         onPressed: () {
                                           Navigator.pushNamed(
-                                            context, editCustomerRoute);
+                                              context, editCustomerRoute);
                                         },
                                         icon: const Icon(Icons.edit_document),
                                         color: const Color(0xFFEA7A40)),
@@ -418,7 +418,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                           .showSnackBar(
                                                         const SnackBar(
                                                             content: Text(
-                                                                'Entry Deleted')),
+                                                                'Customer Deleted')),
                                                       );
                                                     },
                                                     child: const Text(
@@ -507,7 +507,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                         .showSnackBar(
                                                       const SnackBar(
                                                           content: Text(
-                                                              'Entry Deleted')),
+                                                              'Customer Deleted')),
                                                     );
                                                   },
                                                   child: const Text(
@@ -557,8 +557,8 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                   children: [
                                     IconButton(
                                         onPressed: () {
-                                         Navigator.pushNamed(
-                                            context, editCustomerRoute);
+                                          Navigator.pushNamed(
+                                              context, editCustomerRoute);
                                         },
                                         icon: const Icon(Icons.edit_document),
                                         color: const Color(0xFFEA7A40)),
@@ -592,181 +592,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                           .showSnackBar(
                                                         const SnackBar(
                                                             content: Text(
-                                                                'Entry Deleted')),
-                                                      );
-                                                    },
-                                                    child: const Text(
-                                                      'YES',
-                                                      style: TextStyle(
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  ElevatedButton(
-                                                    onPressed: () {
-                                                      Navigator.pop(context);
-                                                    },
-                                                    child: const Text(
-                                                      'NO',
-                                                      style: TextStyle(
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              );
-                                            },
-                                          );
-                                        },
-                                        icon: const Icon(Icons.delete),
-                                        color: const Color(0xFFEA7A40)),
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                          DataRow(
-                            color: MaterialStateColor.resolveWith(
-                              (states) => Colors.white,
-                            ),
-                            cells: [
-                              const DataCell(Center(
-                                child: Text(
-                                  'ayratest',
-                                ),
-                              )),
-                              const DataCell(
-                                Text(
-                                  '9876543210',
-                                  textAlign: TextAlign.end,
-                                ),
-                              ),
-                              DataCell(
-                                Row(
-                                  children: [
-                                    IconButton(
-                                      onPressed: () {
-                                       Navigator.pushNamed(
-                                            context, editCustomerRoute);
-                                      },
-                                      icon: const Icon(Icons.edit_document),
-                                      color: const Color(0xFFEA7A40),
-                                    ),
-                                    IconButton(
-                                      onPressed: () {
-                                        showDialog(
-                                          context: context,
-                                          builder: (BuildContext context) {
-                                            return AlertDialog(
-                                              backgroundColor:
-                                                  const Color(0xFFF9E8E3),
-                                              title: const Text(
-                                                'Do you want to delete this customer ?',
-                                                style: TextStyle(
-                                                  color: Color(0xFF663274),
-                                                ),
-                                              ),
-                                              actions: [
-                                                ElevatedButton(
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                    backgroundColor:
-                                                        const Color(0xFFEA7B0C),
-                                                  ),
-                                                  onPressed: () {
-                                                    // Implement logic to delete
-                                                    Navigator.pop(context);
-                                                    ScaffoldMessenger.of(
-                                                            context)
-                                                        .showSnackBar(
-                                                      const SnackBar(
-                                                          content: Text(
-                                                              'Entry Deleted')),
-                                                    );
-                                                  },
-                                                  child: const Text(
-                                                    'YES',
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                ),
-                                                ElevatedButton(
-                                                  onPressed: () {
-                                                    Navigator.pop(context);
-                                                  },
-                                                  child: const Text(
-                                                    'NO',
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            );
-                                          },
-                                        );
-                                      },
-                                      icon: const Icon(Icons.delete),
-                                      color: const Color(0xFFEA7A40),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          DataRow(
-                            color: MaterialStateColor.resolveWith(
-                              (states) => Colors.white,
-                            ),
-                            cells: [
-                              const DataCell(Center(
-                                child: Text(
-                                  'ayratest',
-                                ),
-                              )),
-                              const DataCell(Text('9876543210')),
-                              DataCell(
-                                Row(
-                                  children: [
-                                    IconButton(
-                                        onPressed: () {
-                                         Navigator.pushNamed(
-                                            context, editCustomerRoute);
-                                        },
-                                        icon: const Icon(Icons.edit_document),
-                                        color: const Color(0xFFEA7A40)),
-                                    IconButton(
-                                        onPressed: () {
-                                          showDialog(
-                                            context: context,
-                                            builder: (BuildContext context) {
-                                              return AlertDialog(
-                                                backgroundColor:
-                                                    const Color(0xFFF9E8E3),
-                                                title: const Text(
-                                                  'Do you want to delete this customer ?',
-                                                  style: TextStyle(
-                                                    color: Color(0xFF663274),
-                                                  ),
-                                                ),
-                                                actions: [
-                                                  ElevatedButton(
-                                                    style: ElevatedButton
-                                                        .styleFrom(
-                                                      backgroundColor:
-                                                          const Color(
-                                                              0xFFEA7B0C),
-                                                    ),
-                                                    onPressed: () {
-                                                      // Implement logic to delete
-                                                      Navigator.pop(context);
-                                                      ScaffoldMessenger.of(
-                                                              context)
-                                                          .showSnackBar(
-                                                        const SnackBar(
-                                                            content: Text(
-                                                                'Entry Deleted')),
+                                                                'Customer Deleted')),
                                                       );
                                                     },
                                                     child: const Text(
@@ -855,7 +681,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                         .showSnackBar(
                                                       const SnackBar(
                                                           content: Text(
-                                                              'Entry Deleted')),
+                                                              'Customer Deleted')),
                                                     );
                                                   },
                                                   child: const Text(
@@ -906,7 +732,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                     IconButton(
                                         onPressed: () {
                                           Navigator.pushNamed(
-                                            context, editCustomerRoute);
+                                              context, editCustomerRoute);
                                         },
                                         icon: const Icon(Icons.edit_document),
                                         color: const Color(0xFFEA7A40)),
@@ -940,7 +766,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                           .showSnackBar(
                                                         const SnackBar(
                                                             content: Text(
-                                                                'Entry Deleted')),
+                                                                'Customer Deleted')),
                                                       );
                                                     },
                                                     child: const Text(
@@ -994,7 +820,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                   children: [
                                     IconButton(
                                       onPressed: () {
-                                       Navigator.pushNamed(
+                                        Navigator.pushNamed(
                                             context, editCustomerRoute);
                                       },
                                       icon: const Icon(Icons.edit_document),
@@ -1029,7 +855,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                         .showSnackBar(
                                                       const SnackBar(
                                                           content: Text(
-                                                              'Entry Deleted')),
+                                                              'Customer Deleted')),
                                                     );
                                                   },
                                                   child: const Text(
@@ -1080,7 +906,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                     IconButton(
                                         onPressed: () {
                                           Navigator.pushNamed(
-                                            context, editCustomerRoute);
+                                              context, editCustomerRoute);
                                         },
                                         icon: const Icon(Icons.edit_document),
                                         color: const Color(0xFFEA7A40)),
@@ -1114,7 +940,181 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                           .showSnackBar(
                                                         const SnackBar(
                                                             content: Text(
-                                                                'Entry Deleted')),
+                                                                'Customer Deleted')),
+                                                      );
+                                                    },
+                                                    child: const Text(
+                                                      'YES',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: const Text(
+                                                      'NO',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        icon: const Icon(Icons.delete),
+                                        color: const Color(0xFFEA7A40)),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                          DataRow(
+                            color: MaterialStateColor.resolveWith(
+                              (states) => Colors.white,
+                            ),
+                            cells: [
+                              const DataCell(Center(
+                                child: Text(
+                                  'ayratest',
+                                ),
+                              )),
+                              const DataCell(
+                                Text(
+                                  '9876543210',
+                                  textAlign: TextAlign.end,
+                                ),
+                              ),
+                              DataCell(
+                                Row(
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {
+                                        Navigator.pushNamed(
+                                            context, editCustomerRoute);
+                                      },
+                                      icon: const Icon(Icons.edit_document),
+                                      color: const Color(0xFFEA7A40),
+                                    ),
+                                    IconButton(
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              backgroundColor:
+                                                  const Color(0xFFF9E8E3),
+                                              title: const Text(
+                                                'Do you want to delete this customer ?',
+                                                style: TextStyle(
+                                                  color: Color(0xFF663274),
+                                                ),
+                                              ),
+                                              actions: [
+                                                ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        const Color(0xFFEA7B0C),
+                                                  ),
+                                                  onPressed: () {
+                                                    // Implement logic to delete
+                                                    Navigator.pop(context);
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      const SnackBar(
+                                                          content: Text(
+                                                              'Customer Deleted')),
+                                                    );
+                                                  },
+                                                  child: const Text(
+                                                    'YES',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: const Text(
+                                                    'NO',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      },
+                                      icon: const Icon(Icons.delete),
+                                      color: const Color(0xFFEA7A40),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          DataRow(
+                            color: MaterialStateColor.resolveWith(
+                              (states) => Colors.white,
+                            ),
+                            cells: [
+                              const DataCell(Center(
+                                child: Text(
+                                  'ayratest',
+                                ),
+                              )),
+                              const DataCell(Text('9876543210')),
+                              DataCell(
+                                Row(
+                                  children: [
+                                    IconButton(
+                                        onPressed: () {
+                                          Navigator.pushNamed(
+                                              context, editCustomerRoute);
+                                        },
+                                        icon: const Icon(Icons.edit_document),
+                                        color: const Color(0xFFEA7A40)),
+                                    IconButton(
+                                        onPressed: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                backgroundColor:
+                                                    const Color(0xFFF9E8E3),
+                                                title: const Text(
+                                                  'Do you want to delete this customer ?',
+                                                  style: TextStyle(
+                                                    color: Color(0xFF663274),
+                                                  ),
+                                                ),
+                                                actions: [
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          const Color(
+                                                              0xFFEA7B0C),
+                                                    ),
+                                                    onPressed: () {
+                                                      // Implement logic to delete
+                                                      Navigator.pop(context);
+                                                      ScaffoldMessenger.of(
+                                                              context)
+                                                          .showSnackBar(
+                                                        const SnackBar(
+                                                            content: Text(
+                                                                'Customer Deleted')),
                                                       );
                                                     },
                                                     child: const Text(
@@ -1164,7 +1164,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                     IconButton(
                                         onPressed: () {
                                           Navigator.pushNamed(
-                                            context, editCustomerRoute);
+                                              context, editCustomerRoute);
                                         },
                                         icon: const Icon(Icons.edit_document),
                                         color: const Color(0xFFEA7A40)),
@@ -1198,7 +1198,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                                           .showSnackBar(
                                                         const SnackBar(
                                                             content: Text(
-                                                                'Entry Deleted')),
+                                                                'Customer Deleted')),
                                                       );
                                                     },
                                                     child: const Text(
