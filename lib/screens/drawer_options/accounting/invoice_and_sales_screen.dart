@@ -1,5 +1,6 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
+import 'package:accountsntax/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class InvoiceAndSalesScreen extends StatefulWidget {
@@ -118,9 +119,7 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title:const Text('Invoicing/Sales')
-      ),
+      appBar: AppBar(title: const Text('Invoicing/Sales')),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -197,7 +196,7 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                             color: Color(0xFFEA7A40),
                           ),
                           onPressed: () {
-                            // Handle customers button tap
+                            Navigator.pushNamed(context, customerRoute);
                           },
                         ),
                       ),
@@ -209,8 +208,8 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            Row(
-              children: [const Text(
+            Row(children: [
+              const Text(
                 '   Invoicing Data',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -219,19 +218,26 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                 ),
               ),
               const SizedBox(width: 28.0),
-                  const Icon(Icons.file_upload,size: 32,color: Color(0xFFEA7A40),),
-                  const SizedBox(width: 18.0),
-                  IconButton(
-                    icon: const Icon(Icons.add_circle_outline,size:32,color: Color(0xFFEA7A40),),
-                    onPressed: () {
-                      // Handle add button
-                    },
-                  ),
-              ]
-            ),
+              const Icon(
+                Icons.file_upload,
+                size: 32,
+                color: Color(0xFFEA7A40),
+              ),
+              const SizedBox(width: 18.0),
+              IconButton(
+                icon: const Icon(
+                  Icons.add_circle_outline,
+                  size: 32,
+                  color: Color(0xFFEA7A40),
+                ),
+                onPressed: () {
+                  // Handle add button
+                },
+              ),
+            ]),
             const SizedBox(height: 10),
             SizedBox(
-              width: MediaQuery.of(context).size.width * 0.97,
+              width: MediaQuery.of(context).size.width * 0.99,
               child: SingleChildScrollView(
                 child: Theme(
                   data: Theme.of(context).copyWith(

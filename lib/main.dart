@@ -1,4 +1,5 @@
 import 'package:accountsntax/screens/drawer_options/accounting/expenses_screen.dart';
+import 'package:accountsntax/screens/drawer_options/accounting/invoice_and_sales_operations/customers_screen.dart';
 import 'package:accountsntax/screens/drawer_options/accounting/invoice_and_sales_screen.dart';
 import 'package:accountsntax/screens/invoice_operations/add_customer_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_address_details_screen.dart';
@@ -12,7 +13,7 @@ import 'package:accountsntax/screens/basic_details_operations/view_bank_details_
 import 'package:accountsntax/screens/basic_details_operations/view_basic_details_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/view_business_details_screen.dart';
 import 'package:accountsntax/screens/change_password.dart';
-import 'package:accountsntax/screens/company_profile_screen.dart';
+import 'package:accountsntax/screens/drawer_options/company_profile_screen.dart';
 import 'package:accountsntax/screens/invoice_operations/create_invoice_screen.dart';
 import 'package:accountsntax/screens/customer_details_screen.dart';
 import 'package:accountsntax/screens/drawer_options/mis_operations/mis_screen.dart';
@@ -87,6 +88,7 @@ class AccountsntaxApp extends StatelessWidget {
         viewInvoiceRoute:(context) => const ViewInvoiceScreen(),
         expensesRoute:(context) => const ExpensesDescription(),
         invoiceSalesRoute:(context) => const InvoiceAndSalesScreen(),
+        customerRoute:(context) => const CustomerScreen(),
         },
     );
   }

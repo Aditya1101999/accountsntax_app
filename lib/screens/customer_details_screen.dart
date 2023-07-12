@@ -27,12 +27,12 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
   @override
   void initState() {
     super.initState();
-    _typeController = TextEditingController(text: 'Khatu Shyam Traders');
+    _typeController = TextEditingController(text: 'ayratest');
     _addressLine1Controller = TextEditingController(text: '20/ 2 Telephone...');
     _addressLine2Controller = TextEditingController(text: 'xyz.google.com');
     _pincodeController = TextEditingController(text: '08CVYPG6177K1ZL');
     _cityController = TextEditingController(text: '08CVYPG6177K1ZL');
-    _stateController = TextEditingController(text: '+91-9876543210');
+    _stateController = TextEditingController(text: '9876543210');
   }
 
   @override
@@ -76,18 +76,20 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
       });
       isValid = false;
     }
-    RegExp pattern = RegExp(r'^\d{2}[A-Za-z0-9]{10}[1-9A-Za-z]$');
+    //update the regex pattern for gst after updated on web
+   // RegExp pattern =RegExp(r'^\d{2}[A-Za-z0-9]{10}[1-9A-Za-z]$');
     if (_cityController.text.isEmpty) {
       setState(() {
         _cityError = 'Please enter GST No.';
       });
       isValid = false;
-    } else if (!pattern.hasMatch(_cityController.text)) {
-      setState(() {
-        _cityError = 'Please enter Valid GST No.';
-      });
-      isValid = false;
-    }
+    } 
+    // else if (!pattern.hasMatch(_cityController.text)) {
+    //   setState(() {
+    //     _cityError = 'Please enter Valid GST No.';
+    //   });
+    //   isValid = false;
+    // }
 
     if (_stateController.text.isEmpty) {
       setState(() {
@@ -245,7 +247,7 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
                 ),
                 const SizedBox(height: 5),
                 TextFormField(
-                  controller: _pincodeController,
+                  controller: _cityController,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
@@ -261,7 +263,7 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
-                    errorText: _pincodeError,
+                    errorText: _cityError,
                   ),
                 ),
               ],
@@ -279,7 +281,7 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
                 ),
                 const SizedBox(height: 5),
                 TextFormField(
-                  controller: _cityController,
+                  controller: _pincodeController,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
@@ -295,7 +297,7 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
-                    errorText: _cityError,
+                    errorText: _pincodeError,
                   ),
                 ),
               ],

@@ -36,7 +36,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
           SizedBox(
             height: 50,
             child: IconButton(
-              icon: const Icon(Icons.arrow_back,color:Color(0xFF663274)),
+              icon: const Icon(Icons.arrow_back, color: Color(0xFF663274)),
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -188,7 +188,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                         context, editBasicDetailsRoute);
                                   },
                                   child: const Icon(
-                                    Icons.edit,
+                                    Icons.edit_document,
                                     color: Color(0xFF663274),
                                   ),
                                 ),
@@ -311,7 +311,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                         context, editBusinessDetailsRoute);
                                   },
                                   child: const Icon(
-                                    Icons.edit,
+                                    Icons.edit_document,
                                     color: Color(0xFF663274),
                                   ),
                                 ),
@@ -446,7 +446,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                         context, editAddressDetailsRoute);
                                   },
                                   child: const Icon(
-                                    Icons.edit,
+                                    Icons.edit_document,
                                     color: Color(0xFF663274),
                                   ),
                                 ),
@@ -580,7 +580,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                         context, editBankDetailsRoute);
                                   },
                                   child: const Icon(
-                                    Icons.edit,
+                                    Icons.edit_document,
                                     color: Color(0xFF663274),
                                   ),
                                 ),
@@ -662,7 +662,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                           Navigator.pushNamed(
                                               context, editPartnerDetailsRoute);
                                         },
-                                        child: const Icon(Icons.edit,
+                                        child: const Icon(Icons.edit_document,
                                             color: Color(0xFF663274)),
                                       ),
                                       const SizedBox(width: 8),
@@ -804,7 +804,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                           Navigator.pushNamed(
                                               context, editPartnerDetailsRoute);
                                         },
-                                        child: const Icon(Icons.edit,
+                                        child: const Icon(Icons.edit_document,
                                             color: Color(0xFF663274)),
                                       ),
                                       const SizedBox(width: 8),
@@ -946,7 +946,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                           Navigator.pushNamed(
                                               context, editPartnerDetailsRoute);
                                         },
-                                        child: const Icon(Icons.edit,
+                                        child: const Icon(Icons.edit_document,
                                             color: Color(0xFF663274)),
                                       ),
                                       const SizedBox(width: 8),
@@ -1050,7 +1050,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                   children: [
                     InkWell(
                       onTap: () {
-                         Navigator.pushNamed(context, viewVaultDetailsRoute);
+                        Navigator.pushNamed(context, viewVaultDetailsRoute);
                       },
                       child: Container(
                         height: 125,
@@ -1114,7 +1114,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                           Navigator.pushNamed(
                                               context, editVaultDetailsRoute);
                                         },
-                                        child: const Icon(Icons.edit,
+                                        child: const Icon(Icons.edit_document,
                                             color: Color(0xFF663274)),
                                       ),
                                       const SizedBox(width: 8),
@@ -1203,9 +1203,9 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                         ),
                       ),
                     ),
-                     InkWell(
+                    InkWell(
                       onTap: () {
-                         Navigator.pushNamed(context, viewVaultDetailsRoute);
+                        Navigator.pushNamed(context, viewVaultDetailsRoute);
                       },
                       child: Container(
                         height: 125,
@@ -1269,7 +1269,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                           Navigator.pushNamed(
                                               context, editVaultDetailsRoute);
                                         },
-                                        child: const Icon(Icons.edit,
+                                        child: const Icon(Icons.edit_document,
                                             color: Color(0xFF663274)),
                                       ),
                                       const SizedBox(width: 8),
@@ -1358,9 +1358,9 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                         ),
                       ),
                     ),
-                     InkWell(
+                    InkWell(
                       onTap: () {
-                         Navigator.pushNamed(context, viewVaultDetailsRoute);
+                        Navigator.pushNamed(context, viewVaultDetailsRoute);
                       },
                       child: Container(
                         height: 125,
@@ -1424,7 +1424,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage>
                                           Navigator.pushNamed(
                                               context, editVaultDetailsRoute);
                                         },
-                                        child: const Icon(Icons.edit,
+                                        child: const Icon(Icons.edit_document,
                                             color: Color(0xFF663274)),
                                       ),
                                       const SizedBox(width: 8),
