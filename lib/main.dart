@@ -1,4 +1,5 @@
 import 'package:accountsntax/screens/drawer_options/accounting/expenses_screen.dart';
+import 'package:accountsntax/screens/drawer_options/accounting/invoice_and_sales_screen.dart';
 import 'package:accountsntax/screens/invoice_operations/add_customer_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_address_details_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_bank_details_screen.dart';
@@ -14,8 +15,8 @@ import 'package:accountsntax/screens/change_password.dart';
 import 'package:accountsntax/screens/company_profile_screen.dart';
 import 'package:accountsntax/screens/invoice_operations/create_invoice_screen.dart';
 import 'package:accountsntax/screens/customer_details_screen.dart';
-import 'package:accountsntax/screens/drawer_options/mis_screen.dart';
-import 'package:accountsntax/screens/drawer_options/sales_operations/sales_description.dart';
+import 'package:accountsntax/screens/drawer_options/mis_operations/mis_screen.dart';
+import 'package:accountsntax/screens/drawer_options/mis_operations/sales_operations/sales_description.dart';
 import 'package:accountsntax/screens/invoice_operations/add_item_screen.dart';
 import 'package:accountsntax/screens/invoice_operations/add_more_details.dart';
 import 'package:accountsntax/screens/invoice_operations/view_invoice_screen.dart';
@@ -85,6 +86,7 @@ class AccountsntaxApp extends StatelessWidget {
         addMoreDetailsRoute:(context) => const AddMoreDetailsScreen(),
         viewInvoiceRoute:(context) => const ViewInvoiceScreen(),
         expensesRoute:(context) => const ExpensesDescription(),
+        invoiceSalesRoute:(context) => const InvoiceAndSalesScreen(),
         },
     );
   }
