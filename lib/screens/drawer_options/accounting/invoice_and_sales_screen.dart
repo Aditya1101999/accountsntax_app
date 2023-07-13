@@ -231,7 +231,7 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                   color: Color(0xFFEA7A40),
                 ),
                 onPressed: () {
-                  // Handle add button
+                  Navigator.pushNamed(context, createInvoiceRoute);
                 },
               ),
             ]),
