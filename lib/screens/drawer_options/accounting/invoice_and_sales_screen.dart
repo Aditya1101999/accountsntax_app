@@ -172,7 +172,7 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                             color: Color(0xFFEA7A40),
                           ),
                           onPressed: () {
-                            // Handle items button tap
+                            Navigator.pushNamed(context, itemRoute);
                           },
                         ),
                       ),

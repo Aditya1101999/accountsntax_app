@@ -35,3 +35,6 @@ const String dispatchOrderRoute = 'dispatch_order';
 const String expensesRoute = 'expenses';
 const String invoiceSalesRoute = 'invoice_and_sales';
 const String customerRoute = 'customer';
+const String itemRoute = 'item';
+const String addInvoiceRoute = 'add_invoice';
+const String editInvoiceRoute = 'edit_invoice';
