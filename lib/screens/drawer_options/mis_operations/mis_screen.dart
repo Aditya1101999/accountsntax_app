@@ -184,7 +184,7 @@ class MISScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 14.0),
               ),
               onTap: () {
-                // Handle list item tap
+                Navigator.pushNamed(context, expensesRoute);
               },
             ),
             const Divider(color: Color(0xFFEA7A40)),

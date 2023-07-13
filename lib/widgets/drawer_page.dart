@@ -112,12 +112,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       Navigator.pushNamed(context, invoiceSalesRoute);
                     });
                   }),
-                  _buildSubListTile(1, Icons.shopping_cart, 'Purchase/Expense',
-                   onTap: () {
-                    setState(() {
-                      Navigator.pushNamed(context, expensesRoute);
-                    });
-                  }),
                   _buildSubListTile(2, Icons.account_balance, 'Cash and Bank'),
                   _buildSubListTile(3, Icons.show_chart, 'Investment'),
                 ],
