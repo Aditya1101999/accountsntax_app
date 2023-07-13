@@ -105,7 +105,7 @@ class MISScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(12.0),
                         child: IconButton(
                           icon: const Icon(
-                            Icons.money_off_csred_sharp,
+                            Icons.monetization_on,
                             color: Color(0xFFEA7A40),
                           ),
                           onPressed: () {
@@ -127,7 +127,7 @@ class MISScreen extends StatelessWidget {
                 children: [
                   IconButton(
                     icon:
-                        const Icon(Icons.arrow_left, color: Color(0xFF663274)),
+                        const Icon(Icons.arrow_left, color: Color(0xFFEA7A40)),
                     onPressed: () {
                       // Handle left arrow button tap
                     },

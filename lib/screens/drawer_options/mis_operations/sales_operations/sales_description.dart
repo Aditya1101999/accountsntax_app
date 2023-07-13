@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'package:accountsntax/screens/invoice_operations/invoice_screen.dart';
+import 'package:accountsntax/screens/drawer_options/mis_operations/sales_operations/customer_wise_screen.dart';
+import 'package:accountsntax/screens/drawer_options/mis_operations/sales_operations/invoice_wise_screen.dart';
 import 'package:flutter/material.dart';
 
 class SalesDescription extends StatefulWidget {
@@ -17,14 +18,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 40.0, left: 16.0, right: 16.0),
+        padding: const EdgeInsets.only(top: 40.0, left: 10.0, right: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
                 IconButton(
-                  icon: const Icon(Icons.arrow_back,color:Color(0xFF663274)),
+                  icon: const Icon(Icons.arrow_back, color: Color(0xFF663274)),
                   onPressed: () {
                     Navigator.pop(context);
                   },
@@ -52,7 +53,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
               ],
             ),
             const Text(
-              '                 Rs. 36,13,239.64',
+              '                    Rs. 36,13,239.64',
               style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -68,28 +69,28 @@ class _SalesDescriptionState extends State<SalesDescription> {
                 items: const [
                   DropdownMenuItem(
                     value: 'Option 1',
-                    child: Text('                               Month Wise',
+                    child: Text('                             Month Wise',
                         style: TextStyle(
                           color: Color(0xFFEA7A40),
                         )),
                   ),
                   DropdownMenuItem(
                     value: 'Option 2',
-                    child: Text('                               Item Wise',
+                    child: Text('                             Item Wise',
                         style: TextStyle(
                           color: Color(0xFFEA7A40),
                         )),
                   ),
                   DropdownMenuItem(
                     value: 'Option 3',
-                    child: Text('                                Invoice Wise',
+                    child: Text('                             Invoice Wise',
                         style: TextStyle(
                           color: Color(0xFFEA7A40),
                         )),
                   ),
                   DropdownMenuItem(
                     value: 'Option 4',
-                    child: Text('                               Customer Wise',
+                    child: Text('                             Customer Wise',
                         style: TextStyle(
                           color: Color(0xFFEA7A40),
                         )),
@@ -266,7 +267,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           const DataCell(Text('1527641.77')),
                           const DataCell(
                             Text(
-                              "        104",
+                              "       104",
                             ),
                           )
                         ],
@@ -321,14 +322,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                                 style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   21500.00')),
-                          DataCell(GestureDetector(
-                            onTap: () {
-                              //handle tap for sep orders
-                            },
-                            child: const Text(
+                          const DataCell(
+                            Text(
                               "        51",
                             ),
-                          ))
+                          )
                         ],
                       ),
                       DataRow(
@@ -497,7 +495,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
-                          const DataCell(Text('192428.26')),
+                          const DataCell(Text(' 192428.26')),
                           const DataCell(
                             Text(" -1200"),
                           )
@@ -558,7 +556,7 @@ class _SalesDescriptionState extends State<SalesDescription> {
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
-                          const DataCell(Text('152741.77')),
+                          const DataCell(Text(' 152741.77')),
                           const DataCell(
                             Text("  -300"),
                           )
@@ -739,17 +737,18 @@ class _SalesDescriptionState extends State<SalesDescription> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '58'),
-        ),
-      );
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const InvoiceScreen(textValue: '58'),
+                                  ),
+                                );
                               },
                               child: const Text('    58',
                                   style: TextStyle(color: Color(0xFFEA7A40))),
                             ),
                           ),
-                          const DataCell(Text('   Style Co.')),
+                          const DataCell(Text('Style Co.')),
                           const DataCell(
                             Text(
                               "15271.77",
@@ -764,16 +763,17 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           DataCell(GestureDetector(
                             onTap: () {
                               Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '1'),
-        ),
-      );
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '1'),
+                                ),
+                              );
                             },
                             child: const Text('     1',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
-                          const DataCell(Text('   Filigree')),
+                          const DataCell(Text('Filigree')),
                           const DataCell(
                             Text(
                               "13319.61",
@@ -787,12 +787,13 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                             Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '45'),
-        ),
-      );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '45'),
+                                ),
+                              );
                             },
                             child: const Text('    45',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -810,11 +811,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           DataCell(GestureDetector(
                             onTap: () {
                               Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '145'),
-        ),
-      );
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '145'),
+                                ),
+                              );
                             },
                             child: const Text('   145',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -831,12 +833,13 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                             Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '23'),
-        ),
-      );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '23'),
+                                ),
+                              );
                             },
                             child: const Text('    23',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -853,12 +856,13 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                             Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '76'),
-        ),
-      );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '76'),
+                                ),
+                              );
                             },
                             child: const Text('    76',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -876,11 +880,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           DataCell(GestureDetector(
                             onTap: () {
                               Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '104'),
-        ),
-      );
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '104'),
+                                ),
+                              );
                             },
                             child: const Text('   104',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -898,11 +903,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           DataCell(GestureDetector(
                             onTap: () {
                               Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '33'),
-        ),
-      );
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '33'),
+                                ),
+                              );
                             },
                             child: const Text('    33',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -920,11 +926,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           DataCell(GestureDetector(
                             onTap: () {
                               Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '21'),
-        ),
-      );
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '21'),
+                                ),
+                              );
                             },
                             child: const Text('    21',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -942,11 +949,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           DataCell(GestureDetector(
                             onTap: () {
                               Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '156'),
-        ),
-      );
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '156'),
+                                ),
+                              );
                             },
                             child: const Text('   156',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -963,12 +971,13 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                             Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '19'),
-        ),
-      );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '19'),
+                                ),
+                              );
                             },
                             child: const Text('    19',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -986,11 +995,12 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           DataCell(GestureDetector(
                             onTap: () {
                               Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const InvoiceScreen(textValue: '3'),
-        ),
-      );
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const InvoiceScreen(textValue: '3'),
+                                ),
+                              );
                             },
                             child: const Text('     3',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1059,7 +1069,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                           DataCell(
                             GestureDetector(
                               onTap: () {
-                                //handle party tap
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const CustomerWiseScreen(
+                                            textValue: 'Filigree JW'),
+                                  ),
+                                );
                               },
                               child: const Text(' Filigree JW',
                                   style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1077,7 +1094,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Kushal JW'),
+                                ),
+                              );
                             },
                             child: const Text(' Kushal JW',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1094,7 +1118,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'La Modish'),
+                                ),
+                              );
                             },
                             child: const Text(' La Modish',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1111,7 +1142,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Gupta Store'),
+                                ),
+                              );
                             },
                             child: const Text(' Gupta Store',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1128,7 +1166,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Go Fashion'),
+                                ),
+                              );
                             },
                             child: const Text(' Go Fashion',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1145,7 +1190,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Shagun JW'),
+                                ),
+                              );
                             },
                             child: const Text(' Shagun JW',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1162,7 +1214,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Radhika JW'),
+                                ),
+                              );
                             },
                             child: const Text(' Radhika JW',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1179,7 +1238,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Basant JW'),
+                                ),
+                              );
                             },
                             child: const Text(' Basant JW',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1196,7 +1262,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Mani JW'),
+                                ),
+                              );
                             },
                             child: const Text(' Mani JW',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1213,7 +1286,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Radhe JW'),
+                                ),
+                              );
                             },
                             child: const Text(' Radhe JW',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1230,7 +1310,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Goyal Stores'),
+                                ),
+                              );
                             },
                             child: const Text(' Goyal Stores',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1247,7 +1334,14 @@ class _SalesDescriptionState extends State<SalesDescription> {
                         cells: [
                           DataCell(GestureDetector(
                             onTap: () {
-                              //handle party tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CustomerWiseScreen(
+                                          textValue: 'Gun Fashion'),
+                                ),
+                              );
                             },
                             child: const Text(' Gun Fashion',
                                 style: TextStyle(color: Color(0xFFEA7A40))),
@@ -1475,14 +1569,11 @@ class _SalesDescriptionState extends State<SalesDescription> {
                                 style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   21500.00')),
-                          DataCell(GestureDetector(
-                            onTap: () {
-                              //handle tap for sep orders
-                            },
-                            child: const Text(
+                          const DataCell(
+                            Text(
                               "        51",
                             ),
-                          ))
+                          )
                         ],
                       ),
                       DataRow(

@@ -236,146 +236,63 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
               ),
             ]),
             const SizedBox(height: 10),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.99,
-              child: SingleChildScrollView(
-                child: Theme(
-                  data: Theme.of(context).copyWith(
-                    dividerColor: const Color(0xFFEA7B0C),
-                  ),
-                  child: DataTable(
-                    dividerThickness: 1.0,
-                    columns: const [
-                      DataColumn(label: Text('  Date')),
-                      DataColumn(label: Text('Type')),
-                      DataColumn(
-                          label: Text(
-                        '        Actions',
-                      )),
-                    ],
-                    rows: [
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
-                        ),
-                        cells: [
-                          const DataCell(Center(
-                            child: Expanded(
-                              child: Text(
-                                '28Janall',
-                                textAlign: TextAlign.center,
+            Padding(
+              padding: const EdgeInsets.only(left: 7.0, right: 7.0),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.97,
+                child: SingleChildScrollView(
+                  child: Theme(
+                    data: Theme.of(context).copyWith(
+                      dividerColor: const Color(0xFFEA7B0C),
+                    ),
+                    child: DataTable(
+                      dividerThickness: 1.0,
+                      columns: const [
+                        DataColumn(label: Text('  Date')),
+                        DataColumn(label: Text('Type')),
+                        DataColumn(
+                            label: Text(
+                          '        Actions',
+                        )),
+                      ],
+                      rows: [
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
+                          ),
+                          cells: [
+                            const DataCell(Center(
+                              child: Expanded(
+                                child: Text(
+                                  '28Janall',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            )),
+                            const DataCell(
+                              Text(
+                                'Sales',
+                                textAlign: TextAlign.end,
                               ),
                             ),
-                          )),
-                          const DataCell(
-                            Text(
-                              'Sales',
-                              textAlign: TextAlign.end,
-                            ),
-                          ),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
-                                  onPressed: () {
-                                    _showCommentDialog(context);
-                                  },
-                                  icon: const Icon(Icons.comment),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    _showVoiceDialog(context);
-                                  },
-                                  icon: const Icon(Icons.mic_none),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return AlertDialog(
-                                          backgroundColor:
-                                              const Color(0xFFF9E8E3),
-                                          title: const Text(
-                                            'Do you want to delete this entry ?',
-                                            style: TextStyle(
-                                              color: Color(0xFF663274),
-                                            ),
-                                          ),
-                                          actions: [
-                                            ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                backgroundColor:
-                                                    const Color(0xFFEA7B0C),
-                                              ),
-                                              onPressed: () {
-                                                // Implement logic to delete
-                                                Navigator.pop(context);
-                                                ScaffoldMessenger.of(context)
-                                                    .showSnackBar(
-                                                  const SnackBar(
-                                                      content: Text(
-                                                          'Entry Deleted')),
-                                                );
-                                              },
-                                              child: const Text(
-                                                'YES',
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                            ),
-                                            ElevatedButton(
-                                              onPressed: () {
-                                                Navigator.pop(context);
-                                              },
-                                              child: const Text(
-                                                'NO',
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        );
-                                      },
-                                    );
-                                  },
-                                  icon: const Icon(Icons.delete),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
-                        ),
-                        cells: [
-                          const DataCell(Text(
-                            '28Janall',
-                          )),
-                          const DataCell(Text('Invoice')),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
                                     onPressed: () {
                                       _showCommentDialog(context);
                                     },
                                     icon: const Icon(Icons.comment),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       _showVoiceDialog(context);
                                     },
                                     icon: const Icon(Icons.mic_none),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       showDialog(
                                         context: context,
@@ -429,134 +346,136 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                                       );
                                     },
                                     icon: const Icon(Icons.delete),
-                                    color: const Color(0xFFEA7A40)),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
-                        ),
-                        cells: [
-                          const DataCell(Center(
-                            child: Expanded(
-                              child: Text(
-                                '28Janall',
-                                textAlign: TextAlign.center,
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                ],
                               ),
                             ),
-                          )),
-                          const DataCell(
-                            Text(
-                              'Sales',
-                              textAlign: TextAlign.end,
-                            ),
+                          ],
+                        ),
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
                           ),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
-                                  onPressed: () {
-                                    _showCommentDialog(context);
-                                  },
-                                  icon: const Icon(Icons.comment),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    _showVoiceDialog(context);
-                                  },
-                                  icon: const Icon(Icons.mic_none),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return AlertDialog(
-                                          backgroundColor:
-                                              const Color(0xFFF9E8E3),
-                                          title: const Text(
-                                            'Do you want to delete this entry ?',
-                                            style: TextStyle(
-                                              color: Color(0xFF663274),
-                                            ),
-                                          ),
-                                          actions: [
-                                            ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                backgroundColor:
-                                                    const Color(0xFFEA7B0C),
-                                              ),
-                                              onPressed: () {
-                                                // Implement logic to delete
-                                                Navigator.pop(context);
-                                                ScaffoldMessenger.of(context)
-                                                    .showSnackBar(
-                                                  const SnackBar(
-                                                      content: Text(
-                                                          'Entry Deleted')),
-                                                );
-                                              },
-                                              child: const Text(
-                                                'YES',
+                          cells: [
+                            const DataCell(Text(
+                              '28Janall',
+                            )),
+                            const DataCell(Text('Invoice')),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {
+                                        _showCommentDialog(context);
+                                      },
+                                      icon: const Icon(Icons.comment),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        _showVoiceDialog(context);
+                                      },
+                                      icon: const Icon(Icons.mic_none),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              backgroundColor:
+                                                  const Color(0xFFF9E8E3),
+                                              title: const Text(
+                                                'Do you want to delete this entry ?',
                                                 style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Color(0xFF663274),
                                                 ),
                                               ),
-                                            ),
-                                            ElevatedButton(
-                                              onPressed: () {
-                                                Navigator.pop(context);
-                                              },
-                                              child: const Text(
-                                                'NO',
-                                                style: TextStyle(
-                                                  color: Colors.white,
+                                              actions: [
+                                                ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        const Color(0xFFEA7B0C),
+                                                  ),
+                                                  onPressed: () {
+                                                    // Implement logic to delete
+                                                    Navigator.pop(context);
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      const SnackBar(
+                                                          content: Text(
+                                                              'Entry Deleted')),
+                                                    );
+                                                  },
+                                                  child: const Text(
+                                                    'YES',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
                                                 ),
-                                              ),
-                                            ),
-                                          ],
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: const Text(
+                                                    'NO',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
                                         );
                                       },
-                                    );
-                                  },
-                                  icon: const Icon(Icons.delete),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
+                                      icon: const Icon(Icons.delete),
+                                      color: const Color(0xFFEA7A40)),
+                                ],
+                              ),
+                            )
+                          ],
                         ),
-                        cells: [
-                          const DataCell(Text(
-                            '28Janall',
-                          )),
-                          const DataCell(Text('Invoice')),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
+                          ),
+                          cells: [
+                            const DataCell(Center(
+                              child: Expanded(
+                                child: Text(
+                                  '28Janall',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            )),
+                            const DataCell(
+                              Text(
+                                'Sales',
+                                textAlign: TextAlign.end,
+                              ),
+                            ),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
                                     onPressed: () {
                                       _showCommentDialog(context);
                                     },
                                     icon: const Icon(Icons.comment),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       _showVoiceDialog(context);
                                     },
                                     icon: const Icon(Icons.mic_none),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       showDialog(
                                         context: context,
@@ -610,134 +529,136 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                                       );
                                     },
                                     icon: const Icon(Icons.delete),
-                                    color: const Color(0xFFEA7A40)),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
-                        ),
-                        cells: [
-                          const DataCell(Center(
-                            child: Expanded(
-                              child: Text(
-                                '28Janall',
-                                textAlign: TextAlign.center,
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                ],
                               ),
                             ),
-                          )),
-                          const DataCell(
-                            Text(
-                              'Sales',
-                              textAlign: TextAlign.end,
-                            ),
+                          ],
+                        ),
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
                           ),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
-                                  onPressed: () {
-                                    _showCommentDialog(context);
-                                  },
-                                  icon: const Icon(Icons.comment),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    _showVoiceDialog(context);
-                                  },
-                                  icon: const Icon(Icons.mic_none),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return AlertDialog(
-                                          backgroundColor:
-                                              const Color(0xFFF9E8E3),
-                                          title: const Text(
-                                            'Do you want to delete this entry ?',
-                                            style: TextStyle(
-                                              color: Color(0xFF663274),
-                                            ),
-                                          ),
-                                          actions: [
-                                            ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                backgroundColor:
-                                                    const Color(0xFFEA7B0C),
-                                              ),
-                                              onPressed: () {
-                                                // Implement logic to delete
-                                                Navigator.pop(context);
-                                                ScaffoldMessenger.of(context)
-                                                    .showSnackBar(
-                                                  const SnackBar(
-                                                      content: Text(
-                                                          'Entry Deleted')),
-                                                );
-                                              },
-                                              child: const Text(
-                                                'YES',
+                          cells: [
+                            const DataCell(Text(
+                              '28Janall',
+                            )),
+                            const DataCell(Text('Invoice')),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {
+                                        _showCommentDialog(context);
+                                      },
+                                      icon: const Icon(Icons.comment),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        _showVoiceDialog(context);
+                                      },
+                                      icon: const Icon(Icons.mic_none),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              backgroundColor:
+                                                  const Color(0xFFF9E8E3),
+                                              title: const Text(
+                                                'Do you want to delete this entry ?',
                                                 style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Color(0xFF663274),
                                                 ),
                                               ),
-                                            ),
-                                            ElevatedButton(
-                                              onPressed: () {
-                                                Navigator.pop(context);
-                                              },
-                                              child: const Text(
-                                                'NO',
-                                                style: TextStyle(
-                                                  color: Colors.white,
+                                              actions: [
+                                                ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        const Color(0xFFEA7B0C),
+                                                  ),
+                                                  onPressed: () {
+                                                    // Implement logic to delete
+                                                    Navigator.pop(context);
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      const SnackBar(
+                                                          content: Text(
+                                                              'Entry Deleted')),
+                                                    );
+                                                  },
+                                                  child: const Text(
+                                                    'YES',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
                                                 ),
-                                              ),
-                                            ),
-                                          ],
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: const Text(
+                                                    'NO',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
                                         );
                                       },
-                                    );
-                                  },
-                                  icon: const Icon(Icons.delete),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
+                                      icon: const Icon(Icons.delete),
+                                      color: const Color(0xFFEA7A40)),
+                                ],
+                              ),
+                            )
+                          ],
                         ),
-                        cells: [
-                          const DataCell(Text(
-                            '28Janall',
-                          )),
-                          const DataCell(Text('Invoice')),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
+                          ),
+                          cells: [
+                            const DataCell(Center(
+                              child: Expanded(
+                                child: Text(
+                                  '28Janall',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            )),
+                            const DataCell(
+                              Text(
+                                'Sales',
+                                textAlign: TextAlign.end,
+                              ),
+                            ),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
                                     onPressed: () {
                                       _showCommentDialog(context);
                                     },
                                     icon: const Icon(Icons.comment),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       _showVoiceDialog(context);
                                     },
                                     icon: const Icon(Icons.mic_none),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       showDialog(
                                         context: context,
@@ -791,134 +712,136 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                                       );
                                     },
                                     icon: const Icon(Icons.delete),
-                                    color: const Color(0xFFEA7A40)),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
-                        ),
-                        cells: [
-                          const DataCell(Center(
-                            child: Expanded(
-                              child: Text(
-                                '28Janall',
-                                textAlign: TextAlign.center,
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                ],
                               ),
                             ),
-                          )),
-                          const DataCell(
-                            Text(
-                              'Sales',
-                              textAlign: TextAlign.end,
-                            ),
+                          ],
+                        ),
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
                           ),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
-                                  onPressed: () {
-                                    _showCommentDialog(context);
-                                  },
-                                  icon: const Icon(Icons.comment),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    _showVoiceDialog(context);
-                                  },
-                                  icon: const Icon(Icons.mic_none),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return AlertDialog(
-                                          backgroundColor:
-                                              const Color(0xFFF9E8E3),
-                                          title: const Text(
-                                            'Do you want to delete this entry ?',
-                                            style: TextStyle(
-                                              color: Color(0xFF663274),
-                                            ),
-                                          ),
-                                          actions: [
-                                            ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                backgroundColor:
-                                                    const Color(0xFFEA7B0C),
-                                              ),
-                                              onPressed: () {
-                                                // Implement logic to delete
-                                                Navigator.pop(context);
-                                                ScaffoldMessenger.of(context)
-                                                    .showSnackBar(
-                                                  const SnackBar(
-                                                      content: Text(
-                                                          'Entry Deleted')),
-                                                );
-                                              },
-                                              child: const Text(
-                                                'YES',
+                          cells: [
+                            const DataCell(Text(
+                              '28Janall',
+                            )),
+                            const DataCell(Text('Invoice')),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {
+                                        _showCommentDialog(context);
+                                      },
+                                      icon: const Icon(Icons.comment),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        _showVoiceDialog(context);
+                                      },
+                                      icon: const Icon(Icons.mic_none),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              backgroundColor:
+                                                  const Color(0xFFF9E8E3),
+                                              title: const Text(
+                                                'Do you want to delete this entry ?',
                                                 style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Color(0xFF663274),
                                                 ),
                                               ),
-                                            ),
-                                            ElevatedButton(
-                                              onPressed: () {
-                                                Navigator.pop(context);
-                                              },
-                                              child: const Text(
-                                                'NO',
-                                                style: TextStyle(
-                                                  color: Colors.white,
+                                              actions: [
+                                                ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        const Color(0xFFEA7B0C),
+                                                  ),
+                                                  onPressed: () {
+                                                    // Implement logic to delete
+                                                    Navigator.pop(context);
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      const SnackBar(
+                                                          content: Text(
+                                                              'Entry Deleted')),
+                                                    );
+                                                  },
+                                                  child: const Text(
+                                                    'YES',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
                                                 ),
-                                              ),
-                                            ),
-                                          ],
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: const Text(
+                                                    'NO',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
                                         );
                                       },
-                                    );
-                                  },
-                                  icon: const Icon(Icons.delete),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
+                                      icon: const Icon(Icons.delete),
+                                      color: const Color(0xFFEA7A40)),
+                                ],
+                              ),
+                            )
+                          ],
                         ),
-                        cells: [
-                          const DataCell(Text(
-                            '28Janall',
-                          )),
-                          const DataCell(Text('Invoice')),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
+                          ),
+                          cells: [
+                            const DataCell(Center(
+                              child: Expanded(
+                                child: Text(
+                                  '28Janall',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            )),
+                            const DataCell(
+                              Text(
+                                'Sales',
+                                textAlign: TextAlign.end,
+                              ),
+                            ),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
                                     onPressed: () {
                                       _showCommentDialog(context);
                                     },
                                     icon: const Icon(Icons.comment),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       _showVoiceDialog(context);
                                     },
                                     icon: const Icon(Icons.mic_none),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       showDialog(
                                         context: context,
@@ -972,134 +895,136 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                                       );
                                     },
                                     icon: const Icon(Icons.delete),
-                                    color: const Color(0xFFEA7A40)),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
-                        ),
-                        cells: [
-                          const DataCell(Center(
-                            child: Expanded(
-                              child: Text(
-                                '28Janall',
-                                textAlign: TextAlign.center,
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                ],
                               ),
                             ),
-                          )),
-                          const DataCell(
-                            Text(
-                              'Sales',
-                              textAlign: TextAlign.end,
-                            ),
+                          ],
+                        ),
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
                           ),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
-                                  onPressed: () {
-                                    _showCommentDialog(context);
-                                  },
-                                  icon: const Icon(Icons.comment),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    _showVoiceDialog(context);
-                                  },
-                                  icon: const Icon(Icons.mic_none),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return AlertDialog(
-                                          backgroundColor:
-                                              const Color(0xFFF9E8E3),
-                                          title: const Text(
-                                            'Do you want to delete this entry ?',
-                                            style: TextStyle(
-                                              color: Color(0xFF663274),
-                                            ),
-                                          ),
-                                          actions: [
-                                            ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                backgroundColor:
-                                                    const Color(0xFFEA7B0C),
-                                              ),
-                                              onPressed: () {
-                                                // Implement logic to delete
-                                                Navigator.pop(context);
-                                                ScaffoldMessenger.of(context)
-                                                    .showSnackBar(
-                                                  const SnackBar(
-                                                      content: Text(
-                                                          'Entry Deleted')),
-                                                );
-                                              },
-                                              child: const Text(
-                                                'YES',
+                          cells: [
+                            const DataCell(Text(
+                              '28Janall',
+                            )),
+                            const DataCell(Text('Invoice')),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {
+                                        _showCommentDialog(context);
+                                      },
+                                      icon: const Icon(Icons.comment),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        _showVoiceDialog(context);
+                                      },
+                                      icon: const Icon(Icons.mic_none),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              backgroundColor:
+                                                  const Color(0xFFF9E8E3),
+                                              title: const Text(
+                                                'Do you want to delete this entry ?',
                                                 style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Color(0xFF663274),
                                                 ),
                                               ),
-                                            ),
-                                            ElevatedButton(
-                                              onPressed: () {
-                                                Navigator.pop(context);
-                                              },
-                                              child: const Text(
-                                                'NO',
-                                                style: TextStyle(
-                                                  color: Colors.white,
+                                              actions: [
+                                                ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        const Color(0xFFEA7B0C),
+                                                  ),
+                                                  onPressed: () {
+                                                    // Implement logic to delete
+                                                    Navigator.pop(context);
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      const SnackBar(
+                                                          content: Text(
+                                                              'Entry Deleted')),
+                                                    );
+                                                  },
+                                                  child: const Text(
+                                                    'YES',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
                                                 ),
-                                              ),
-                                            ),
-                                          ],
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: const Text(
+                                                    'NO',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
                                         );
                                       },
-                                    );
-                                  },
-                                  icon: const Icon(Icons.delete),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
+                                      icon: const Icon(Icons.delete),
+                                      color: const Color(0xFFEA7A40)),
+                                ],
+                              ),
+                            )
+                          ],
                         ),
-                        cells: [
-                          const DataCell(Text(
-                            '28Janall',
-                          )),
-                          const DataCell(Text('Invoice')),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
+                          ),
+                          cells: [
+                            const DataCell(Center(
+                              child: Expanded(
+                                child: Text(
+                                  '28Janall',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            )),
+                            const DataCell(
+                              Text(
+                                'Sales',
+                                textAlign: TextAlign.end,
+                              ),
+                            ),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
                                     onPressed: () {
                                       _showCommentDialog(context);
                                     },
                                     icon: const Icon(Icons.comment),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       _showVoiceDialog(context);
                                     },
                                     icon: const Icon(Icons.mic_none),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       showDialog(
                                         context: context,
@@ -1153,134 +1078,136 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                                       );
                                     },
                                     icon: const Icon(Icons.delete),
-                                    color: const Color(0xFFEA7A40)),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
-                        ),
-                        cells: [
-                          const DataCell(Center(
-                            child: Expanded(
-                              child: Text(
-                                '28Janall',
-                                textAlign: TextAlign.center,
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                ],
                               ),
                             ),
-                          )),
-                          const DataCell(
-                            Text(
-                              'Sales',
-                              textAlign: TextAlign.end,
-                            ),
+                          ],
+                        ),
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
                           ),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
-                                  onPressed: () {
-                                    _showCommentDialog(context);
-                                  },
-                                  icon: const Icon(Icons.comment),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    _showVoiceDialog(context);
-                                  },
-                                  icon: const Icon(Icons.mic_none),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return AlertDialog(
-                                          backgroundColor:
-                                              const Color(0xFFF9E8E3),
-                                          title: const Text(
-                                            'Do you want to delete this entry ?',
-                                            style: TextStyle(
-                                              color: Color(0xFF663274),
-                                            ),
-                                          ),
-                                          actions: [
-                                            ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                backgroundColor:
-                                                    const Color(0xFFEA7B0C),
-                                              ),
-                                              onPressed: () {
-                                                // Implement logic to delete
-                                                Navigator.pop(context);
-                                                ScaffoldMessenger.of(context)
-                                                    .showSnackBar(
-                                                  const SnackBar(
-                                                      content: Text(
-                                                          'Entry Deleted')),
-                                                );
-                                              },
-                                              child: const Text(
-                                                'YES',
+                          cells: [
+                            const DataCell(Text(
+                              '28Janall',
+                            )),
+                            const DataCell(Text('Invoice')),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {
+                                        _showCommentDialog(context);
+                                      },
+                                      icon: const Icon(Icons.comment),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        _showVoiceDialog(context);
+                                      },
+                                      icon: const Icon(Icons.mic_none),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              backgroundColor:
+                                                  const Color(0xFFF9E8E3),
+                                              title: const Text(
+                                                'Do you want to delete this entry ?',
                                                 style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Color(0xFF663274),
                                                 ),
                                               ),
-                                            ),
-                                            ElevatedButton(
-                                              onPressed: () {
-                                                Navigator.pop(context);
-                                              },
-                                              child: const Text(
-                                                'NO',
-                                                style: TextStyle(
-                                                  color: Colors.white,
+                                              actions: [
+                                                ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        const Color(0xFFEA7B0C),
+                                                  ),
+                                                  onPressed: () {
+                                                    // Implement logic to delete
+                                                    Navigator.pop(context);
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      const SnackBar(
+                                                          content: Text(
+                                                              'Entry Deleted')),
+                                                    );
+                                                  },
+                                                  child: const Text(
+                                                    'YES',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
                                                 ),
-                                              ),
-                                            ),
-                                          ],
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: const Text(
+                                                    'NO',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
                                         );
                                       },
-                                    );
-                                  },
-                                  icon: const Icon(Icons.delete),
-                                  color: const Color(0xFFEA7A40),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.white,
+                                      icon: const Icon(Icons.delete),
+                                      color: const Color(0xFFEA7A40)),
+                                ],
+                              ),
+                            )
+                          ],
                         ),
-                        cells: [
-                          const DataCell(Text(
-                            '28Janall',
-                          )),
-                          const DataCell(Text('Invoice')),
-                          DataCell(
-                            Row(
-                              children: [
-                                IconButton(
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
+                          ),
+                          cells: [
+                            const DataCell(Center(
+                              child: Expanded(
+                                child: Text(
+                                  '28Janall',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            )),
+                            const DataCell(
+                              Text(
+                                'Sales',
+                                textAlign: TextAlign.end,
+                              ),
+                            ),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
                                     onPressed: () {
                                       _showCommentDialog(context);
                                     },
                                     icon: const Icon(Icons.comment),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       _showVoiceDialog(context);
                                     },
                                     icon: const Icon(Icons.mic_none),
-                                    color: const Color(0xFFEA7A40)),
-                                IconButton(
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                  IconButton(
                                     onPressed: () {
                                       showDialog(
                                         context: context,
@@ -1334,13 +1261,101 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                                       );
                                     },
                                     icon: const Icon(Icons.delete),
-                                    color: const Color(0xFFEA7A40)),
-                              ],
+                                    color: const Color(0xFFEA7A40),
+                                  ),
+                                ],
+                              ),
                             ),
-                          )
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                        DataRow(
+                          color: MaterialStateColor.resolveWith(
+                            (states) => Colors.white,
+                          ),
+                          cells: [
+                            const DataCell(Text(
+                              '28Janall',
+                            )),
+                            const DataCell(Text('Invoice')),
+                            DataCell(
+                              Row(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {
+                                        _showCommentDialog(context);
+                                      },
+                                      icon: const Icon(Icons.comment),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        _showVoiceDialog(context);
+                                      },
+                                      icon: const Icon(Icons.mic_none),
+                                      color: const Color(0xFFEA7A40)),
+                                  IconButton(
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              backgroundColor:
+                                                  const Color(0xFFF9E8E3),
+                                              title: const Text(
+                                                'Do you want to delete this entry ?',
+                                                style: TextStyle(
+                                                  color: Color(0xFF663274),
+                                                ),
+                                              ),
+                                              actions: [
+                                                ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        const Color(0xFFEA7B0C),
+                                                  ),
+                                                  onPressed: () {
+                                                    // Implement logic to delete
+                                                    Navigator.pop(context);
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      const SnackBar(
+                                                          content: Text(
+                                                              'Entry Deleted')),
+                                                    );
+                                                  },
+                                                  child: const Text(
+                                                    'YES',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: const Text(
+                                                    'NO',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      },
+                                      icon: const Icon(Icons.delete),
+                                      color: const Color(0xFFEA7A40)),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

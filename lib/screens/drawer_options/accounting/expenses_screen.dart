@@ -15,7 +15,7 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 40.0, left: 16.0, right: 16.0),
+        padding: const EdgeInsets.only(top: 40.0, left: 10.0, right: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -257,7 +257,7 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                           const DataCell(Text('1527641.77')),
                           const DataCell(
                             Text(
-                              "        104",
+                              "       104",
                             ),
                           )
                         ],
@@ -312,14 +312,11 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                                 style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   21500.00')),
-                          DataCell(GestureDetector(
-                            onTap: () {
-                              //handle tap for sep orders
-                            },
-                            child: const Text(
+                          const DataCell(
+                            Text(
                               "        51",
                             ),
-                          ))
+                          )
                         ],
                       ),
                       DataRow(
@@ -488,7 +485,7 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
-                          const DataCell(Text('192428.26')),
+                          const DataCell(Text(' 192428.26')),
                           const DataCell(
                             Text(" -1200"),
                           )
@@ -549,7 +546,7 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
-                          const DataCell(Text('152741.77')),
+                          const DataCell(Text('  152741.77')),
                           const DataCell(
                             Text("  -300"),
                           )
@@ -568,7 +565,7 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
-                          const DataCell(Text(' 133179.61')),
+                          const DataCell(Text('  133179.61')),
                           const DataCell(
                             Text(" -1200"),
                           )
@@ -587,7 +584,7 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
-                          const DataCell(Text('122468.26')),
+                          const DataCell(Text(' 122468.26')),
                           const DataCell(
                             Text(" -1300"),
                           )
@@ -606,7 +603,7 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
-                          const DataCell(Text('  21500.00')),
+                          const DataCell(Text('   21500.00')),
                           const DataCell(
                             Text(" -1600"),
                           )
@@ -625,7 +622,7 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                                   color: Color(0xFFEA7A40),
                                 )),
                           )),
-                          const DataCell(Text('  15450.00')),
+                          const DataCell(Text('   15450.00')),
                           const DataCell(
                             Text(
                               "     0",
@@ -729,8 +726,8 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                           DataCell(
                             GestureDetector(
                               onTap: () {
-                              //handle order tap
-                            },
+                                //handle order tap
+                              },
                               child: const Text('    58',
                                   style: TextStyle(color: Color(0xFFEA7A40))),
                             ),
@@ -1398,14 +1395,11 @@ class _ExpensesDescriptionState extends State<ExpensesDescription> {
                                 style: TextStyle(color: Color(0xFFEA7A40))),
                           )),
                           const DataCell(Text('   21500.00')),
-                          DataCell(GestureDetector(
-                            onTap: () {
-                              //handle tap for sep orders
-                            },
-                            child: const Text(
+                          const DataCell(
+                            Text(
                               "        51",
                             ),
-                          ))
+                          )
                         ],
                       ),
                       DataRow(
