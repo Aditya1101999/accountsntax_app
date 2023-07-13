@@ -153,7 +153,7 @@ class _CustomerWiseScreenState extends State<CustomerWiseScreen> {
         return AlertDialog(
           backgroundColor: const Color(0xFFF9E8E3),
           title: const Text(
-            'Expense Details',
+            'Sales Details',
             style: TextStyle(
               color: Color(0xFF663274),
             ),
@@ -163,15 +163,15 @@ class _CustomerWiseScreenState extends State<CustomerWiseScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ListTile(
-                  title: Text('AgstRef@68                  2688'),
+                  title: Text('Agst Ref-68                  2688'),
                 ),
                 Divider(color: Color(0xFFEA7A40)),
                 ListTile(
-                  title: Text('AgstRef                        35848'),
+                  title: Text('Agst Ref                        35848'),
                 ),
                 Divider(color: Color(0xFFEA7A40)),
                 ListTile(
-                  title: Text('On Account@61            9072'),
+                  title: Text('On Account-61            9072'),
                 ),
                 Divider(color: Color(0xFFEA7A40)),
               ],
@@ -687,7 +687,7 @@ class _CustomerWiseScreenState extends State<CustomerWiseScreen> {
                             icon: const Icon(Icons.visibility,
                                 color: Color(0xFF663274)),
                             onPressed: () {
-                             showExpenseDetailsDialog(context);
+                              showExpenseDetailsDialog(context);
                             },
                           )),
                         ],
@@ -826,25 +826,25 @@ class _CustomerWiseScreenState extends State<CustomerWiseScreen> {
             children: [
               const ListTile(
                 title:
-                    Text(' 28-09-2022                                160064'),
-                subtitle: Text('  New Ref@61'),
+                    Text('  New Ref-61                                160064'),
+                subtitle: Text('  08-12-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               const ListTile(
                 title:
-                    Text(' 19-10-2022                                 25000'),
-                subtitle: Text(' New Ref@46'),
+                    Text('  New Ref-46                                25000'),
+                subtitle: Text(' 08-12-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               const ListTile(
-                title: Text(' 28-09-2022                                25000'),
-                subtitle: Text('On Account@61'),
+                title: Text('On Account-61                             25000'),
+                subtitle: Text('  08-12-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               const ListTile(
                 title:
-                    Text(' 19-10-2022                                 	5376'),
-                subtitle: Text(' New Ref@46'),
+                    Text(' New Ref-96                                  5376'),
+                subtitle: Text('  09-01-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               Container(
@@ -864,7 +864,7 @@ class _CustomerWiseScreenState extends State<CustomerWiseScreen> {
                         '50000',
                         style: TextStyle(color: Colors.white),
                       ),
-                      SizedBox(width: 35)
+                      SizedBox(width: 30)
                     ],
                   ),
                 ),
@@ -879,25 +879,25 @@ class _CustomerWiseScreenState extends State<CustomerWiseScreen> {
             children: [
               const ListTile(
                 title:
-                    Text(' 28-09-2022                                160064'),
-                subtitle: Text('  New Ref@11'),
+                    Text('  New Ref-11                                160064'),
+                subtitle: Text('  08-01-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               const ListTile(
                 title:
-                    Text(' 19-10-2022                                 75000'),
-                subtitle: Text(' New Ref@26'),
+                    Text('  New Ref-46                                15000'),
+                subtitle: Text(' 28-12-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               const ListTile(
-                title: Text(' 28-09-2022                                15000'),
-                subtitle: Text('On Account@41'),
+                title: Text('On Account-31                             35000'),
+                subtitle: Text('  18-12-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               const ListTile(
                 title:
-                    Text(' 19-10-2022                                 	5376'),
-                subtitle: Text(' New Ref@96'),
+                    Text(' New Ref-56                                  8376'),
+                subtitle: Text('  19-01-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               Container(
@@ -917,7 +917,7 @@ class _CustomerWiseScreenState extends State<CustomerWiseScreen> {
                         '50000',
                         style: TextStyle(color: Colors.white),
                       ),
-                      SizedBox(width: 35)
+                      SizedBox(width: 30)
                     ],
                   ),
                 ),
@@ -931,25 +931,27 @@ class _CustomerWiseScreenState extends State<CustomerWiseScreen> {
             padding: const EdgeInsets.all(8.0),
             children: [
               const ListTile(
-                title: Text('28-09-2022                              25000 CR'),
-                subtitle: Text('  Sales@61'),
+                title:
+                    Text('Sales-21                                   25000 CR'),
+                subtitle: Text('28-09-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               const ListTile(
                 title:
-                    Text('19-10-2022                               25000 DR'),
-                subtitle: Text(' Reciept@46'),
-              ),
-              const Divider(color: Color(0xFFEA7A40)),
-              const ListTile(
-                title: Text('28-09-2022                              25000 DR'),
-                subtitle: Text('  Sales@61'),
+                    Text('Reciept-46                               25000 DR'),
+                subtitle: Text(' 17-09-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               const ListTile(
                 title:
-                    Text('19-10-2022                               25000 DR'),
-                subtitle: Text(' Reciept@46'),
+                    Text('Sales-61                                   25000 DR'),
+                subtitle: Text('19-09-2022'),
+              ),
+              const Divider(color: Color(0xFFEA7A40)),
+              const ListTile(
+                title:
+                    Text('Reciept-46                               25000 DR'),
+                subtitle: Text(' 28-09-2022'),
               ),
               const Divider(color: Color(0xFFEA7A40)),
               Container(
