@@ -35,6 +35,7 @@ class _TaxesScreenState extends State<TaxesScreen>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            SizedBox(height: 30),
             SizedBox(
               height: 50,
               child: IconButton(
