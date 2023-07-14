@@ -8,6 +8,7 @@ import 'package:accountsntax/screens/drawer_options/accounting/purchase_and_expe
 import 'package:accountsntax/screens/drawer_options/accounting/purchase_operations/add_supplier_screen.dart';
 import 'package:accountsntax/screens/drawer_options/accounting/purchase_operations/edit_supplier_screen.dart';
 import 'package:accountsntax/screens/drawer_options/accounting/purchase_operations/suppliers_screen.dart';
+import 'package:accountsntax/screens/drawer_options/taxes_screen.dart';
 import 'package:accountsntax/screens/drawer_options/upload_screen.dart';
 import 'package:accountsntax/screens/invoice_operations/add_customer_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_address_details_screen.dart';
@@ -105,6 +106,7 @@ class AccountsntaxApp extends StatelessWidget {
         supplierRoute:(context) => const SupplierScreen(),
         addSupplierRoute:(context) => const AddSupplierDetailsScreen(),
         editSupplierRoute:(context) => const SupplierDetailsScreen(),
+        taxesRoute:(context) => const TaxesScreen(),
         },
     );
   }

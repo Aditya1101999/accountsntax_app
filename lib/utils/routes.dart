@@ -43,3 +43,4 @@ const String purchaseExpenseRoute = 'purchase_expense';
 const String supplierRoute = 'supplier';
 const String addSupplierRoute = 'add_supplier';
 const String editSupplierRoute = 'edit_supplier';
+const String taxesRoute = 'taxes';

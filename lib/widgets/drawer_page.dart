@@ -135,7 +135,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 color: _selectedTileIndex == 2 ? Colors.black : null,
               ),
             ),
-            trailing: const Icon(Icons.keyboard_arrow_down),
             onTap: () {
               setState(() {
                 if (_selectedTileIndex == 2) {
@@ -146,21 +145,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   _showSubTiles = true;
                 }
               });
-              //code here for the 'Taxes' tile
+              Navigator.pushNamed(context, taxesRoute);
             },
           ),
-          if (_showSubTiles && _selectedTileIndex == 2)
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _buildSubListTile(0, Icons.calculate_outlined, 'Income Tax'),
-                  _buildSubListTile(1, Icons.calculate_outlined, 'GST'),
-                  _buildSubListTile(2, Icons.calculate_outlined, 'TDS'),
-                ],
-              ),
-            ),
           ListTile(
             tileColor: _selectedTileIndex == 3 ? Colors.white : null,
             leading: Icon(
