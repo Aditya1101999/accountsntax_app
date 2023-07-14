@@ -22,11 +22,10 @@ class _CreateInvoiceScreenState extends State<CreateInvoiceScreen> {
   }
 
   String _getCurrentDate() {
-    // Logic to get the current date in the desired format
     DateTime currentDate = DateTime.now();
     String formattedDate = currentDate
         .toString()
-        .split(' ')[0]; // Format the date as per your requirement
+        .split(' ')[0];
     return formattedDate;
   }
 

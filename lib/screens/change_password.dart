@@ -136,7 +136,7 @@ class ChangePasswordScreen extends StatefulWidget {
           },
           icon: Icon(
             isObscure ? Icons.visibility : Icons.visibility_off,
-            color: Colors.grey,
+            color: const Color(0xFF663274),
           ),
         ),
         errorText: errorText.isNotEmpty ? errorText : null,

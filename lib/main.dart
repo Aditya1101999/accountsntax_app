@@ -4,6 +4,11 @@ import 'package:accountsntax/screens/drawer_options/accounting/invoice_and_sales
 import 'package:accountsntax/screens/drawer_options/accounting/invoice_and_sales_operations/item_operations/edit_invoice_item.dart';
 import 'package:accountsntax/screens/drawer_options/accounting/invoice_and_sales_operations/items_screen.dart';
 import 'package:accountsntax/screens/drawer_options/accounting/invoice_and_sales_screen.dart';
+import 'package:accountsntax/screens/drawer_options/accounting/purchase_and_expense_screen.dart';
+import 'package:accountsntax/screens/drawer_options/accounting/purchase_operations/add_supplier_screen.dart';
+import 'package:accountsntax/screens/drawer_options/accounting/purchase_operations/edit_supplier_screen.dart';
+import 'package:accountsntax/screens/drawer_options/accounting/purchase_operations/suppliers_screen.dart';
+import 'package:accountsntax/screens/drawer_options/upload_screen.dart';
 import 'package:accountsntax/screens/invoice_operations/add_customer_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_address_details_screen.dart';
 import 'package:accountsntax/screens/basic_details_operations/add_bank_details_screen.dart';
@@ -18,7 +23,7 @@ import 'package:accountsntax/screens/basic_details_operations/view_business_deta
 import 'package:accountsntax/screens/change_password.dart';
 import 'package:accountsntax/screens/drawer_options/company_profile_screen.dart';
 import 'package:accountsntax/screens/invoice_operations/create_invoice_screen.dart';
-import 'package:accountsntax/screens/customer_details_screen.dart';
+import 'package:accountsntax/screens/invoice_operations/customer_details_screen.dart';
 import 'package:accountsntax/screens/drawer_options/mis_operations/mis_screen.dart';
 import 'package:accountsntax/screens/drawer_options/mis_operations/sales_operations/sales_description.dart';
 import 'package:accountsntax/screens/invoice_operations/add_item_screen.dart';
@@ -95,7 +100,11 @@ class AccountsntaxApp extends StatelessWidget {
         itemRoute:(context) => const ItemScreen(),
         addInvoiceRoute:(context) => const AddInvoiceItemScreen(),
         editInvoiceRoute:(context) => const EditInvoiceItem(),
-        
+        uploadRoute:(context) => const UploadScreen(),
+        purchaseExpenseRoute:(context) => const PurchaseAndExpenseScreen(),
+        supplierRoute:(context) => const SupplierScreen(),
+        addSupplierRoute:(context) => const AddSupplierDetailsScreen(),
+        editSupplierRoute:(context) => const SupplierDetailsScreen(),
         },
     );
   }

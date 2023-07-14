@@ -107,9 +107,15 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _buildSubListTile(0, Icons.description, 'Invoicing/Sales',
-                  onTap: () {
+                      onTap: () {
                     setState(() {
                       Navigator.pushNamed(context, invoiceSalesRoute);
+                    });
+                  }),
+                  _buildSubListTile(1, Icons.shopping_cart, 'Purchase/Expense',
+                      onTap: () {
+                    setState(() {
+                      Navigator.pushNamed(context, purchaseExpenseRoute);
                     });
                   }),
                   _buildSubListTile(2, Icons.account_balance, 'Cash and Bank'),

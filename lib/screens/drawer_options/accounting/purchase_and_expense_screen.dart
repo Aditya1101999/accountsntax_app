@@ -3,14 +3,15 @@
 import 'package:accountsntax/utils/routes.dart';
 import 'package:flutter/material.dart';
 
-class InvoiceAndSalesScreen extends StatefulWidget {
-  const InvoiceAndSalesScreen({super.key});
+class PurchaseAndExpenseScreen extends StatefulWidget {
+  const PurchaseAndExpenseScreen({super.key});
 
   @override
-  State<InvoiceAndSalesScreen> createState() => _InvoiceAndSalesScreenState();
+  State<PurchaseAndExpenseScreen> createState() =>
+      _PurchaseAndExpenseScreenState();
 }
 
-class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
+class _PurchaseAndExpenseScreenState extends State<PurchaseAndExpenseScreen> {
   @override
   Widget build(BuildContext context) {
     void _showCommentDialog(BuildContext context) {
@@ -119,7 +120,7 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Invoicing/Sales')),
+      appBar: AppBar(title: const Text('Purchase/Expense')),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,16 +145,16 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                         padding: const EdgeInsets.all(12.0),
                         child: IconButton(
                           icon: const Icon(
-                            Icons.handshake_sharp,
+                            Icons.payment,
                             color: Color(0xFFEA7A40),
                           ),
                           onPressed: () {
-                            // Handle receivable button tap
+                            // Handle payable button tap
                           },
                         ),
                       ),
                       const SizedBox(height: 8.0),
-                      const Text('Receivable'),
+                      const Text('Payable'),
                     ],
                   ),
                   Column(
@@ -196,12 +197,12 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
                             color: Color(0xFFEA7A40),
                           ),
                           onPressed: () {
-                            Navigator.pushNamed(context, customerRoute);
+                            Navigator.pushNamed(context, supplierRoute);
                           },
                         ),
                       ),
                       const SizedBox(height: 8.0),
-                      const Text('Customers'),
+                      const Text('Suppliers'),
                     ],
                   ),
                 ],
@@ -210,7 +211,7 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
             const SizedBox(height: 10),
             Row(children: [
               const Text(
-                '   Invoicing Data',
+                '    Pur./Exp Data',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
@@ -219,9 +220,10 @@ class _InvoiceAndSalesScreenState extends State<InvoiceAndSalesScreen> {
               ),
               const SizedBox(width: 28.0),
               IconButton(
-                icon:const Icon(Icons.file_upload,
-                size: 32,
-                color: Color(0xFFEA7A40),
+                icon: const Icon(
+                  Icons.file_upload,
+                  size: 32,
+                  color: Color(0xFFEA7A40),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, uploadRoute);
