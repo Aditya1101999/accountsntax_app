@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "879502703916",
+    "project_id": "accountsntax-fea20",
+    "storage_bucket": "accountsntax-fea20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879502703916:android:57ed661f5bc6547e678089",
+        "android_client_info": {
+          "package_name": "com.example.accountsntax"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879502703916-5u4lsk36aki5a4nn7geher79t1q8kgdt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSXVH1UzKunI-B2ldsC0fQ5mQHqkSiNJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879502703916-5u4lsk36aki5a4nn7geher79t1q8kgdt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

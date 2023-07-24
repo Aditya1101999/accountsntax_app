@@ -39,6 +39,7 @@ import 'package:accountsntax/screens/vault_operations/add_vault_screen.dart';
 import 'package:accountsntax/screens/vault_operations/edit_vault_screen.dart';
 import 'package:accountsntax/screens/vault_operations/view_vault_screen.dart';
 import 'package:accountsntax/widgets/notification_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:accountsntax/utils/routes.dart';
 import 'package:accountsntax/utils/theme.dart';
@@ -47,7 +48,9 @@ import 'package:accountsntax/screens/login_screen.dart';
 import 'package:accountsntax/screens/signup_screen.dart';
 import 'package:accountsntax/screens/dashboard_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const AccountsntaxApp());
 }
 

@@ -1,5 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:accountsntax/utils/routes.dart';
 
@@ -23,12 +24,12 @@ class _LoginScreenState extends State<LoginScreen> {
     bool isValid = true;
     if (email.isEmpty) {
       setState(() {
-        _emailError = 'Please enter your Number.';
+        _emailError = 'Please enter your E-mail.';
       });
       isValid = false;
-    } else if (email.length != 10) {
+    } else if (email.length < 15) {
       setState(() {
-        _emailError = 'Please enter Valid Number.';
+        _emailError = 'Please enter Valid Email.';
       });
       isValid = false;
     } else {
@@ -54,6 +55,47 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     return isValid;
+  }
+  Future<void> _loginWithEmailAndPassword() async {
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
+
+    try {
+      if (_validateFields()) {
+        // ignore: unused_local_variable
+        UserCredential uCredential =
+            await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: email,
+          password: password,
+        );
+        // Login successful, you can navigate to the dashboard
+        Navigator.pushReplacementNamed(context, dashboardRoute);
+      }
+    } on FirebaseAuthException catch (e) {
+      // Handle login errors based on the error code
+      String errorMessage;
+      if (e.code == 'user-not-found') {
+        errorMessage = 'No user found for that email.';
+      } else if (e.code == 'wrong-password') {
+        errorMessage = 'Wrong password provided for that user.';
+      } else {
+        errorMessage = 'An error occurred. Please try again later.';
+      }
+
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Login Error'),
+          content: Text(errorMessage),
+          actions: [
+            ElevatedButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
   }
 
   @override
@@ -86,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      'Contact No.',
+                      'E-mail',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF663274)),
@@ -104,7 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       contentPadding: const EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 12.0),
-                      hintText: 'Enter your Number',
+                      hintText: 'Enter your mail',
                       hintStyle: const TextStyle(
                         color: Colors.grey,
                       ),
@@ -176,13 +218,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: 150,
                     height: 48,
                     child: ElevatedButton(
-                      onPressed: () {
-                        if (_validateFields()) {
-                          // Perform sign up logic
-                          Navigator.pushReplacementNamed(
-                              context, dashboardRoute);
-                        }
-                      },
+                      onPressed: _loginWithEmailAndPassword,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFEA7B0C),
                         shape: RoundedRectangleBorder(
