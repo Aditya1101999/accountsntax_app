@@ -1,5 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:accountsntax/utils/routes.dart';
 
@@ -120,6 +122,74 @@ class _SignUpScreenState extends State<SignUpScreen> {
         _confirmPasswordError = '';
       });
     }
+    if (isValid) {
+    // Create a new user in Firebase Auth
+    FirebaseAuth.instance
+        .createUserWithEmailAndPassword(email: email, password: password)
+        .then((UserCredential userCredential) {
+      // Store the user details in Firestore
+      FirebaseFirestore.instance.collection('users').doc(userCredential.user!.uid).set({
+        'first_name': firstName,
+        'last_name': lastName,
+        'contact_no': contactNo,
+        'email': email,
+      }).then((_) {
+        // If the data is successfully added to Firestore,
+        // navigate to the OTP verification screen
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const OTPVerificationScreen(
+              sourceFlag: 1,
+            ), // Pass 1 as a flag for sign-up route
+          ),
+        );
+      }).catchError((error) {
+        // Handle any errors that occur while adding data to Firestore
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: const Text('Error'),
+            content: const Text('An error occurred while saving data. Please try again later.'),
+            actions: [
+              ElevatedButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('OK'),
+              ),
+            ],
+          ),
+        );
+      });
+    }).catchError((error) {
+      // Handle any errors that occur while creating a user in Firebase Auth
+      String errorMessage;
+      if (error is FirebaseAuthException) {
+        if (error.code == 'weak-password') {
+          errorMessage = 'The password provided is too weak.';
+        } else if (error.code == 'email-already-in-use') {
+          errorMessage = 'The account already exists for that email.';
+        } else {
+          errorMessage = 'An error occurred. Please try again later.';
+        }
+      } else {
+        errorMessage = 'An error occurred. Please try again later.';
+      }
+
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Sign Up Error'),
+          content: Text(errorMessage),
+          actions: [
+            ElevatedButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+    });
+  }
 
     return isValid;
   }
